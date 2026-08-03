@@ -1,0 +1,46 @@
+name: NavvyaSignal Daily Briefing
+
+on:
+  schedule:
+    # GST = UTC+4. Cron times below are in UTC.
+    - cron: "0 20 * * *"   # 00:00 GST (general briefing)
+    - cron: "0 8 * * *"    # 12:00 GST (general briefing)
+    - cron: "0 14 * * *"   # 18:00 GST (India Desk briefing)
+  workflow_dispatch: {}     # allows manual "Run workflow" button for ad-hoc runs
+
+jobs:
+  run-briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine run type
+        id: runtype
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 14 * * *" ]; then
+            echo "run_type=india" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_type=general" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run briefing script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_FROM_EMAIL: ${{ secrets.KIT_FROM_EMAIL }}
+          WHAPI_TOKEN: ${{ secrets.WHAPI_TOKEN }}
+          WHAPI_CHANNEL_ID: ${{ secrets.WHAPI_CHANNEL_ID }}
+          RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
+        run: python main.py
