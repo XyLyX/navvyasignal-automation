@@ -42,5 +42,6 @@ jobs:
           KIT_FROM_EMAIL: ${{ secrets.KIT_FROM_EMAIL }}
           WHAPI_TOKEN: ${{ secrets.WHAPI_TOKEN }}
           WHAPI_CHANNEL_ID: ${{ secrets.WHAPI_CHANNEL_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
         run: python main.py

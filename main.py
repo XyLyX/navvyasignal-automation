@@ -25,6 +25,7 @@ KIT_API_KEY = os.environ["KIT_API_KEY"]
 KIT_FROM_EMAIL = os.environ.get("KIT_FROM_EMAIL", "hello@navvyasignal.com")
 WHAPI_TOKEN = os.environ.get("WHAPI_TOKEN", "")
 WHAPI_CHANNEL_ID = os.environ.get("WHAPI_CHANNEL_ID", "")
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 # Which run this is: "general" (00:00/12:00 GST) or "india" (18:00 GST)
 RUN_TYPE = os.environ.get("RUN_TYPE", "general")
@@ -226,7 +227,114 @@ Research today's developments and produce the JSON output per your instructions.
     return data
 
 
-# ---------- STEP 3: Push to Notion ----------
+# ---------- STEP 2.5: Gemini cross-verification ----------
+
+def call_gemini(prompt_text):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    payload = {"contents": [{"parts": [{"text": prompt_text}]}]}
+    resp = requests.post(url, json=payload, timeout=60)
+    if resp.status_code != 200:
+        log(f"WARNING: Gemini call failed ({resp.status_code}): {resp.text[:500]}")
+        return None
+    try:
+        return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+    except (KeyError, IndexError):
+        log(f"WARNING: Unexpected Gemini response shape: {resp.text[:500]}")
+        return None
+
+
+def gemini_review(briefing_json_str):
+    prompt = f"""You are fact-checking a draft news briefing before publication for NavvyaSignal, \
+a credibility-focused intelligence publication. Review the JSON draft below.
+
+Flag ONLY genuine concerns: factual claims that seem implausible, internally contradictory, \
+unsupported by the stated sources, or that you have reason to believe are outdated or wrong. \
+Do not flag stylistic choices or things you simply cannot verify either way — only flag \
+things you have an actual, specific reason to doubt.
+
+Respond in this exact format:
+FLAGS: <number of concerns, 0 if none>
+If FLAGS > 0, list each concern on its own line starting with "- ", specific enough to act on.
+
+Draft to review:
+{briefing_json_str}"""
+    return call_gemini(prompt)
+
+
+def claude_respond_to_flags(briefing_data, gemini_flags_text):
+    """Ask Claude to address Gemini's specific concerns: confirm with better sourcing,
+    revise, or explain — using web search to re-check if needed."""
+    prompt = f"""Gemini raised the following concerns about your draft briefing:
+
+{gemini_flags_text}
+
+For each concern, either:
+1. Re-verify via web search and confirm the claim stands (explain why), or
+2. Revise the specific claim to be accurate, or
+3. If genuinely uncertain after re-checking, soften the claim with appropriate hedging \
+language (e.g. "single-source, unconfirmed" or "disputed") rather than stating it flatly \
+or dropping it — per NavvyaSignal's credibility protocol of labeled inference over fabrication.
+
+Current draft JSON:
+{json.dumps(briefing_data)}
+
+Output the FULL corrected JSON (same schema as before), with fixes applied. Output ONLY \
+the JSON, no other text."""
+
+    response = client.messages.create(
+        model="claude-sonnet-4-5",
+        max_tokens=16000,
+        system=SYSTEM_PROMPT,
+        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+        messages=[{"role": "user", "content": prompt}],
+    )
+    text_parts = [block.text for block in response.content if block.type == "text"]
+    full_text = "\n".join(text_parts).strip()
+
+    import re
+    fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", full_text, re.DOTALL)
+    json_str = fence_match.group(1) if fence_match else full_text[full_text.find("{"):full_text.rfind("}") + 1]
+    json_str = re.sub(r"</?cite[^>]*>", "", json_str)
+
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        log("WARNING: Claude's revision after Gemini flags was not valid JSON — keeping prior draft.")
+        return briefing_data
+
+
+def verify_with_gemini_loop(briefing_data, max_rounds=2):
+    """Cross-verification loop: Gemini reviews, Claude responds to flags, Gemini re-reviews.
+    If flags persist after max_rounds, proceed with Claude's best (hedged) version rather
+    than blocking the run indefinitely."""
+    for round_num in range(1, max_rounds + 1):
+        log(f"Gemini verification round {round_num}...")
+        review = gemini_review(json.dumps(briefing_data))
+        if review is None:
+            log("Gemini review unavailable this round — proceeding without cross-verification.")
+            return briefing_data
+
+        flags_count = 0
+        for line in review.splitlines():
+            if line.strip().upper().startswith("FLAGS:"):
+                try:
+                    flags_count = int("".join(c for c in line.split(":")[1] if c.isdigit()) or "0")
+                except ValueError:
+                    flags_count = 0
+                break
+
+        if flags_count == 0:
+            log("Gemini review: no concerns raised.")
+            return briefing_data
+
+        log(f"Gemini raised {flags_count} concern(s):\n{review}")
+        briefing_data = claude_respond_to_flags(briefing_data, review)
+
+    log(f"Concerns persisted after {max_rounds} rounds — proceeding with Claude's hedged/revised version.")
+    return briefing_data
+
+
+
 
 def push_to_notion(entries):
     summary = []
@@ -344,6 +452,8 @@ def main():
     # entries AND empty email content — that's a sign generation failed silently.
     if not briefing["notion_entries"] and not briefing["email_html"].strip():
         fail_hard("Generation produced no entries and no email content — refusing to send.")
+
+    briefing = verify_with_gemini_loop(briefing)
 
     notion_summary = push_to_notion(briefing["notion_entries"])
 
