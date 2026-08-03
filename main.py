@@ -126,6 +126,10 @@ Rules you must follow strictly:
 - Only include information you can verify from search results in this run.
 - For each validated development, decide whether it UPDATES an existing Notion entry \
 (provided below, with title, category, creation time, and a content snippet) or is genuinely NEW.
+- CRITICAL: when setting "existing_id" for an update, copy the id string EXACTLY character-for-character \
+from the provided existing entries list below. Do not retype or paraphrase it from memory — a single \
+wrong character will cause the update to fail. If you are not fully certain of the exact id, treat \
+the entry as "create" instead of guessing at an id.
 - CRITICAL DEDUP RULE: if an existing entry was created within the last 48 hours, is in the \
 same desk, and covers the same underlying subject (same commodity, same index, same conflict, \
 same company, same event thread) — you MUST treat it as an UPDATE, even if the specific \
@@ -336,12 +340,22 @@ def verify_with_gemini_loop(briefing_data, max_rounds=2):
 
 
 
-def push_to_notion(entries):
+def push_to_notion(entries, valid_existing_ids):
     summary = []
     for entry in entries:
         desk = entry["desk"]
         if desk not in DESKS:
             fail_hard(f"Model returned invalid desk category: {desk}")
+
+        # Guard against the model slightly mis-copying a long Notion page ID
+        # (a known LLM failure mode) — if the claimed existing_id doesn't match
+        # anything we actually fetched, fall back to creating a new entry
+        # instead of crashing the whole run on a 404.
+        if entry["action"] == "update" and entry.get("existing_id") not in valid_existing_ids:
+            log(f"WARNING: existing_id '{entry.get('existing_id')}' for '{entry['title']}' "
+                f"doesn't match any fetched entry — treating as create instead of update.")
+            entry["action"] = "create"
+            entry["existing_id"] = None
 
         # Notion has a 2000-char limit per rich_text content block
         signal_brief = entry["body_markdown"][:2000]
@@ -372,7 +386,9 @@ def push_to_notion(entries):
             action_label = "Created"
 
         if resp.status_code not in (200, 201):
-            fail_hard(f"Notion write failed for '{entry['title']}': {resp.status_code} {resp.text}")
+            log(f"WARNING: Notion write failed for '{entry['title']}' — skipping this entry, "
+                f"continuing with the rest of the run. {resp.status_code} {resp.text[:500]}")
+            continue
 
         summary.append(f"{action_label} — {entry['title']} ({desk})" + (f" [NOTE: {entry['notes']}]" if entry.get("notes") else ""))
         log(summary[-1])
@@ -455,7 +471,8 @@ def main():
 
     briefing = verify_with_gemini_loop(briefing)
 
-    notion_summary = push_to_notion(briefing["notion_entries"])
+    valid_existing_ids = {e["id"] for e in existing}
+    notion_summary = push_to_notion(briefing["notion_entries"], valid_existing_ids)
 
     broadcast_id = send_kit(briefing["email_subject"], briefing["email_html"])
     verify_kit_sent(broadcast_id)
