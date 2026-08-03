@@ -114,7 +114,12 @@ all-caps.
 for that section rather than padding with a no-op update.
 - Never carry forward a stale/outdated figure without flagging or correcting it.
 
-Output ONLY valid JSON matching this schema, no other text:
+Output ONLY valid JSON matching this schema — no preamble, no narration of your research process, \
+no explanation before or after, and no markdown code fences. Do not use <cite> tags or any citation \
+markup in the JSON string values — write plain prose with sources named inline in the "sources_text" \
+field instead. Your entire response must be parseable as JSON from the first character.
+
+Schema:
 {
   "edition_label": "string, e.g. '2026-08-01, 12:00 GST edition'",
   "editor_note": "string, 1-3 sentences on corrections/context, or empty string",
@@ -147,7 +152,7 @@ Research today's developments and produce the JSON output per your instructions.
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=8000,
+        max_tokens=16000,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": user_prompt}],
@@ -157,16 +162,27 @@ Research today's developments and produce the JSON output per your instructions.
     text_parts = [block.text for block in response.content if block.type == "text"]
     full_text = "\n".join(text_parts).strip()
 
-    # Strip markdown code fences if present
-    if full_text.startswith("```"):
-        full_text = full_text.split("```")[1]
-        if full_text.startswith("json"):
-            full_text = full_text[4:]
+    # Find the JSON object regardless of any preamble text or code fences
+    import re
+    fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", full_text, re.DOTALL)
+    if fence_match:
+        json_str = fence_match.group(1)
+    else:
+        # No fence — find the first '{' and the matching last '}'
+        start = full_text.find("{")
+        end = full_text.rfind("}")
+        if start == -1 or end == -1 or end < start:
+            fail_hard(f"Could not locate a JSON object in model output.\nRaw output:\n{full_text[:2000]}")
+        json_str = full_text[start:end + 1]
+
+    # Strip citation tags like <cite index="...">...</cite> the model may have
+    # carried over from search-result formatting — these aren't valid in our schema.
+    json_str = re.sub(r"</?cite[^>]*>", "", json_str)
 
     try:
-        data = json.loads(full_text)
+        data = json.loads(json_str)
     except json.JSONDecodeError as e:
-        fail_hard(f"Model output was not valid JSON: {e}\nRaw output:\n{full_text[:2000]}")
+        fail_hard(f"Model output was not valid JSON: {e}\nExtracted text:\n{json_str[:2000]}")
 
     required_keys = ["edition_label", "notion_entries", "email_subject", "email_html", "whatsapp_text"]
     for k in required_keys:
