@@ -65,18 +65,34 @@ def fail_hard(msg):
 # ---------- STEP 1: Fetch existing Notion entries (for dedup) ----------
 
 def fetch_existing_entries():
-    """Pull recent Signal Feed entries so the model can decide update vs. new."""
+    """Pull recent Signal Feed entries so the model can decide update vs. new.
+    Includes a content snippet and creation time so matching isn't based on
+    title text alone — this is what lets same-day stories with slightly
+    different figures get recognized as updates rather than duplicates."""
     url = f"https://api.notion.com/v1/databases/{NOTION_DATABASE_ID}/query"
     payload = {
-        "page_size": 50,
-        "sorts": [{"timestamp": "last_edited_time", "direction": "descending"}],
+        "page_size": 100,
+        "sorts": [{"timestamp": "created_time", "direction": "descending"}],
     }
     resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
     if resp.status_code != 200:
         fail_hard(f"Notion query failed: {resp.status_code} {resp.text}")
     results = resp.json().get("results", [])
+
+    cutoff = datetime.datetime.utcnow() - datetime.timedelta(hours=48)
     entries = []
     for page in results:
+        created_time_str = page.get("created_time", "")
+        try:
+            created_dt = datetime.datetime.strptime(created_time_str[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            created_dt = None
+        # Only include entries from the last 48h in the dedup context — older
+        # entries are very unlikely to be the "same story" as today's news,
+        # and keeping the list short/recent makes matching far more reliable.
+        if created_dt and created_dt < cutoff:
+            continue
+
         props = page.get("properties", {})
         title = ""
         if "Name" in props and props["Name"].get("title"):
@@ -84,7 +100,17 @@ def fetch_existing_entries():
         category = ""
         if "Category" in props and props["Category"].get("select"):
             category = props["Category"]["select"].get("name", "")
-        entries.append({"id": page["id"], "title": title, "category": category})
+        brief_snippet = ""
+        if "Signal Brief" in props and props["Signal Brief"].get("rich_text"):
+            brief_snippet = "".join([t.get("plain_text", "") for t in props["Signal Brief"]["rich_text"]])[:300]
+
+        entries.append({
+            "id": page["id"],
+            "title": title,
+            "category": category,
+            "created_time": created_time_str,
+            "content_snippet": brief_snippet,
+        })
     return entries
 
 
@@ -98,8 +124,16 @@ Rules you must follow strictly:
 - Research current developments using web search. Never fabricate facts, figures, or quotes.
 - Only include information you can verify from search results in this run.
 - For each validated development, decide whether it UPDATES an existing Notion entry \
-(provided below) or is genuinely NEW. Prefer updating over duplicating when the story \
-is a continuation of the same underlying event/trend.
+(provided below, with title, category, creation time, and a content snippet) or is genuinely NEW.
+- CRITICAL DEDUP RULE: if an existing entry was created within the last 48 hours, is in the \
+same desk, and covers the same underlying subject (same commodity, same index, same conflict, \
+same company, same event thread) — you MUST treat it as an UPDATE, even if the specific \
+figures differ (e.g. an oil price from 15 minutes ago vs. now, a slightly different \
+percentage). Do NOT create a new entry just because the exact numbers moved. Fast-moving \
+stories (oil prices, market indices, an unfolding conflict) are expected to have updated \
+figures on every run — that is exactly what should trigger an update, not a duplicate. \
+Only create a new entry when the underlying subject itself is genuinely different from \
+everything in the provided list.
 - Assign each entry to exactly one of these desks: West Asia Desk, Maritime & Energy Desk, \
 Markets & Capital Desk, India Desk, Real Estate & Infrastructure Desk, Sports Desk, \
 Trends & Forecasting Desk, Global Politics Desk. If genuinely ambiguous, pick the closest \
