@@ -253,7 +253,6 @@ def send_kit(subject, html_content):
         "published_at": send_at,
         "send_at": send_at,
         "email_address": KIT_FROM_EMAIL,
-        "subscriber_filter": [{"all": [{"type": "all_subscribers"}]}],
     }
     resp = requests.post(url, headers=headers, json=payload, timeout=30)
     if resp.status_code != 201:
