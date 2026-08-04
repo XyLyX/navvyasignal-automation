@@ -159,18 +159,31 @@ UAE Desk coverage is the priority for this run — this run happens every 6 hour
 to keep UAE content current between the once-daily full briefing.
 - If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
 full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
-- LOCAL BREAKING-NEWS RULE: on every run, regardless of RUN_TYPE, you MUST run at least one \
-dedicated search pass specifically for UAE local breaking-news and incident reports — this is \
-separate from and in addition to your macro/desk-level topic searches (oil prices, markets, \
-geopolitics, etc.), which will NOT surface most local incidents on their own. Concretely, run \
-searches such as: "Dubai Media Office statement today", "UAE Civil Defence incident today", \
-"Dubai breaking news today", "Abu Dhabi incident today", and similar phrasing with the current \
-date. Cover things like: explosions, fires, industrial accidents, transport incidents (road, \
-metro, aviation, maritime near UAE waters), building collapses, severe weather impacts, and any \
-other acute local incident — even if it has no macro/market angle and would not otherwise surface \
-under a desk topic like Markets & Capital or Real Estate. A local incident with injuries or \
-fatalities is newsworthy on its own and belongs on UAE Desk even without further analytical \
-framing. Do not skip this pass just because other desks already have enough material for this run.
+- BREAKING-NEWS RULE (ALL DESKS): on every run, regardless of RUN_TYPE, macro/desk-level topic \
+searches (oil prices, market indices, ongoing conflict threads, policy analysis, etc.) will NOT \
+reliably surface acute breaking incidents on their own — those need their own dedicated search \
+pass per desk, in addition to your usual macro searches. Run at least one incident-focused search \
+for EACH of the following, using the current date in the query:
+  * UAE Desk: "Dubai Media Office statement today", "UAE Civil Defence incident today", "Abu Dhabi \
+incident today" — explosions, fires, industrial/transport accidents, building issues, severe \
+weather.
+  * West Asia Desk: breaking regional incidents (attacks, strikes, political upheaval, protests, \
+sudden military movements) beyond whatever is already tracked in ongoing conflict threads.
+  * Maritime & Energy Desk: tanker/vessel incidents, port or refinery accidents, pipeline \
+disruptions, shipping lane closures — not just price/index movements.
+  * Markets & Capital Desk: flash crashes, circuit breakers, emergency central bank action, major \
+unscheduled earnings or guidance shocks.
+  * India Desk: breaking incidents (accidents, disasters, major political events) inside India.
+  * Real Estate & Infrastructure Desk: building collapses, major project cancellations/approvals, \
+construction accidents.
+  * Sports Desk: breaking results, serious injuries, disciplinary or scandal news.
+  * Global Politics Desk: breaking political events — resignations, elections, coups, sudden \
+policy reversals — beyond scheduled/expected developments.
+  * Trends & Forecasting Desk: breaking data releases or reports that shift an existing forecast, \
+if any surface.
+An acute incident with real-world impact (injuries, fatalities, market/operational disruption) is \
+newsworthy on its own and belongs on its desk even without further analytical framing — do not \
+skip a desk's incident pass just because other desks already have enough material for this run.
 - Each Notion entry body must include full "What Happened" and "Why It Matters" sections \
 with real figures, attributions, and analysis — not a one-line summary.
 - Subject lines and headers must use proper case ("Navvya Signal - Daily Briefing"), never \
