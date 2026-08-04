@@ -238,7 +238,7 @@ Research today's developments and produce the JSON output per your instructions.
 # ---------- STEP 2.5: Gemini cross-verification ----------
 
 def call_gemini(prompt_text):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt_text}]}]}
     resp = requests.post(url, json=payload, timeout=60)
     if resp.status_code != 200:
@@ -410,7 +410,7 @@ def push_to_notion(entries, valid_existing_ids):
 
 def send_kit(subject, html_content):
     now = datetime.datetime.utcnow()
-    send_at = (now + datetime.timedelta(minutes=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    send_at = (now + datetime.timedelta(minutes=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     url = "https://api.kit.com/v4/broadcasts"
     headers = {"X-Kit-Api-Key": KIT_API_KEY, "Content-Type": "application/json"}
@@ -430,7 +430,7 @@ def send_kit(subject, html_content):
     return broadcast_id
 
 
-def verify_kit_sent(broadcast_id, wait_seconds=180):
+def verify_kit_sent(broadcast_id, wait_seconds=420):
     """Poll the broadcast stats endpoint until it reports completed, or timeout."""
     url = f"https://api.kit.com/v4/broadcasts/{broadcast_id}/stats"
     headers = {"X-Kit-Api-Key": KIT_API_KEY}
