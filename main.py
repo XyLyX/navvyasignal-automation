@@ -232,13 +232,14 @@ Existing recent Signal Feed entries (id | title | desk) for dedup reference:
 
 Research today's developments and produce the JSON output per your instructions."""
 
-    response = client.messages.create(
+    with client.messages.stream(
         model="claude-sonnet-4-5",
         max_tokens=32000,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": user_prompt}],
-    )
+    ) as stream:
+        response = stream.get_final_message()
 
     # Collect all text blocks (model may interleave search calls and text)
     text_parts = [block.text for block in response.content if block.type == "text"]
@@ -328,13 +329,14 @@ Current draft JSON:
 Output the FULL corrected JSON (same schema as before), with fixes applied. Output ONLY \
 the JSON, no other text."""
 
-    response = client.messages.create(
+    with client.messages.stream(
         model="claude-sonnet-4-5",
         max_tokens=32000,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
-    )
+    ) as stream:
+        response = stream.get_final_message()
     text_parts = [block.text for block in response.content if block.type == "text"]
     full_text = "\n".join(text_parts).strip()
 
