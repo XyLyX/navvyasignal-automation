@@ -27,14 +27,17 @@ WHAPI_TOKEN = os.environ.get("WHAPI_TOKEN", "")
 WHAPI_CHANNEL_ID = os.environ.get("WHAPI_CHANNEL_ID", "")
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
-# Which run this is: "general" (00:00/12:00 GST) or "india" (18:00 GST)
+# Which run this is: "general" (comprehensive, all desks) or "uae_refresh" (UAE-focused refresh)
 RUN_TYPE = os.environ.get("RUN_TYPE", "general")
+# Whether this run should actually send email/WhatsApp, or just refresh Notion content
+SEND_OUTPUT = os.environ.get("SEND_OUTPUT", "true").lower() == "true"
 
 DESKS = [
     "West Asia Desk",
     "Maritime & Energy Desk",
     "Markets & Capital Desk",
     "India Desk",
+    "UAE Desk",
     "Real Estate & Infrastructure Desk",
     "Sports Desk",
     "Trends & Forecasting Desk",
@@ -140,13 +143,24 @@ figures on every run — that is exactly what should trigger an update, not a du
 Only create a new entry when the underlying subject itself is genuinely different from \
 everything in the provided list.
 - Assign each entry to exactly one of these desks: West Asia Desk, Maritime & Energy Desk, \
-Markets & Capital Desk, India Desk, Real Estate & Infrastructure Desk, Sports Desk, \
+Markets & Capital Desk, India Desk, UAE Desk, Real Estate & Infrastructure Desk, Sports Desk, \
 Trends & Forecasting Desk, Global Politics Desk. If genuinely ambiguous, pick the closest \
 fit and note the ambiguity in a "notes" field — do not leave it blank.
+- UAE DESK RULE: any story that is specifically about the UAE (Dubai, Abu Dhabi, Sharjah, or \
+UAE federal policy/economy/markets) goes to UAE Desk as its primary desk, even if it would \
+otherwise fit Real Estate & Infrastructure, Markets & Capital, or another desk. When a UAE \
+story also has a clear secondary angle in another desk (e.g. a UAE real estate story with \
+national market implications), mention that secondary desk naturally within the body prose \
+(e.g. "This also carries implications for the broader Markets & Capital picture...") rather \
+than using a separate field or splitting it into two entries.
+- If RUN_TYPE is "uae_refresh": focus primarily on fresh UAE Desk developments since the last \
+check. You may also update other desks' entries if something has changed significantly, but \
+UAE Desk coverage is the priority for this run — this run happens every 6 hours specifically \
+to keep UAE content current between the once-daily full briefing.
+- If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
+full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
 - Each Notion entry body must include full "What Happened" and "Why It Matters" sections \
 with real figures, attributions, and analysis — not a one-line summary.
-- If this is the India Desk run, focus primarily on India Desk signals, and include \
-other-desk signals ONLY if they have a direct, material India angle.
 - Subject lines and headers must use proper case ("Navvya Signal - Daily Briefing"), never \
 all-caps.
 - If nothing meaningful changed since the last run, it is correct to return zero entries \
@@ -484,10 +498,12 @@ def main():
     valid_existing_ids = {e["id"] for e in existing}
     notion_summary = push_to_notion(briefing["notion_entries"], valid_existing_ids)
 
-    broadcast_id = send_kit(briefing["email_subject"], briefing["email_html"])
-    verify_kit_sent(broadcast_id)
-
-    send_whapi(briefing["whatsapp_text"])
+    if SEND_OUTPUT:
+        broadcast_id = send_kit(briefing["email_subject"], briefing["email_html"])
+        verify_kit_sent(broadcast_id)
+        send_whapi(briefing["whatsapp_text"])
+    else:
+        log("SEND_OUTPUT is false — this is a Notion-refresh-only run, skipping Kit/Whapi sends.")
 
     log("Run complete. Summary:")
     for line in notion_summary:

@@ -3,10 +3,23 @@ name: NavvyaSignal Daily Briefing
 on:
   schedule:
     # GST = UTC+4. Cron times below are in UTC.
-    - cron: "0 20 * * *"   # 00:00 GST (general briefing)
-    - cron: "0 8 * * *"    # 12:00 GST (general briefing)
-    - cron: "0 14 * * *"   # 18:00 GST (India Desk briefing)
-  workflow_dispatch: {}     # allows manual "Run workflow" button for ad-hoc runs
+    - cron: "0 2 * * *"    # 06:00 GST — full briefing, all desks, sends email + WhatsApp
+    - cron: "0 8 * * *"    # 12:00 GST — UAE-focused refresh only, Notion only, no send
+    - cron: "0 14 * * *"   # 18:00 GST — UAE-focused refresh only, Notion only, no send
+    - cron: "0 20 * * *"   # 00:00 GST — UAE-focused refresh only, Notion only, no send
+  workflow_dispatch:
+    inputs:
+      run_type:
+        description: "Run type: general (all desks) or uae_refresh (UAE-focused)"
+        required: false
+        default: "general"
+        type: choice
+        options: ["general", "uae_refresh"]
+      send_output:
+        description: "Send email/WhatsApp this run?"
+        required: false
+        default: true
+        type: boolean
 
 jobs:
   run-briefing:
@@ -24,13 +37,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Determine run type
+      - name: Determine run type and send flag
         id: runtype
         run: |
-          if [ "${{ github.event.schedule }}" = "0 14 * * *" ]; then
-            echo "run_type=india" >> "$GITHUB_OUTPUT"
-          else
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run_type=${{ github.event.inputs.run_type }}" >> "$GITHUB_OUTPUT"
+            echo "send_output=${{ github.event.inputs.send_output }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then
             echo "run_type=general" >> "$GITHUB_OUTPUT"
+            echo "send_output=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_type=uae_refresh" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run briefing script
@@ -44,4 +62,5 @@ jobs:
           WHAPI_CHANNEL_ID: ${{ secrets.WHAPI_CHANNEL_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
+          SEND_OUTPUT: ${{ steps.runtype.outputs.send_output }}
         run: python main.py
