@@ -121,7 +121,7 @@ def fetch_existing_entries():
 # ---------- STEP 2: Generate briefing via Claude ----------
 
 SYSTEM_PROMPT = """You are the editorial engine for NavvyaSignal, a daily intelligence \
-publication covering West Asia, Maritime & Energy, Markets & Capital, India, Real Estate \
+publication covering West Asia, Maritime & Energy, Markets & Capital, India, UAE, Real Estate \
 & Infrastructure, Sports, Trends & Forecasting, and Global Politics.
 
 Rules you must follow strictly:
@@ -159,6 +159,18 @@ UAE Desk coverage is the priority for this run — this run happens every 6 hour
 to keep UAE content current between the once-daily full briefing.
 - If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
 full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
+- LOCAL BREAKING-NEWS RULE: on every run, regardless of RUN_TYPE, you MUST run at least one \
+dedicated search pass specifically for UAE local breaking-news and incident reports — this is \
+separate from and in addition to your macro/desk-level topic searches (oil prices, markets, \
+geopolitics, etc.), which will NOT surface most local incidents on their own. Concretely, run \
+searches such as: "Dubai Media Office statement today", "UAE Civil Defence incident today", \
+"Dubai breaking news today", "Abu Dhabi incident today", and similar phrasing with the current \
+date. Cover things like: explosions, fires, industrial accidents, transport incidents (road, \
+metro, aviation, maritime near UAE waters), building collapses, severe weather impacts, and any \
+other acute local incident — even if it has no macro/market angle and would not otherwise surface \
+under a desk topic like Markets & Capital or Real Estate. A local incident with injuries or \
+fatalities is newsworthy on its own and belongs on UAE Desk even without further analytical \
+framing. Do not skip this pass just because other desks already have enough material for this run.
 - Each Notion entry body must include full "What Happened" and "Why It Matters" sections \
 with real figures, attributions, and analysis — not a one-line summary.
 - Subject lines and headers must use proper case ("Navvya Signal - Daily Briefing"), never \
