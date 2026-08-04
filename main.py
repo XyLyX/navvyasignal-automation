@@ -168,7 +168,11 @@ Schema:
       "existing_id": "notion page id if action=update, else null",
       "title": "string",
       "desk": "one of the 8 desk names exactly as listed above",
-      "body_markdown": "string, max 1800 chars, with What Happened / Why It Matters sections",
+      "body_markdown": "string, max 1800 chars, flowing prose covering what happened and why it \
+matters — do NOT use markdown syntax like ## headers or ** bold **, since this is stored in a \
+Notion rich-text property that displays plain text literally, not rendered markdown. Structure \
+it as clear paragraphs instead: one or two paragraphs on what happened, then a paragraph on why \
+it matters — no visible section labels or markdown symbols of any kind.",
       "sources_text": "string, max 1800 chars, e.g. 'Sources: Reuters, AP. Quotes verified across outlets.'",
       "notes": "string, e.g. ambiguity flag, or empty string"
     }
@@ -357,8 +361,14 @@ def push_to_notion(entries, valid_existing_ids):
             entry["action"] = "create"
             entry["existing_id"] = None
 
+        # Notion rich_text properties display markdown literally (not rendered) — strip any
+        # that slipped through despite the prompt instruction, so it never shows as "## " on the live site.
+        import re as _re
+        clean_body = _re.sub(r"^#{1,6}\s*", "", entry["body_markdown"], flags=_re.MULTILINE)
+        clean_body = _re.sub(r"\*\*(.+?)\*\*", r"\1", clean_body)
+
         # Notion has a 2000-char limit per rich_text content block
-        signal_brief = entry["body_markdown"][:2000]
+        signal_brief = clean_body[:2000]
         sources_text = entry.get("sources_text", "")[:2000]
 
         properties = {
