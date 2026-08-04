@@ -234,7 +234,7 @@ Research today's developments and produce the JSON output per your instructions.
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=16000,
+        max_tokens=32000,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": user_prompt}],
@@ -330,7 +330,7 @@ the JSON, no other text."""
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=16000,
+        max_tokens=32000,
         system=SYSTEM_PROMPT,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
