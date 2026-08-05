@@ -498,7 +498,10 @@ def send_whapi(text):
     url = "https://gate.whapi.cloud/messages/text"
     headers = {"Authorization": f"Bearer {WHAPI_TOKEN}", "Content-Type": "application/json"}
     payload = {"to": WHAPI_CHANNEL_ID, "body": text}
+    log(f"DEBUG: Whapi payload length = {len(text)} chars. First 150 chars: {text[:150]!r}")
+    log(f"DEBUG: Whapi payload last 150 chars: {text[-150:]!r}")
     resp = requests.post(url, headers=headers, json=payload, timeout=30)
+    log(f"DEBUG: Whapi raw response status={resp.status_code} body={resp.text}")
     if resp.status_code != 200 or not resp.json().get("sent"):
         fail_hard(f"Whapi send failed: {resp.status_code} {resp.text}")
     log("Whapi message sent successfully.")
