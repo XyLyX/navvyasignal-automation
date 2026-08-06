@@ -25,6 +25,7 @@ KIT_API_KEY = os.environ["KIT_API_KEY"]
 KIT_FROM_EMAIL = os.environ.get("KIT_FROM_EMAIL", "hello@navvyasignal.com")
 WHAPI_TOKEN = os.environ.get("WHAPI_TOKEN", "")
 WHAPI_CHANNEL_ID = os.environ.get("WHAPI_CHANNEL_ID", "")
+OPS_NOTIFY_NUMBER = os.environ.get("OPS_NOTIFY_NUMBER", "")
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 # Which run this is: "general" (comprehensive, all desks) or "uae_refresh" (UAE-focused refresh)
@@ -539,6 +540,48 @@ def main():
     for line in notion_summary:
         log(f"  {line}")
 
+    return {
+        "edition_label": briefing["edition_label"],
+        "entry_count": len(briefing["notion_entries"]),
+        "notion_summary": notion_summary,
+        "sent_output": SEND_OUTPUT,
+    }
+
+
+def send_ops_notification(text):
+    """Best-effort WhatsApp DM to the operator with a run status update.
+    Never raises — a notification failure must not mask the real run result."""
+    if not OPS_NOTIFY_NUMBER or not WHAPI_TOKEN:
+        log("WARNING: OPS_NOTIFY_NUMBER or WHAPI_TOKEN not configured — skipping ops notification.")
+        return
+    try:
+        digits = "".join(ch for ch in OPS_NOTIFY_NUMBER if ch.isdigit())
+        url = "https://gate.whapi.cloud/messages/text"
+        headers = {"Authorization": f"Bearer {WHAPI_TOKEN}", "Content-Type": "application/json"}
+        payload = {"to": f"{digits}@s.whatsapp.net", "body": text}
+        resp = requests.post(url, headers=headers, json=payload, timeout=30)
+        if resp.status_code != 200 or not resp.json().get("sent"):
+            log(f"WARNING: Ops notification failed to send: {resp.status_code} {resp.text}")
+        else:
+            log("Ops notification sent.")
+    except Exception as e:
+        log(f"WARNING: Ops notification raised an exception (ignored): {e}")
+
 
 if __name__ == "__main__":
-    main()
+    try:
+        result = main()
+        notion_lines = "\n".join(f"- {line}" for line in result["notion_summary"]) or "(no changes)"
+        send_ops_notification(
+            f"✅ NavvyaSignal run OK\n"
+            f"Type: {RUN_TYPE} | Sent email/WhatsApp: {result['sent_output']}\n"
+            f"{result['edition_label']} — {result['entry_count']} entries\n"
+            f"{notion_lines}"
+        )
+    except SystemExit:
+        # fail_hard() already logged a FATAL line above this.
+        send_ops_notification(f"❌ NavvyaSignal run FAILED (type={RUN_TYPE})\nSee GitHub Actions log for the FATAL line.")
+        raise
+    except Exception as e:
+        send_ops_notification(f"❌ NavvyaSignal run CRASHED (type={RUN_TYPE})\n{type(e).__name__}: {e}")
+        raise

@@ -60,6 +60,7 @@ jobs:
           KIT_FROM_EMAIL: ${{ secrets.KIT_FROM_EMAIL }}
           WHAPI_TOKEN: ${{ secrets.WHAPI_TOKEN }}
           WHAPI_CHANNEL_ID: ${{ secrets.WHAPI_CHANNEL_ID }}
+          OPS_NOTIFY_NUMBER: ${{ secrets.OPS_NOTIFY_NUMBER }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
           SEND_OUTPUT: ${{ steps.runtype.outputs.send_output }}
