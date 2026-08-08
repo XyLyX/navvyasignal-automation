@@ -18,15 +18,15 @@ import anthropic
 
 # ---------- CONFIG ----------
 
-ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
-NOTION_API_KEY = os.environ["NOTION_API_KEY"]
-NOTION_DATABASE_ID = os.environ["NOTION_DATABASE_ID"]
-KIT_API_KEY = os.environ["KIT_API_KEY"]
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+NOTION_API_KEY = os.environ.get("NOTION_API_KEY", "")
+NOTION_DATABASE_ID = os.environ.get("NOTION_DATABASE_ID", "")
+KIT_API_KEY = os.environ.get("KIT_API_KEY", "")
 KIT_FROM_EMAIL = os.environ.get("KIT_FROM_EMAIL", "hello@navvyasignal.com")
 WHAPI_TOKEN = os.environ.get("WHAPI_TOKEN", "")
 WHAPI_CHANNEL_ID = os.environ.get("WHAPI_CHANNEL_ID", "")
 OPS_NOTIFY_NUMBER = os.environ.get("OPS_NOTIFY_NUMBER", "")
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # Which run this is: "general" (comprehensive, all desks) or "uae_refresh" (UAE-focused refresh)
 RUN_TYPE = os.environ.get("RUN_TYPE", "general")
@@ -512,6 +512,17 @@ def send_whapi(text):
 
 def main():
     log(f"Starting NavvyaSignal automated run (type={RUN_TYPE})")
+
+    required = {
+        "ANTHROPIC_API_KEY": ANTHROPIC_API_KEY,
+        "NOTION_API_KEY": NOTION_API_KEY,
+        "NOTION_DATABASE_ID": NOTION_DATABASE_ID,
+        "KIT_API_KEY": KIT_API_KEY,
+        "GEMINI_API_KEY": GEMINI_API_KEY,
+    }
+    missing = [name for name, value in required.items() if not value]
+    if missing:
+        fail_hard(f"Missing required secret(s): {', '.join(missing)}. Check GitHub Actions secrets.")
 
     existing = fetch_existing_entries()
     log(f"Fetched {len(existing)} existing Notion entries for dedup reference.")
