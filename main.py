@@ -160,28 +160,35 @@ UAE Desk coverage is the priority for this run — this run happens every 6 hour
 to keep UAE content current between the once-daily full briefing.
 - If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
 full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
-- BREAKING-NEWS RULE (ALL DESKS): on every run, regardless of RUN_TYPE, macro/desk-level topic \
-searches (oil prices, market indices, ongoing conflict threads, policy analysis, etc.) will NOT \
-reliably surface acute breaking incidents on their own — those need their own dedicated search \
-pass per desk, in addition to your usual macro searches. Run at least one incident-focused search \
-for EACH of the following, using the current date in the query:
+- BREAKING-NEWS RULE: macro/desk-level topic searches (oil prices, market indices, ongoing conflict \
+threads, policy analysis, etc.) will NOT reliably surface acute breaking incidents on their own — \
+those need their own dedicated search pass per desk, in addition to your usual macro searches. Run \
+at least one incident-focused search for each in-scope desk below, using the current date in the \
+query. Scope depends on RUN_TYPE:
+  * If RUN_TYPE is "uae_refresh": only run dedicated breaking-news passes for UAE Desk and India \
+Desk (the two desks this run type covers) — do NOT run breaking-news passes for the other 7 desks \
+on this run type, since it happens 3x more often than "general" and running all 9 desks' passes \
+every time is unnecessary cost for desks this run type isn't focused on.
+  * If RUN_TYPE is "general": run dedicated breaking-news passes for ALL 9 desks below, since this \
+is the once-daily comprehensive sweep.
   * UAE Desk: "Dubai Media Office statement today", "UAE Civil Defence incident today", "Abu Dhabi \
 incident today" — explosions, fires, industrial/transport accidents, building issues, severe \
 weather.
-  * West Asia Desk: breaking regional incidents (attacks, strikes, political upheaval, protests, \
-sudden military movements) beyond whatever is already tracked in ongoing conflict threads.
-  * Maritime & Energy Desk: tanker/vessel incidents, port or refinery accidents, pipeline \
-disruptions, shipping lane closures — not just price/index movements.
-  * Markets & Capital Desk: flash crashes, circuit breakers, emergency central bank action, major \
-unscheduled earnings or guidance shocks.
   * India Desk: breaking incidents (accidents, disasters, major political events) inside India.
-  * Real Estate & Infrastructure Desk: building collapses, major project cancellations/approvals, \
-construction accidents.
-  * Sports Desk: breaking results, serious injuries, disciplinary or scandal news.
-  * Global Politics Desk: breaking political events — resignations, elections, coups, sudden \
-policy reversals — beyond scheduled/expected developments.
-  * Trends & Forecasting Desk: breaking data releases or reports that shift an existing forecast, \
-if any surface.
+  * West Asia Desk (general only): breaking regional incidents (attacks, strikes, political \
+upheaval, protests, sudden military movements) beyond whatever is already tracked in ongoing \
+conflict threads.
+  * Maritime & Energy Desk (general only): tanker/vessel incidents, port or refinery accidents, \
+pipeline disruptions, shipping lane closures — not just price/index movements.
+  * Markets & Capital Desk (general only): flash crashes, circuit breakers, emergency central bank \
+action, major unscheduled earnings or guidance shocks.
+  * Real Estate & Infrastructure Desk (general only): building collapses, major project \
+cancellations/approvals, construction accidents.
+  * Sports Desk (general only): breaking results, serious injuries, disciplinary or scandal news.
+  * Global Politics Desk (general only): breaking political events — resignations, elections, \
+coups, sudden policy reversals — beyond scheduled/expected developments.
+  * Trends & Forecasting Desk (general only): breaking data releases or reports that shift an \
+existing forecast, if any surface.
 An acute incident with real-world impact (injuries, fatalities, market/operational disruption) is \
 newsworthy on its own and belongs on its desk even without further analytical framing — do not \
 skip a desk's incident pass just because other desks already have enough material for this run.

@@ -4,9 +4,7 @@ on:
   schedule:
     # GST = UTC+4. Cron times below are in UTC.
     - cron: "0 2 * * *"    # 06:00 GST — full briefing, all desks, sends email + WhatsApp
-    - cron: "0 8 * * *"    # 12:00 GST — UAE-focused refresh only, Notion only, no send
     - cron: "0 14 * * *"   # 18:00 GST — UAE-focused refresh only, Notion only, no send
-    - cron: "0 20 * * *"   # 00:00 GST — UAE-focused refresh only, Notion only, no send
   workflow_dispatch:
     inputs:
       run_type:
