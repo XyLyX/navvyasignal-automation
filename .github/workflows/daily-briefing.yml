@@ -2,9 +2,8 @@ name: NavvyaSignal Daily Briefing
 
 on:
   schedule:
-    # GST = UTC+4. Cron times below are in UTC.
-    - cron: "0 2 * * *"    # 06:00 GST — full briefing, all desks, sends email + WhatsApp
-    - cron: "0 14 * * *"   # 18:00 GST — UAE-focused refresh only, Notion only, no send
+    # GST = UTC+4. Cron time below is in UTC.
+    - cron: "0 14 * * *"   # 18:00 GST — full briefing, all desks, sends email + WhatsApp
   workflow_dispatch:
     inputs:
       run_type:
@@ -41,12 +40,9 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run_type=${{ github.event.inputs.run_type }}" >> "$GITHUB_OUTPUT"
             echo "send_output=${{ github.event.inputs.send_output }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then
+          else
             echo "run_type=general" >> "$GITHUB_OUTPUT"
             echo "send_output=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run_type=uae_refresh" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run briefing script
