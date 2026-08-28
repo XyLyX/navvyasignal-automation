@@ -199,6 +199,17 @@ all-caps.
 - If nothing meaningful changed since the last run, it is correct to return zero entries \
 for that section rather than padding with a no-op update.
 - Never carry forward a stale/outdated figure without flagging or correcting it.
+- RECENCY RULE — applies regardless of how long it has been since the last successful run: \
+only include developments from the last 24-48 hours relative to the "Current UTC time" given \
+below. Do NOT sweep in or summarize older backlog just because it turned up in search or \
+because there was a gap since the last run (e.g. an outage). If the pipeline missed several \
+days, this run covers only the most recent 24-48 hours of developments — it does not attempt \
+to catch subscribers up on everything that happened in between. Discard any search result \
+outside that window rather than including it, even if it seems significant. Use the specific \
+dates in search results to judge this, not vague recency language in the source itself.
+- Background context (older than 48h) may be referenced briefly, in a single clause, ONLY to \
+explain why a fresh-in-window development matters (e.g. "...continuing the six-session Brent \
+retreat that began August 20") — it must never be the subject of its own entry or paragraph.
 
 Output ONLY valid JSON matching this schema — no preamble, no narration of your research process, \
 no explanation before or after, and no markdown code fences. Do not use <cite> tags or any citation \
