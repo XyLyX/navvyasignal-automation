@@ -226,7 +226,13 @@ with real figures, attributions, and analysis — not a one-line summary.
 - Subject lines and headers must use proper case ("Navvya Signal - Daily Briefing"), never \
 all-caps.
 - If nothing meaningful changed since the last run, it is correct to return zero entries \
-for that section rather than padding with a no-op update.
+for that section rather than padding with a no-op update. This is a per-STORY judgment, not \
+a per-DESK one: a desk having already published an entry earlier today does NOT mean that \
+desk is "done" for the day. Run the full roundup and incident searches for every desk on every \
+run regardless of what that desk already covered — if they surface a genuinely distinct new \
+development (different topic, different specific event), it gets its own entry even if the \
+same desk already has other entries today. Only skip when the search results contain nothing \
+that is both new (within the recency window) and distinct from what's already covered.
 - Never carry forward a stale/outdated figure without flagging or correcting it.
 - RECENCY RULE — applies regardless of how long it has been since the last successful run: \
 only include developments from the last 24-48 hours relative to the "Current UTC time" given \
