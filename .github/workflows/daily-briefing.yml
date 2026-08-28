@@ -3,7 +3,9 @@ name: NavvyaSignal Daily Briefing
 on:
   schedule:
     # GST = UTC+4. Cron time below is in UTC.
-    - cron: "0 14 * * *"   # 18:00 GST — full briefing, all desks, sends email + WhatsApp
+    # Offset 6 min past the hour — GitHub Actions documents that scheduled runs at the exact
+    # top of the hour are more likely to be delayed or silently skipped under high load.
+    - cron: "6 14 * * *"   # 18:06 GST — full briefing, all desks, sends email + WhatsApp
   workflow_dispatch:
     inputs:
       run_type:
