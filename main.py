@@ -170,15 +170,17 @@ need their own broad sweep. Run at least one query like these per desk, adapted 
   * UAE Desk: "UAE news today", "Khaleej Times today", "Gulf News UAE today" — covering diplomacy, \
 government announcements, infrastructure, aid, regulation, and human-interest stories, not just \
 conflict-adjacent or incident news.
-  * India Desk: "India news today", broad outlet roundup, not just accidents/disasters.
+  * India Desk: "India news today", "Times of India today", "Hindustan Times today" — covering \
+diplomacy, government announcements, infrastructure, economic policy, regulation, and human- \
+interest stories, not just accidents/disasters or the specific threads already tracked.
   * West Asia Desk: "Middle East news today" beyond the primary conflict thread already tracked.
   * Markets & Capital Desk: broad market roundup beyond the specific indices already tracked.
   * Real Estate & Infrastructure Desk: "infrastructure news today", project announcements beyond \
 collapses/accidents.
   * Sports Desk: general sports roundup beyond the leagues/injuries already tracked.
   * Global Politics Desk: general political roundup beyond elections/coups already tracked.
-  Apply the same principle to India, Maritime & Energy, and Trends & Forecasting Desks: a topic- \
-specific search finds what you already expect — a broad roundup search finds what you don't.
+  Apply the same principle to Maritime & Energy and Trends & Forecasting Desks: a topic-specific \
+search finds what you already expect — a broad roundup search finds what you don't.
 - BREAKING-NEWS RULE: macro/desk-level topic searches (oil prices, market indices, ongoing conflict \
 threads, policy analysis, etc.) will NOT reliably surface acute breaking incidents on their own — \
 those need their own dedicated search pass per desk, in addition to your usual macro searches. Run \
@@ -193,7 +195,9 @@ is the once-daily comprehensive sweep.
   * UAE Desk: "Dubai Media Office statement today", "UAE Civil Defence incident today", "Abu Dhabi \
 incident today" — explosions, fires, industrial/transport accidents, structural/building issues, \
 deaths or casualties (falls, drownings, road accidents), severe weather.
-  * India Desk: breaking incidents (accidents, disasters, major political events) inside India.
+  * India Desk: "India accident today", "India disaster today", "PTI breaking news" — accidents, \
+natural disasters, industrial/transport incidents, deaths or casualties, major political events \
+(resignations, unrest, sudden policy action) inside India.
   * West Asia Desk (general only): breaking regional incidents (attacks, strikes, political \
 upheaval, protests, sudden military movements) beyond whatever is already tracked in ongoing \
 conflict threads.
