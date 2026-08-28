@@ -170,9 +170,15 @@ need their own broad sweep. Run at least one query like these per desk, adapted 
   * UAE Desk: "UAE news today", "Khaleej Times today", "Gulf News UAE today" — covering diplomacy, \
 government announcements, infrastructure, aid, regulation, and human-interest stories, not just \
 conflict-adjacent or incident news.
-  * India Desk: "India news today", "Times of India today", "Hindustan Times today" — covering \
-diplomacy, government announcements, infrastructure, economic policy, regulation, and human- \
-interest stories, not just accidents/disasters or the specific threads already tracked.
+  * India Desk: "India news today", "Reuters India today", "Indian Express today", "Times of \
+India today" — covering diplomacy, government announcements, infrastructure, economic policy, \
+regulation, and human-interest stories, not just accidents/disasters or the specific threads \
+already tracked. Prioritize Reuters for low-noise business/economy/markets/policy signal, Indian \
+Express for politics/government/courts, The Hindu when depth/context matters more than speed, and \
+Times of India/Hindustan Times for breadth. When multiple India stories compete for space, weight \
+toward what matters to a UAE-based reader with India business, trade, or investment exposure — \
+markets, RBI/policy moves, trade ties, infrastructure, and major national events — over purely \
+domestic political or celebrity/crime stories with no external relevance.
   * West Asia Desk: "Middle East news today" beyond the primary conflict thread already tracked.
   * Markets & Capital Desk: broad market roundup beyond the specific indices already tracked.
   * Real Estate & Infrastructure Desk: "infrastructure news today", project announcements beyond \
