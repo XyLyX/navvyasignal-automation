@@ -28,9 +28,12 @@ WHAPI_CHANNEL_ID = os.environ.get("WHAPI_CHANNEL_ID", "")
 OPS_NOTIFY_NUMBER = os.environ.get("OPS_NOTIFY_NUMBER", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
-# Which run this is: "general" (comprehensive, all desks) or "uae_refresh" (UAE-focused refresh)
-RUN_TYPE = os.environ.get("RUN_TYPE", "general")
-# Whether this run should actually send email/WhatsApp, or just refresh Notion content
+# Which run this is: "group_a" / "group_b" / "group_c" (research + Notion push for that
+# group's 3 desks only, no send) or "compile_send" (no research — compiles today's already-
+# researched Notion entries into the single daily email + WhatsApp send).
+RUN_TYPE = os.environ.get("RUN_TYPE", "compile_send")
+# Whether this run should actually send email/WhatsApp. Only ever true for compile_send —
+# group runs never send regardless of this flag (enforced in main(), not just here).
 SEND_OUTPUT = os.environ.get("SEND_OUTPUT", "true").lower() == "true"
 
 DESKS = [
@@ -44,6 +47,22 @@ DESKS = [
     "Trends & Forecasting Desk",
     "Global Politics Desk",
 ]
+
+# Desks are split into 3 balanced groups (each mixing a heavier desk with lighter ones) so a
+# single research call never has to split its attention across all 9 desks at once — that
+# split-attention pattern was the root cause of desks being silently skipped under the old
+# single-call "general" run. Each group gets its own dedicated run, staggered through the day;
+# a final compile_send run assembles everything into one daily email + WhatsApp send.
+GROUPS = {
+    "group_a": ["West Asia Desk", "UAE Desk", "Trends & Forecasting Desk"],
+    "group_b": ["Maritime & Energy Desk", "India Desk", "Real Estate & Infrastructure Desk"],
+    "group_c": ["Markets & Capital Desk", "Global Politics Desk", "Sports Desk"],
+}
+
+# How far back compile_send looks in Notion for "today's" entries to compile. Group A starts
+# at 13:30 GST and compile_send runs at 18:30 GST — a 5 hour span — so 6 hours gives buffer
+# for a group run that started slightly late without pulling in yesterday's entries.
+COMPILE_WINDOW_HOURS = 6
 
 NOTION_VERSION = "2022-06-28"
 NOTION_HEADERS = {
@@ -119,6 +138,57 @@ def fetch_existing_entries():
     return entries
 
 
+def fetch_todays_entries_for_compile():
+    """Pull today's already-researched entries (from the group_a/group_b/group_c runs earlier
+    today) for compile_send to assemble into the final digest. Unlike fetch_existing_entries
+    (which only needs a short snippet for dedup matching), this needs the FULL body text since
+    it's the actual source material for the compiled email/WhatsApp send — no re-research or
+    re-writing of facts happens at compile time, only formatting/assembly of what's already
+    validated and in Notion."""
+    url = f"https://api.notion.com/v1/databases/{NOTION_DATABASE_ID}/query"
+    payload = {
+        "page_size": 100,
+        "sorts": [{"timestamp": "last_edited_time", "direction": "descending"}],
+    }
+    resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
+    if resp.status_code != 200:
+        fail_hard(f"Notion query failed: {resp.status_code} {resp.text}")
+    results = resp.json().get("results", [])
+
+    cutoff = datetime.datetime.utcnow() - datetime.timedelta(hours=COMPILE_WINDOW_HOURS)
+    entries = []
+    for page in results:
+        edited_time_str = page.get("last_edited_time", "")
+        try:
+            edited_dt = datetime.datetime.strptime(edited_time_str[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            edited_dt = None
+        if edited_dt and edited_dt < cutoff:
+            continue
+
+        props = page.get("properties", {})
+        title = ""
+        if "Name" in props and props["Name"].get("title"):
+            title = "".join([t.get("plain_text", "") for t in props["Name"]["title"]])
+        desk = ""
+        if "Category" in props and props["Category"].get("select"):
+            desk = props["Category"]["select"].get("name", "")
+        body = ""
+        if "Signal Brief" in props and props["Signal Brief"].get("rich_text"):
+            body = "".join([t.get("plain_text", "") for t in props["Signal Brief"]["rich_text"]])
+        sources = ""
+        if "Text 1" in props and props["Text 1"].get("rich_text"):
+            sources = "".join([t.get("plain_text", "") for t in props["Text 1"]["rich_text"]])
+
+        entries.append({
+            "title": title,
+            "desk": desk,
+            "body": body,
+            "sources": sources,
+        })
+    return entries
+
+
 # ---------- STEP 2: Generate briefing via Claude ----------
 
 SYSTEM_PROMPT = """You are the editorial engine for NavvyaSignal, a daily intelligence \
@@ -154,12 +224,17 @@ story also has a clear secondary angle in another desk (e.g. a UAE real estate s
 national market implications), mention that secondary desk naturally within the body prose \
 (e.g. "This also carries implications for the broader Markets & Capital picture...") rather \
 than using a separate field or splitting it into two entries.
-- If RUN_TYPE is "uae_refresh": focus primarily on fresh UAE Desk developments since the last \
-check. You may also update other desks' entries if something has changed significantly, but \
-UAE Desk coverage is the priority for this run — this run happens every 6 hours specifically \
-to keep UAE content current between the once-daily full briefing.
-- If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
-full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
+- SCOPE RULE: this run covers ONLY the specific desks listed under "Desks in scope for this \
+run" in the user message below — a subset of the 9 desks, never all of them. Apply the DAILY \
+ROUNDUP RULE and BREAKING-NEWS RULE (below) IN FULL to each in-scope desk — give them the same \
+thorough, real search effort you would give a single desk on its own. Do NOT research, write, \
+or return any entry for a desk that is not in scope this run, even if you're aware of breaking \
+news there — a separate dedicated run covers that desk on its own schedule later. This scoping \
+exists specifically so each run gives its 2-3 desks real, complete attention instead of \
+splitting effort thin across all 9 at once.
+- This run does NOT send email or WhatsApp. Leave "email_subject", "email_html", and \
+"whatsapp_text" as empty strings — a separate later run compiles everything into the actual \
+send. Only "edition_label", "editor_note", and "notion_entries" matter for this run.
 - DAILY ROUNDUP RULE: "your usual macro searches" must include at least one genuinely broad, \
 outlet-level roundup search per desk, using the current date — not just topic-specific queries \
 tied to whatever conflict thread or index you already expect to update. A desk-level search for \
@@ -192,31 +267,28 @@ threads, policy analysis, etc.) will NOT reliably surface acute breaking inciden
 those need their own dedicated search pass per desk, in addition to your usual macro searches. Run \
 at least one incident-focused search for each in-scope desk below, using the current date in the \
 query. Scope depends on RUN_TYPE:
-  * If RUN_TYPE is "uae_refresh": only run dedicated breaking-news passes for UAE Desk and India \
-Desk (the two desks this run type covers) — do NOT run breaking-news passes for the other 7 desks \
-on this run type, since it happens 3x more often than "general" and running all 9 desks' passes \
-every time is unnecessary cost for desks this run type isn't focused on.
-  * If RUN_TYPE is "general": run dedicated breaking-news passes for ALL 9 desks below, since this \
-is the once-daily comprehensive sweep.
+  Run a dedicated breaking-news pass for every desk in scope for this run (see SCOPE RULE \
+above) — typically 2-3 desks per run, never all 9. Do not run breaking-news passes for \
+out-of-scope desks; they get their own dedicated run.
   * UAE Desk: "Dubai Media Office statement today", "UAE Civil Defence incident today", "Abu Dhabi \
 incident today" — explosions, fires, industrial/transport accidents, structural/building issues, \
 deaths or casualties (falls, drownings, road accidents), severe weather.
   * India Desk: "India accident today", "India disaster today", "PTI breaking news" — accidents, \
 natural disasters, industrial/transport incidents, deaths or casualties, major political events \
 (resignations, unrest, sudden policy action) inside India.
-  * West Asia Desk (general only): breaking regional incidents (attacks, strikes, political \
+  * West Asia Desk: breaking regional incidents (attacks, strikes, political \
 upheaval, protests, sudden military movements) beyond whatever is already tracked in ongoing \
 conflict threads.
-  * Maritime & Energy Desk (general only): tanker/vessel incidents, port or refinery accidents, \
+  * Maritime & Energy Desk: tanker/vessel incidents, port or refinery accidents, \
 pipeline disruptions, shipping lane closures — not just price/index movements.
-  * Markets & Capital Desk (general only): flash crashes, circuit breakers, emergency central bank \
+  * Markets & Capital Desk: flash crashes, circuit breakers, emergency central bank \
 action, major unscheduled earnings or guidance shocks.
-  * Real Estate & Infrastructure Desk (general only): building collapses, major project \
+  * Real Estate & Infrastructure Desk: building collapses, major project \
 cancellations/approvals, construction accidents.
-  * Sports Desk (general only): breaking results, serious injuries, disciplinary or scandal news.
-  * Global Politics Desk (general only): breaking political events — resignations, elections, \
+  * Sports Desk: breaking results, serious injuries, disciplinary or scandal news.
+  * Global Politics Desk: breaking political events — resignations, elections, \
 coups, sudden policy reversals — beyond scheduled/expected developments.
-  * Trends & Forecasting Desk (general only): breaking data releases or reports that shift an \
+  * Trends & Forecasting Desk: breaking data releases or reports that shift an \
 existing forecast, if any surface.
 An acute incident with real-world impact (injuries, fatalities, market/operational disruption) is \
 newsworthy on its own and belongs on its desk even without further analytical framing — do not \
@@ -277,14 +349,17 @@ it matters — no visible section labels or markdown symbols of any kind.",
 """
 
 
-def generate_briefing(existing_entries):
+def generate_briefing(existing_entries, scope_desks):
+    scope_line = "Desks in scope for this run: " + ", ".join(scope_desks)
     user_prompt = f"""Run type: {RUN_TYPE}
+{scope_line}
 Current UTC time: {datetime.datetime.utcnow().isoformat()}Z
 
 Existing recent Signal Feed entries (id | title | desk) for dedup reference:
 {json.dumps(existing_entries, indent=2)}
 
-Research today's developments and produce the JSON output per your instructions."""
+Research today's developments for ONLY the desks listed above and produce the JSON output \
+per your instructions."""
 
     with client.messages.stream(
         model="claude-sonnet-4-5",
@@ -325,6 +400,79 @@ Research today's developments and produce the JSON output per your instructions.
     for k in required_keys:
         if k not in data:
             fail_hard(f"Model output missing required key: {k}")
+
+    return data
+
+
+COMPILE_SYSTEM_PROMPT = """You are the compilation editor for NavvyaSignal, a daily intelligence \
+publication. You do NOT research or write new facts — you assemble the final daily email and \
+WhatsApp send from already-researched, already-validated entries provided to you below. Every \
+fact in the provided entries has already been fact-checked; do not add, remove, or alter any \
+factual claim, figure, or attribution — only format and organize.
+
+Rules:
+- Group entries by desk in this order where present: West Asia Desk, Maritime & Energy Desk, \
+Markets & Capital Desk, India Desk, UAE Desk, Real Estate & Infrastructure Desk, Sports Desk, \
+Trends & Forecasting Desk, Global Politics Desk.
+- Subject lines and headers use proper case ("Navvya Signal - Daily Briefing"), never all-caps.
+- email_html: full HTML body, clean sections per desk, using the provided title/body/sources \
+for each entry verbatim (light formatting only — do not rewrite the prose).
+- whatsapp_text: staccato style summarizing the day's key entries, no markdown, ends with a \
+navvyasignal.com invite.
+- If the provided entries list is empty, still produce a short, honest edition noting that no \
+qualifying developments were found across desks today, rather than fabricating content.
+- editor_note: 1-2 sentences noting anything worth flagging (e.g. a desk with no update today), \
+or empty string.
+
+Output ONLY valid JSON matching this schema — no preamble, no markdown code fences:
+{
+  "edition_label": "string, e.g. '2026-08-01, 18:30 GST edition'",
+  "editor_note": "string, or empty string",
+  "email_subject": "string",
+  "email_html": "string, full HTML body for the email",
+  "whatsapp_text": "string, staccato style, no markdown, ends with navvyasignal.com invite"
+}
+"""
+
+
+def compile_briefing(todays_entries):
+    user_prompt = f"""Current UTC time: {datetime.datetime.utcnow().isoformat()}Z
+
+Today's researched entries to compile into the daily send:
+{json.dumps(todays_entries, indent=2)}
+
+Assemble the final email and WhatsApp content per your instructions."""
+
+    with client.messages.stream(
+        model="claude-sonnet-4-5",
+        max_tokens=16000,
+        system=COMPILE_SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": user_prompt}],
+    ) as stream:
+        response = stream.get_final_message()
+
+    text_parts = [block.text for block in response.content if block.type == "text"]
+    full_text = "\n".join(text_parts).strip()
+
+    import re
+    fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", full_text, re.DOTALL)
+    if fence_match:
+        json_str = fence_match.group(1)
+    else:
+        start = full_text.find("{")
+        end = full_text.rfind("}")
+        if start == -1 or end == -1 or end < start:
+            fail_hard(f"Could not locate a JSON object in compile output.\nRaw output:\n{full_text[:2000]}")
+        json_str = full_text[start:end + 1]
+
+    try:
+        data = json.loads(json_str)
+    except json.JSONDecodeError as e:
+        fail_hard(f"Compile output was not valid JSON: {e}\nExtracted text:\n{json_str[:2000]}")
+
+    for k in ["edition_label", "email_subject", "email_html", "whatsapp_text"]:
+        if k not in data:
+            fail_hard(f"Compile output missing required key: {k}")
 
     return data
 
@@ -628,30 +776,46 @@ def main():
     if missing:
         fail_hard(f"Missing required secret(s): {', '.join(missing)}. Check GitHub Actions secrets.")
 
+    if RUN_TYPE in GROUPS:
+        return run_group(RUN_TYPE)
+    elif RUN_TYPE == "compile_send":
+        return run_compile_send()
+    else:
+        fail_hard(f"Unrecognized RUN_TYPE '{RUN_TYPE}' — expected one of {list(GROUPS.keys())} "
+                   f"or 'compile_send'.")
+
+
+def run_group(run_type):
+    """Research + Notion push for exactly this group's 2-3 desks. Never sends email/WhatsApp,
+    regardless of SEND_OUTPUT — sending only ever happens from compile_send, once per day,
+    after all groups have run."""
+    scope_desks = GROUPS[run_type]
+    log(f"Group run scoped to: {', '.join(scope_desks)}")
+
     existing = fetch_existing_entries()
     log(f"Fetched {len(existing)} existing Notion entries for dedup reference.")
 
-    briefing = generate_briefing(existing)
+    briefing = generate_briefing(existing, scope_desks)
     log(f"Generated briefing: {briefing['edition_label']}, {len(briefing['notion_entries'])} entries")
 
-    # Basic staleness/sanity guard: refuse to proceed if the model returned zero
-    # entries AND empty email content — that's a sign generation failed silently.
-    if not briefing["notion_entries"] and not briefing["email_html"].strip():
-        fail_hard("Generation produced no entries and no email content — refusing to send.")
+    # Code-level enforcement of scope, not just prompt compliance — if the model slips and
+    # returns an entry for a desk outside this group, drop it here rather than letting it push
+    # to Notion from the wrong run (a later run for that desk's own group will cover it properly).
+    in_scope_entries = []
+    for entry in briefing["notion_entries"]:
+        if entry.get("desk") in scope_desks:
+            in_scope_entries.append(entry)
+        else:
+            log(f"WARNING: dropping out-of-scope entry '{entry.get('title')}' for desk "
+                f"'{entry.get('desk')}' — not in this run's scope ({', '.join(scope_desks)}).")
+    briefing["notion_entries"] = in_scope_entries
 
     briefing = verify_with_gemini_loop(briefing)
 
     valid_existing_ids = {e["id"] for e in existing}
     notion_summary = push_to_notion(briefing["notion_entries"], valid_existing_ids)
 
-    if SEND_OUTPUT:
-        broadcast_id = send_kit(briefing["email_subject"], briefing["email_html"])
-        verify_kit_sent(broadcast_id)
-        send_whapi(briefing["whatsapp_text"])
-    else:
-        log("SEND_OUTPUT is false — this is a Notion-refresh-only run, skipping Kit/Whapi sends.")
-
-    log("Run complete. Summary:")
+    log("Group run complete (no send — compile_send handles that later today). Summary:")
     for line in notion_summary:
         log(f"  {line}")
 
@@ -659,7 +823,36 @@ def main():
         "edition_label": briefing["edition_label"],
         "entry_count": len(briefing["notion_entries"]),
         "notion_summary": notion_summary,
-        "sent_output": SEND_OUTPUT,
+        "sent_output": False,
+    }
+
+
+def run_compile_send():
+    """Compile today's already-researched entries (from group_a/b/c) into the single daily
+    email + WhatsApp send. Does no research of its own — if the groups found nothing, this
+    step has nothing new to say either, by design."""
+    todays_entries = fetch_todays_entries_for_compile()
+    log(f"Fetched {len(todays_entries)} entries from today's group runs to compile.")
+
+    if not todays_entries:
+        log("WARNING: no entries found from today's group runs within the compile window — "
+            "this likely means one or more group runs failed or didn't produce anything. "
+            "Proceeding with an honest 'quiet day' edition rather than failing silently.")
+
+    briefing = compile_briefing(todays_entries)
+    log(f"Compiled: {briefing['edition_label']}")
+
+    broadcast_id = send_kit(briefing["email_subject"], briefing["email_html"])
+    verify_kit_sent(broadcast_id)
+    send_whapi(briefing["whatsapp_text"])
+
+    log("Compile & send complete.")
+
+    return {
+        "edition_label": briefing["edition_label"],
+        "entry_count": len(todays_entries),
+        "notion_summary": [f"{e['title']} ({e['desk']})" for e in todays_entries],
+        "sent_output": True,
     }
 
 
