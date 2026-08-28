@@ -160,6 +160,25 @@ UAE Desk coverage is the priority for this run — this run happens every 6 hour
 to keep UAE content current between the once-daily full briefing.
 - If RUN_TYPE is "general": do a comprehensive sweep across all desks, since this is the once-daily \
 full briefing that covers everything, including UAE Desk, India Desk, and all other desks together.
+- DAILY ROUNDUP RULE: "your usual macro searches" must include at least one genuinely broad, \
+outlet-level roundup search per desk, using the current date — not just topic-specific queries \
+tied to whatever conflict thread or index you already expect to update. A desk-level search for \
+"oil prices" or "Iran Hormuz" will find those threads but will NOT surface unrelated developments \
+like a diplomatic statement, an aid package, an infrastructure announcement, a regulatory change, \
+or a human-interest story that has nothing to do with the thread you were already tracking — those \
+need their own broad sweep. Run at least one query like these per desk, adapted to the desk's beat:
+  * UAE Desk: "UAE news today", "Khaleej Times today", "Gulf News UAE today" — covering diplomacy, \
+government announcements, infrastructure, aid, regulation, and human-interest stories, not just \
+conflict-adjacent or incident news.
+  * India Desk: "India news today", broad outlet roundup, not just accidents/disasters.
+  * West Asia Desk: "Middle East news today" beyond the primary conflict thread already tracked.
+  * Markets & Capital Desk: broad market roundup beyond the specific indices already tracked.
+  * Real Estate & Infrastructure Desk: "infrastructure news today", project announcements beyond \
+collapses/accidents.
+  * Sports Desk: general sports roundup beyond the leagues/injuries already tracked.
+  * Global Politics Desk: general political roundup beyond elections/coups already tracked.
+  Apply the same principle to India, Maritime & Energy, and Trends & Forecasting Desks: a topic- \
+specific search finds what you already expect — a broad roundup search finds what you don't.
 - BREAKING-NEWS RULE: macro/desk-level topic searches (oil prices, market indices, ongoing conflict \
 threads, policy analysis, etc.) will NOT reliably surface acute breaking incidents on their own — \
 those need their own dedicated search pass per desk, in addition to your usual macro searches. Run \
@@ -172,8 +191,8 @@ every time is unnecessary cost for desks this run type isn't focused on.
   * If RUN_TYPE is "general": run dedicated breaking-news passes for ALL 9 desks below, since this \
 is the once-daily comprehensive sweep.
   * UAE Desk: "Dubai Media Office statement today", "UAE Civil Defence incident today", "Abu Dhabi \
-incident today" — explosions, fires, industrial/transport accidents, building issues, severe \
-weather.
+incident today" — explosions, fires, industrial/transport accidents, structural/building issues, \
+deaths or casualties (falls, drownings, road accidents), severe weather.
   * India Desk: breaking incidents (accidents, disasters, major political events) inside India.
   * West Asia Desk (general only): breaking regional incidents (attacks, strikes, political \
 upheaval, protests, sudden military movements) beyond whatever is already tracked in ongoing \
