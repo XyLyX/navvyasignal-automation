@@ -48,21 +48,23 @@ DESKS = [
     "Global Politics Desk",
 ]
 
-# Desks are split into 3 balanced groups (each mixing a heavier desk with lighter ones) so a
-# single research call never has to split its attention across all 9 desks at once — that
-# split-attention pattern was the root cause of desks being silently skipped under the old
-# single-call "general" run. Each group gets its own dedicated run, staggered through the day;
-# a final compile_send run assembles everything into one daily email + WhatsApp send.
+# Desk grouping. West Asia and Maritime & Energy each get their OWN solo run — the group_a/b/c
+# trial run showed these two "heavy, ongoing-narrative" desks (Gaza conflict, Iran-Hormuz
+# conflict) dominate a shared call's attention and cause lighter desks in the same group to get
+# silently skipped, even with explicit scope instructions. The one group with no dominant thread
+# (Markets/Politics/Sports) worked perfectly, so it's kept as-is. Lighter desks are paired.
 GROUPS = {
-    "group_a": ["West Asia Desk", "UAE Desk", "Trends & Forecasting Desk"],
-    "group_b": ["Maritime & Energy Desk", "India Desk", "Real Estate & Infrastructure Desk"],
-    "group_c": ["Markets & Capital Desk", "Global Politics Desk", "Sports Desk"],
+    "maritime_energy": ["Maritime & Energy Desk"],
+    "west_asia": ["West Asia Desk"],
+    "uae_trends": ["UAE Desk", "Trends & Forecasting Desk"],
+    "india_realestate": ["India Desk", "Real Estate & Infrastructure Desk"],
+    "markets_politics_sports": ["Markets & Capital Desk", "Global Politics Desk", "Sports Desk"],
 }
 
-# How far back compile_send looks in Notion for "today's" entries to compile. Group A starts
-# at 13:30 GST and compile_send runs at 18:30 GST — a 5 hour span — so 6 hours gives buffer
-# for a group run that started slightly late without pulling in yesterday's entries.
-COMPILE_WINDOW_HOURS = 6
+# How far back compile_send looks in Notion for "today's" entries to compile. Earliest research
+# run (Maritime & Energy) is 05:04 GST, compile_send runs at 18:30 GST — a ~13.5 hour span — so
+# 15 hours gives buffer without reaching back into yesterday's entries.
+COMPILE_WINDOW_HOURS = 15
 
 NOTION_VERSION = "2022-06-28"
 NOTION_HEADERS = {
