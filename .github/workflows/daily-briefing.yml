@@ -2,20 +2,23 @@ name: NavvyaSignal Daily Briefing
 
 on:
   schedule:
-    # GST = UTC+4. Cron time below is in UTC.
-    # Offset 6 min past the hour — GitHub Actions documents that scheduled runs at the exact
-    # top of the hour are more likely to be delayed or silently skipped under high load.
-    - cron: "6 14 * * *"   # 18:06 GST — full briefing, all desks, sends email + WhatsApp
+    # GST = UTC+4. Cron times below are in UTC. Each offset 30 min past the hour — GitHub
+    # Actions documents that scheduled runs at the exact top of the hour are more likely to
+    # be delayed or silently skipped under high load.
+    - cron: "30 9 * * *"    # 13:30 GST — Group A: West Asia, UAE, Trends & Forecasting
+    - cron: "30 11 * * *"   # 15:30 GST — Group B: Maritime & Energy, India, Real Estate & Infra
+    - cron: "30 13 * * *"   # 17:30 GST — Group C: Markets & Capital, Global Politics, Sports
+    - cron: "30 14 * * *"   # 18:30 GST — Compile & Send: assembles today's entries, sends email + WhatsApp
   workflow_dispatch:
     inputs:
       run_type:
-        description: "Run type: general (all desks) or uae_refresh (UAE-focused)"
+        description: "Run type: group_a / group_b / group_c (research only, no send) or compile_send (sends)"
         required: false
-        default: "general"
+        default: "compile_send"
         type: choice
-        options: ["general", "uae_refresh"]
+        options: ["group_a", "group_b", "group_c", "compile_send"]
       send_output:
-        description: "Send email/WhatsApp this run?"
+        description: "Send email/WhatsApp this run? (ignored for group_a/b/c — they never send)"
         required: false
         default: true
         type: boolean
@@ -42,8 +45,17 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run_type=${{ github.event.inputs.run_type }}" >> "$GITHUB_OUTPUT"
             echo "send_output=${{ github.event.inputs.send_output }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 9 * * *" ]; then
+            echo "run_type=group_a" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 11 * * *" ]; then
+            echo "run_type=group_b" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 13 * * *" ]; then
+            echo "run_type=group_c" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
           else
-            echo "run_type=general" >> "$GITHUB_OUTPUT"
+            echo "run_type=compile_send" >> "$GITHUB_OUTPUT"
             echo "send_output=true" >> "$GITHUB_OUTPUT"
           fi
 
