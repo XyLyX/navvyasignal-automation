@@ -328,19 +328,37 @@ Draft to review:
     return call_gemini(prompt)
 
 
-def claude_respond_to_flags(briefing_data, gemini_flags_text):
+def claude_respond_to_flags(briefing_data, gemini_flags_text, is_repeat_concern=False):
     """Ask Claude to address Gemini's specific concerns: confirm with better sourcing,
     revise, or explain — using web search to re-check if needed."""
+    repeat_warning = ""
+    if is_repeat_concern:
+        repeat_warning = """
+IMPORTANT: this same concern (or a closely related one) was already raised in a previous \
+round and your prior response did not resolve it — Gemini is flagging it again. Do NOT \
+reconfirm the claim as accurate a second time unless you can name one specific, checkable \
+source (outlet + article) you searched THIS round that directly supports it. A vague or \
+blanket claim of confirmation ("confirmed via multiple sources") without a specific, named \
+source is not acceptable and must not be used. If you cannot produce a specific source this \
+round, you MUST either revise the claim to remove the disputed specific detail entirely, or \
+drop that sentence/clause — do not restate it with invented-sounding verification language.
+"""
+
     prompt = f"""Gemini raised the following concerns about your draft briefing:
 
 {gemini_flags_text}
-
+{repeat_warning}
 For each concern, either:
-1. Re-verify via web search and confirm the claim stands (explain why), or
+1. Re-verify via web search and confirm the claim stands — ONLY if you can cite a specific, \
+named source (outlet + article) found in an actual search this round, not a general assertion \
+of confidence, or
 2. Revise the specific claim to be accurate, or
 3. If genuinely uncertain after re-checking, soften the claim with appropriate hedging \
 language (e.g. "single-source, unconfirmed" or "disputed") rather than stating it flatly \
 or dropping it — per NavvyaSignal's credibility protocol of labeled inference over fabrication.
+
+Never fabricate or imply verification you did not actually perform this round. If you did not \
+run a new search for a specific claim, you may not describe it as "confirmed."
 
 Current draft JSON:
 {json.dumps(briefing_data)}
@@ -371,10 +389,33 @@ the JSON, no other text."""
         return briefing_data
 
 
+def _flag_lines(review_text):
+    """Extract just the '- ' concern lines from a Gemini review, for repeat-detection."""
+    return [l.strip().lower() for l in review_text.splitlines() if l.strip().startswith("-")]
+
+
+def _concern_overlaps(prev_flags, current_flags, threshold=0.5):
+    """Rough repeat-detection: does a current flag share enough words with any previous
+    flag to be considered 'the same concern raised again'? Word-overlap is crude but
+    good enough to catch a Gemini re-flag of the same underlying issue."""
+    for cur in current_flags:
+        cur_words = set(w for w in cur.split() if len(w) > 4)
+        for prev in prev_flags:
+            prev_words = set(w for w in prev.split() if len(w) > 4)
+            if not cur_words or not prev_words:
+                continue
+            overlap = len(cur_words & prev_words) / min(len(cur_words), len(prev_words))
+            if overlap >= threshold:
+                return True
+    return False
+
+
 def verify_with_gemini_loop(briefing_data, max_rounds=2):
     """Cross-verification loop: Gemini reviews, Claude responds to flags, Gemini re-reviews.
-    If flags persist after max_rounds, proceed with Claude's best (hedged) version rather
-    than blocking the run indefinitely."""
+    If the SAME concern persists across rounds, Claude is forced to hedge/strip rather than
+    reconfirm. On the final round, any remaining concern is treated as unresolved and forced
+    into a hedge/strip response rather than shipped as flatly stated fact."""
+    prev_flags = []
     for round_num in range(1, max_rounds + 1):
         log(f"Gemini verification round {round_num}...")
         review = gemini_review(json.dumps(briefing_data))
@@ -396,9 +437,19 @@ def verify_with_gemini_loop(briefing_data, max_rounds=2):
             return briefing_data
 
         log(f"Gemini raised {flags_count} concern(s):\n{review}")
-        briefing_data = claude_respond_to_flags(briefing_data, review)
+        current_flags = _flag_lines(review)
+        is_repeat = _concern_overlaps(prev_flags, current_flags)
+        is_final_round = round_num == max_rounds
+        force_hedge = is_repeat or is_final_round
+        if is_repeat:
+            log("WARNING: at least one concern appears to be a repeat from the prior round — "
+                "forcing hedge/strip instead of allowing reconfirmation.")
+        if is_final_round and flags_count > 0:
+            log("Final verification round still has open concerns — forcing hedge/strip "
+                "rather than shipping the disputed claim(s) as flatly stated.")
+        briefing_data = claude_respond_to_flags(briefing_data, review, is_repeat_concern=force_hedge)
+        prev_flags = current_flags
 
-    log(f"Concerns persisted after {max_rounds} rounds — proceeding with Claude's hedged/revised version.")
     return briefing_data
 
 
