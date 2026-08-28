@@ -61,8 +61,13 @@ GROUPS = {
     "markets_politics_sports": ["Markets & Capital Desk", "Global Politics Desk", "Sports Desk"],
 }
 
+# Temporarily disabled at xylyx's request while the Whapi channel re-authorization (number
+# change to +971569713611) is still in progress. Flip back to True once that's fixed — this is
+# the only change needed to re-enable WhatsApp sends. Notion and email continue normally either way.
+WHAPI_ENABLED = False
+
 # How far back compile_send looks in Notion for "today's" entries to compile. Earliest research
-# run (Maritime & Energy) is 05:04 GST, compile_send runs at 18:30 GST — a ~13.5 hour span — so
+# run (Maritime & Energy) is 05:30 GST, compile_send runs at 18:30 GST — a ~13 hour span — so
 # 15 hours gives buffer without reaching back into yesterday's entries.
 COMPILE_WINDOW_HOURS = 15
 
@@ -747,6 +752,10 @@ def verify_kit_sent(broadcast_id, wait_seconds=420):
 # ---------- STEP 5: Send via Whapi ----------
 
 def send_whapi(text):
+    if not WHAPI_ENABLED:
+        log("Whapi sending is temporarily disabled (WHAPI_ENABLED=False) — skipping WhatsApp "
+            "send for this run. Notion and email are unaffected.")
+        return
     if not WHAPI_TOKEN or not WHAPI_CHANNEL_ID:
         log("WARNING: Whapi credentials not configured — skipping WhatsApp send for this run.")
         return
