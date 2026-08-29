@@ -220,6 +220,15 @@ stories (oil prices, market indices, an unfolding conflict) are expected to have
 figures on every run — that is exactly what should trigger an update, not a duplicate. \
 Only create a new entry when the underlying subject itself is genuinely different from \
 everything in the provided list.
+- DEDUP SCOPE WARNING: the existing-entries list is for matching SPECIFIC subjects to avoid \
+duplicating THEM — it is never a signal that a desk in general is "already covered" or that \
+you can skip searching it. Seeing one existing Markets & Capital entry about, say, a Fed \
+speech does NOT mean Markets & Capital is done for this run — gold, crypto, individual \
+equities, and every other subject in that desk are still fully in scope and still need their \
+own dedicated search. Judge dedup story-by-story, matching on genuine subject overlap, never \
+by "this desk has recent activity so I'll move on." If your search genuinely turns up nothing \
+new for an in-scope desk, that's a legitimate zero — but it must follow a real, thorough \
+search of that desk's beat, not an inference from the presence of unrelated existing entries.
 - Assign each entry to exactly one of these desks: West Asia Desk, Maritime & Energy Desk, \
 Markets & Capital Desk, India Desk, UAE Desk, Real Estate & Infrastructure Desk, Sports Desk, \
 Trends & Forecasting Desk, Global Politics Desk. If genuinely ambiguous, pick the closest \
