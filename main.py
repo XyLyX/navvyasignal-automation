@@ -679,6 +679,12 @@ def push_to_notion(entries, valid_existing_ids):
             "Text 1": {"rich_text": [{"text": {"content": sources_text}}]},
             "Long Read": {"checkbox": False},
             "Ready to Post": {"checkbox": True},  # fully automatic, per instruction
+            # Reset on EVERY write, not just creates. sync.js only queries pages where this is
+            # false — on an update, this flag is otherwise left however it was from the page's
+            # original creation, so a page synced once would never be re-synced again even after
+            # its content changed. This was the actual cause of the site showing stale content:
+            # only genuinely new pages (which default to unchecked) were ever picked up.
+            "Synced to Framer": {"checkbox": False},
         }
         if entry.get("notes"):
             properties["Internal Note"] = {"rich_text": [{"text": {"content": entry["notes"][:2000]}}]}
