@@ -25,6 +25,7 @@ on:
           - "india_realestate"
           - "markets_politics_sports"
           - "compile_send"
+          - "whapi_test"
       send_output:
         description: "Send email/WhatsApp this run? (ignored for desk-group runs — they never send)"
         required: false
