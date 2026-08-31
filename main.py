@@ -61,10 +61,9 @@ GROUPS = {
     "markets_politics_sports": ["Markets & Capital Desk", "Global Politics Desk", "Sports Desk"],
 }
 
-# Temporarily disabled at xylyx's request while the Whapi channel re-authorization (number
-# change to +971569713611) is still in progress. Flip back to True once that's fixed — this is
-# the only change needed to re-enable WhatsApp sends. Notion and email continue normally either way.
-WHAPI_ENABLED = False
+# Re-enabled 2026-08-31 — Whapi channel IRONMN-2NYWG confirmed re-authorized with the new
+# number (+971569713611), verified AUTHORIZED status in the Whapi dashboard.
+WHAPI_ENABLED = True
 
 # How far back compile_send looks in Notion for "today's" entries to compile. Earliest research
 # run (Maritime & Energy) is 05:30 GST, compile_send runs at 18:30 GST — a ~13 hour span — so
