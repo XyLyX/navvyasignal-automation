@@ -790,6 +790,12 @@ def send_whapi(text):
 def main():
     log(f"Starting NavvyaSignal automated run (type={RUN_TYPE})")
 
+    if RUN_TYPE == "whapi_test":
+        # Test-only path, manual trigger via workflow_dispatch only (never on a schedule).
+        # Only needs Notion + Whapi — skips the Anthropic/Kit requirement check above since
+        # it doesn't call either.
+        return run_whapi_test()
+
     required = {
         "ANTHROPIC_API_KEY": ANTHROPIC_API_KEY,
         "NOTION_API_KEY": NOTION_API_KEY,
@@ -806,8 +812,8 @@ def main():
     elif RUN_TYPE == "compile_send":
         return run_compile_send()
     else:
-        fail_hard(f"Unrecognized RUN_TYPE '{RUN_TYPE}' — expected one of {list(GROUPS.keys())} "
-                   f"or 'compile_send'.")
+        fail_hard(f"Unrecognized RUN_TYPE '{RUN_TYPE}' — expected one of {list(GROUPS.keys())}, "
+                   f"'compile_send', or 'whapi_test'.")
 
 
 def run_group(run_type):
@@ -850,6 +856,29 @@ def run_group(run_type):
         "notion_summary": notion_summary,
         "sent_output": False,
     }
+
+
+def run_whapi_test():
+    """Manual-only test path: sends the most recent Signal Feed entry as a plain WhatsApp
+    message, with no Kit email and no Anthropic call — isolates the Whapi send itself so it
+    can be verified without touching subscribers' inboxes or re-compiling anything."""
+    todays_entries = fetch_todays_entries_for_compile()
+    if not todays_entries:
+        fail_hard("whapi_test: no recent Notion entries found to build a test message from.")
+
+    latest = todays_entries[0]
+    test_text = (
+        f"NAVVYA SIGNAL — WHAPI TEST\n\n"
+        f"{latest['title']}\n\n"
+        f"{latest['body'][:400]}...\n\n"
+        f"(This is a manual test send — not a real edition.)\n"
+        f"navvyasignal.com"
+    )
+    log(f"whapi_test: sending test message built from '{latest['title']}' ({latest['desk']})")
+    send_whapi(test_text)
+    log("whapi_test: send_whapi call completed without raising — check WhatsApp to confirm delivery.")
+
+    return {"edition_label": "whapi_test", "entry_count": 1, "notion_summary": [latest["title"]], "sent_output": True}
 
 
 def run_compile_send():
