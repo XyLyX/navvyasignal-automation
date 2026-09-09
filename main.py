@@ -460,7 +460,7 @@ Assemble the final email and WhatsApp content per your instructions."""
 
     with client.messages.stream(
         model="claude-sonnet-4-5",
-        max_tokens=16000,
+        max_tokens=32000,
         system=COMPILE_SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     ) as stream:
