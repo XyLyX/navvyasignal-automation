@@ -871,6 +871,16 @@ def push_to_notion(entries, valid_existing_ids):
         if entry.get("notes"):
             properties["Internal Note"] = {"rich_text": [{"text": {"content": entry["notes"][:2000]}}]}
 
+        # Diagnostic-only: log what the model generated for the new metadata fields regardless
+        # of NEW_METADATA_STAGE_LIVE, so compliance can be verified before that gate is ever
+        # flipped to True. This never affects what gets written to Notion.
+        log(f"DIAGNOSTIC (new fields, not yet written to Notion) for '{entry['title']}': "
+            f"coverage_theme={entry.get('coverage_theme')!r}, "
+            f"related_desks={entry.get('related_desks')!r}, "
+            f"watchlist={entry.get('watchlist')!r}, "
+            f"watch_trigger={entry.get('watch_trigger')!r}, "
+            f"next_review={entry.get('next_review')!r}")
+
         # New metadata fields — only included once Stage 1C has created these properties in the
         # live Notion database. Including an unrecognized property name in a Notion write payload
         # causes the whole request to fail with a 400, so this MUST stay gated until confirmed.
@@ -895,9 +905,10 @@ def push_to_notion(entries, valid_existing_ids):
 
         is_update = entry["action"] == "update" and entry.get("existing_id")
         action_label = "Updated" if is_update else "Created"
+        action_verb = "update" if is_update else "create"
 
         if DRY_RUN:
-            log(f"DRY RUN: would {action_label.lower()} '{entry['title']}' ({desk}) — "
+            log(f"DRY RUN: would {action_verb} '{entry['title']}' ({desk}) — "
                 f"properties: {json.dumps(properties, default=str)[:600]}")
             summary.append(f"[DRY RUN] {action_label} — {entry['title']} ({desk})")
             continue
