@@ -50,6 +50,9 @@ on:
         default: false
         type: boolean
 
+permissions:
+  contents: write
+
 jobs:
   run-briefing:
     runs-on: ubuntu-latest
@@ -115,6 +118,7 @@ jobs:
           fi
 
       - name: Run briefing script
+        id: runbriefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
@@ -128,4 +132,20 @@ jobs:
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
           SEND_OUTPUT: ${{ steps.runtype.outputs.send_output }}
           DRY_RUN: ${{ steps.runtype.outputs.dry_run }}
-        run: python main.py
+        run: |
+          mkdir -p logs
+          python main.py 2>&1 | tee logs/latest.txt
+          exit ${PIPESTATUS[0]}
+        shell: bash
+
+      # Always commit the log, even if the run above failed — this is what lets Claude (or
+      # anyone else) read the actual output via the GitHub Contents API instead of the Actions
+      # log-blob storage domain, which is blocked in some sandboxed environments.
+      - name: Commit run log
+        if: always()
+        run: |
+          git config user.name "navvyasignal-bot"
+          git config user.email "actions@github.com"
+          git add logs/latest.txt
+          git commit -m "Log: ${{ steps.runtype.outputs.run_type }} run at $(date -u +%Y-%m-%dT%H:%M:%SZ)" || echo "Nothing to commit"
+          git push || echo "Push failed (non-fatal, log commit is best-effort)"
