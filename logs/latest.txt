@@ -1,29 +1,30 @@
-[2026-09-10 14:35:25 UTC] Starting NavvyaSignal automated run (type=technology_ai)
-[2026-09-10 14:35:25 UTC] Desk run scoped to: Technology & AI Desk
-[2026-09-10 14:35:25 UTC] Fetched 39 existing Notion entries for dedup reference.
-[2026-09-10 14:38:20 UTC] Generated briefing: 2026-09-10, 18:35 GST edition, 7 entries
-[2026-09-10 14:38:20 UTC] Gemini verification round 1...
-[2026-09-10 14:38:21 UTC] Gemini review: no concerns raised.
-[2026-09-10 14:38:21 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'NSA, CISA, FBI Name Six Chinese AI Firms in Industrial-Scale Distillation Campaign Against U.S. Frontier Models': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='U.S.-China AI security dialogue mid-September and potential U.S. policy or enforcement response to the distillation allegations', next_review='2026-09-20'
-[2026-09-10 14:38:21 UTC] Created — NSA, CISA, FBI Name Six Chinese AI Firms in Industrial-Scale Distillation Campaign Against U.S. Frontier Models (Technology & AI Desk)
-[2026-09-10 14:38:21 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Qualcomm Strikes $60 Billion AI Chip Deal with Amazon, Issues $4 Billion in Stock Warrants': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 14:38:22 UTC] Created — Qualcomm Strikes $60 Billion AI Chip Deal with Amazon, Issues $4 Billion in Stock Warrants (Technology & AI Desk)
-[2026-09-10 14:38:22 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Google Secures €13 Billion Finland AI Investment, Locks Up 20-Year Nuclear Power Supply from Loviisa Plant': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 14:38:22 UTC] Created — Google Secures €13 Billion Finland AI Investment, Locks Up 20-Year Nuclear Power Supply from Loviisa Plant (Technology & AI Desk)
-[2026-09-10 14:38:22 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Claims Unreleased AI Model Solved Navier-Stokes Millennium Prize Problem in 88 Hours, Sparking Credit Dispute': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Independent mathematical community verification of the OpenAI proof and potential Clay Mathematics Institute formal award decision', next_review='2026-10-08'
-[2026-09-10 14:38:23 UTC] Created — OpenAI Claims Unreleased AI Model Solved Navier-Stokes Millennium Prize Problem in 88 Hours, Sparking Credit Dispute (Technology & AI Desk)
-[2026-09-10 14:38:23 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'JD Cloud Plans 100,000-GPU Cluster Powered Entirely by Domestic Chinese Chipmaker Moore Threads': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 14:38:23 UTC] Created — JD Cloud Plans 100,000-GPU Cluster Powered Entirely by Domestic Chinese Chipmaker Moore Threads (Technology & AI Desk)
-[2026-09-10 14:38:23 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Meta Ran 300-Plus Ads Containing AI-Generated Child Sexual Abuse Material, Some Using Real Children's Photos': coverage_theme=[], related_desks=['India Desk', 'Global Politics Desk'], watchlist=True, watch_trigger='India NCPCR hearing outcome September 9 and potential regulatory or enforcement action by U.S., Australian, or Indian authorities', next_review='2026-09-15'
-[2026-09-10 14:38:24 UTC] Created — Meta Ran 300-Plus Ads Containing AI-Generated Child Sexual Abuse Material, Some Using Real Children's Photos (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'XPENG's IRON Humanoid Robot Walks Off Guangzhou Production Line Under Its Own Power, Targeting Mass Production by End 2026': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="XPENG's mass-production milestone by end 2026 and commercial deployment numbers once available", next_review='2026-12-31'
-[2026-09-10 14:38:24 UTC] Created — XPENG's IRON Humanoid Robot Walks Off Guangzhou Production Line Under Its Own Power, Targeting Mass Production by End 2026 (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-10 14:38:24 UTC]   Created — NSA, CISA, FBI Name Six Chinese AI Firms in Industrial-Scale Distillation Campaign Against U.S. Frontier Models (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — Qualcomm Strikes $60 Billion AI Chip Deal with Amazon, Issues $4 Billion in Stock Warrants (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — Google Secures €13 Billion Finland AI Investment, Locks Up 20-Year Nuclear Power Supply from Loviisa Plant (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — OpenAI Claims Unreleased AI Model Solved Navier-Stokes Millennium Prize Problem in 88 Hours, Sparking Credit Dispute (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — JD Cloud Plans 100,000-GPU Cluster Powered Entirely by Domestic Chinese Chipmaker Moore Threads (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — Meta Ran 300-Plus Ads Containing AI-Generated Child Sexual Abuse Material, Some Using Real Children's Photos (Technology & AI Desk)
-[2026-09-10 14:38:24 UTC]   Created — XPENG's IRON Humanoid Robot Walks Off Guangzhou Production Line Under Its Own Power, Targeting Mass Production by End 2026 (Technology & AI Desk)
-[2026-09-10 14:38:26 UTC] Ops notification sent.
+[2026-09-10 14:56:58 UTC] Starting NavvyaSignal automated run (type=uae)
+[2026-09-10 14:56:58 UTC] Desk run scoped to: UAE Desk
+[2026-09-10 14:56:59 UTC] Fetched 46 existing Notion entries for dedup reference.
+[2026-09-10 14:58:24 UTC] Generated briefing: 2026-09-10, 18:56 GST edition, 5 entries
+[2026-09-10 14:58:24 UTC] Gemini verification round 1...
+[2026-09-10 14:58:25 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the third entry regarding the Abu Dhabi T10, the text states: "The Abu Dhabi T10 is a professional Twenty20 cricket league... known for its fast-paced 10-over format." This is an internal contradiction/factual error, as T10 is a 10-over format, not a Twenty20 (T20) league.
+[2026-09-10 14:59:30 UTC] Gemini verification round 2...
+[2026-09-10 14:59:32 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the entry regarding the Dubai Metro station renaming, the text states that Garmin becomes "the first global brand to secure naming rights to a station on the Dubai Metro Red Line." This claim is internally contradictory or historically inaccurate given that numerous global brands (such as Etisalat, Mashreq, First Abu Dhabi Bank, Danube, Equiti, etc.) have held naming rights for Red Line stations for many years since the inception of the RTA initiative in 2009.
+[2026-09-10 14:59:32 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-10 15:00:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'President Sheikh Mohamed Holds High-Level Talks with German President Steinmeier in Berlin, UAE-Germany Strategic Partnership Agreements Expected': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:00:46 UTC] Created — President Sheikh Mohamed Holds High-Level Talks with German President Steinmeier in Berlin, UAE-Germany Strategic Partnership Agreements Expected (UAE Desk)
+[2026-09-10 15:00:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Freehold Rental Contracts Climb 3.79% in August to 39,645, Market on Track for All-Time Record in 2026': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:00:47 UTC] Created — Dubai Freehold Rental Contracts Climb 3.79% in August to 39,645, Market on Track for All-Time Record in 2026 (UAE Desk)
+[2026-09-10 15:00:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE Bulls Confirmed as First Founding Franchise for Abu Dhabi T10's New Era Under 10-Year Licence Model': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:00:48 UTC] Created — UAE Bulls Confirmed as First Founding Franchise for Abu Dhabi T10's New Era Under 10-Year Licence Model (UAE Desk)
+[2026-09-10 15:00:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Air France Extends Dubai Flight Suspension Until September 15 as UAE Carriers Report Mixed Flight Picture': coverage_theme=[], related_desks=['West Asia Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:00:49 UTC] Created — Air France Extends Dubai Flight Suspension Until September 15 as UAE Carriers Report Mixed Flight Picture (UAE Desk)
+[2026-09-10 15:00:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai's ONPASSIVE Metro Station Renamed Garmin Metro Station Under 10-Year RTA Naming Rights Deal, Changes Roll Out Through November': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:00:50 UTC] Created — Dubai's ONPASSIVE Metro Station Renamed Garmin Metro Station Under 10-Year RTA Naming Rights Deal, Changes Roll Out Through November (UAE Desk) [NOTE: Removed disputed claim about Garmin being 'first global brand' on Red Line—historical records show Emirates, Etisalat, GGICO, First Abu Dhabi Bank, and other international brands have held Red Line naming rights since 2009.]
+[2026-09-10 15:00:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-10 15:00:50 UTC]   Created — President Sheikh Mohamed Holds High-Level Talks with German President Steinmeier in Berlin, UAE-Germany Strategic Partnership Agreements Expected (UAE Desk)
+[2026-09-10 15:00:50 UTC]   Created — Dubai Freehold Rental Contracts Climb 3.79% in August to 39,645, Market on Track for All-Time Record in 2026 (UAE Desk)
+[2026-09-10 15:00:50 UTC]   Created — UAE Bulls Confirmed as First Founding Franchise for Abu Dhabi T10's New Era Under 10-Year Licence Model (UAE Desk)
+[2026-09-10 15:00:50 UTC]   Created — Air France Extends Dubai Flight Suspension Until September 15 as UAE Carriers Report Mixed Flight Picture (UAE Desk)
+[2026-09-10 15:00:50 UTC]   Created — Dubai's ONPASSIVE Metro Station Renamed Garmin Metro Station Under 10-Year RTA Naming Rights Deal, Changes Roll Out Through November (UAE Desk) [NOTE: Removed disputed claim about Garmin being 'first global brand' on Red Line—historical records show Emirates, Etisalat, GGICO, First Abu Dhabi Bank, and other international brands have held Red Line naming rights since 2009.]
+[2026-09-10 15:00:51 UTC] Ops notification sent.
