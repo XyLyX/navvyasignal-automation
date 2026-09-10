@@ -108,6 +108,14 @@ def fail_hard(msg):
 
 # ---------- STEP 1: Fetch existing Notion entries (for dedup) ----------
 
+def _is_test_record(title):
+    """Permanent safety filter: any Notion page whose title starts with '[TEST' (used for
+    controlled Stage 1C-style pipeline testing) is excluded from every fetch function below,
+    so test/verification records can never accidentally reach a real compile, send, Today's
+    Intelligence selection, Cross-Desk synthesis, or weekly Briefing."""
+    return title.strip().startswith("[TEST")
+
+
 def fetch_existing_entries():
     """Pull recent Signal Feed entries so the model can decide update vs. new.
     Includes a content snippet and creation time so matching isn't based on
@@ -141,6 +149,8 @@ def fetch_existing_entries():
         title = ""
         if "Name" in props and props["Name"].get("title"):
             title = "".join([t.get("plain_text", "") for t in props["Name"]["title"]])
+        if _is_test_record(title):
+            continue
         category = ""
         if "Category" in props and props["Category"].get("select"):
             category = props["Category"]["select"].get("name", "")
@@ -190,6 +200,8 @@ def fetch_todays_entries_for_compile():
         title = ""
         if "Name" in props and props["Name"].get("title"):
             title = "".join([t.get("plain_text", "") for t in props["Name"]["title"]])
+        if _is_test_record(title):
+            continue
         desk = ""
         if "Category" in props and props["Category"].get("select"):
             desk = props["Category"]["select"].get("name", "")
@@ -250,6 +262,8 @@ def fetch_week_entries_for_synthesis():
         title = ""
         if "Name" in props and props["Name"].get("title"):
             title = "".join([t.get("plain_text", "") for t in props["Name"]["title"]])
+        if _is_test_record(title):
+            continue
         desk = ""
         if "Category" in props and props["Category"].get("select"):
             desk = props["Category"]["select"].get("name", "")
@@ -1179,6 +1193,8 @@ def fetch_active_watchlist_items():
     for page in resp.json().get("results", []):
         props = page.get("properties", {})
         title = "".join(t.get("plain_text", "") for t in props.get("Name", {}).get("title", []))
+        if _is_test_record(title):
+            continue
         trigger = "".join(t.get("plain_text", "") for t in props.get("Watch Trigger", {}).get("rich_text", []))
         items.append({"id": page["id"], "title": title, "watch_trigger": trigger})
     return items
