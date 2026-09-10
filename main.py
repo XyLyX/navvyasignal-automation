@@ -1090,7 +1090,7 @@ Select today's Today's Intelligence entries per your instructions."""
     return selected_ids
 
 
-CROSS_DESK_SYSTEM_PROMPT = """You look for a genuine multi-domain connection among today's \
+CROSS_DESK_SYSTEM_PROMPT = f"""You look for a genuine multi-domain connection among today's \
 NavvyaSignal entries and, if one exists, write it up as a single new Cross-Desk Signal. You do \
 NOT do new research — synthesize only from the entries provided.
 
@@ -1100,17 +1100,20 @@ just an entry that happens to mention another desk in passing. Most days will ha
 genuine Cross-Desk connections — that is the expected, correct outcome. Only produce one when \
 there's a real, specific, non-obvious connection worth a reader's attention.
 
-If no genuine connection exists, output exactly: {"has_cross_desk": false}
+The 7 desks are EXACTLY these — use these exact strings, character for character, never an \
+older or approximated name: {", ".join(DESKS)}.
+
+If no genuine connection exists, output exactly: {{"has_cross_desk": false}}
 
 If one exists, output:
-{
+{{
   "has_cross_desk": true,
   "title": "string",
   "body": "string, max 1800 chars, flowing prose synthesizing the connection — plain text, no markdown",
   "sources_text": "string, referencing the underlying entries this draws from",
-  "primary_desk": "the single most central desk name from the 7 desks",
-  "related_desks": ["array of all desk names genuinely involved, including primary_desk"]
-}
+  "primary_desk": "the single most central desk, using the exact desk name from the list above",
+  "related_desks": ["array of exact desk names from the list above genuinely involved, including primary_desk"]
+}}
 Output ONLY valid JSON, no preamble, no code fences.
 """
 
