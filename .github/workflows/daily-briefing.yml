@@ -38,6 +38,7 @@ on:
           - "markets_capital"
           - "compile_send"
           - "weekly_synthesis"
+          - "watchlist_test"
           - "whapi_test"
       send_output:
         description: "Send email/WhatsApp this run? (ignored for desk runs and weekly_synthesis — they never send)"
