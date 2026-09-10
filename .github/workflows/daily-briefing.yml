@@ -10,6 +10,13 @@ on:
     # Asia, Maritime/Energy/Supply Chains, and Technology & AI are spread across different
     # times from each other, not just given solo status, since all three intersect with the
     # ongoing conflict narrative and were the desks most prone to under-coverage before.
+    #
+    # IMPORTANT: this list must stay in sync with CRON_TO_RUN_TYPE in main.py — that dict is
+    # the single source of truth for which cron maps to which run_type. This workflow no longer
+    # resolves that mapping itself; it just passes the raw matched cron string through as
+    # CRON_SCHEDULE and lets main.py look it up. Adding/changing a schedule means updating BOTH
+    # this list and CRON_TO_RUN_TYPE together — main.py will fail loudly (not silently) if they
+    # ever drift out of sync.
     - cron: "33 1 * * *"    # 05:33 GST — West Asia
     - cron: "33 2 * * *"    # 06:33 GST — Maritime Energy & Supply Chains
     - cron: "33 10 * * *"   # 14:33 GST — Technology & AI
@@ -18,13 +25,11 @@ on:
     - cron: "3 12 * * *"    # 16:03 GST — Global Politics
     - cron: "33 12 * * *"   # 16:33 GST — Markets & Capital
     - cron: "3 14 * * *"    # 18:03 GST — Compile & Send: assembles today's entries, sends email + WhatsApp
-    # weekly_synthesis has NO schedule entry yet — manual/workflow_dispatch only for now.
-    # Friday automation is deliberately deferred until weekly_synthesis is confirmed working
-    # standalone (see main.py).
+    - cron: "4 12 * * 5"    # 16:04 GST, Fridays only — Weekly synthesis (Gulf Briefing)
   workflow_dispatch:
     inputs:
       run_type:
-        description: "Run type: one of the 7 desk keys (research only, no send), compile_send (sends), weekly_synthesis, or whapi_test"
+        description: "Run type: one of the 7 desk keys (research only, no send), compile_send (sends), weekly_synthesis, watchlist_test, or whapi_test"
         required: false
         default: "compile_send"
         type: choice
@@ -70,52 +75,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # NOTE: schedule events in native GitHub Actions cron cannot carry custom inputs, so this
-      # mapping from cron string -> run_type is structurally required as long as native
-      # scheduling is in use — it isn't arbitrary duplication to "clean up" so much as an
-      # inherent constraint. It goes away entirely once the Cloudflare Worker (previously
-      # drafted, not yet deployed) replaces native scheduling with workflow_dispatch calls that
-      # always carry an explicit run_type. Until then, this list and the RUN_TYPE keys in
-      # main.py's GROUPS dict must be kept in sync manually.
-      - name: Determine run type and flags
+      # For schedule events, just pass the raw matched cron string through — main.py's
+      # CRON_TO_RUN_TYPE dict is the single source of truth for resolving it to a run_type.
+      # For workflow_dispatch, pass the explicit inputs straight through as before.
+      - name: Determine trigger inputs
         id: runtype
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run_type=${{ github.event.inputs.run_type }}" >> "$GITHUB_OUTPUT"
             echo "send_output=${{ github.event.inputs.send_output }}" >> "$GITHUB_OUTPUT"
             echo "dry_run=${{ github.event.inputs.dry_run }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "33 1 * * *" ]; then
-            echo "run_type=west_asia" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "33 2 * * *" ]; then
-            echo "run_type=maritime_energy" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "33 10 * * *" ]; then
-            echo "run_type=technology_ai" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "3 11 * * *" ]; then
-            echo "run_type=uae" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "33 11 * * *" ]; then
-            echo "run_type=india" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "3 12 * * *" ]; then
-            echo "run_type=global_politics" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "33 12 * * *" ]; then
-            echo "run_type=markets_capital" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+            echo "cron_schedule=" >> "$GITHUB_OUTPUT"
           else
-            echo "run_type=compile_send" >> "$GITHUB_OUTPUT"
-            echo "send_output=true" >> "$GITHUB_OUTPUT"
+            echo "run_type=" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
             echo "dry_run=false" >> "$GITHUB_OUTPUT"
+            echo "cron_schedule=${{ github.event.schedule }}" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run briefing script
@@ -133,6 +108,7 @@ jobs:
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
           SEND_OUTPUT: ${{ steps.runtype.outputs.send_output }}
           DRY_RUN: ${{ steps.runtype.outputs.dry_run }}
+          CRON_SCHEDULE: ${{ steps.runtype.outputs.cron_schedule }}
         run: |
           mkdir -p logs
           python main.py 2>&1 | tee logs/latest.txt
@@ -148,5 +124,5 @@ jobs:
           git config user.name "navvyasignal-bot"
           git config user.email "actions@github.com"
           git add logs/latest.txt
-          git commit -m "Log: ${{ steps.runtype.outputs.run_type }} run at $(date -u +%Y-%m-%dT%H:%M:%SZ)" || echo "Nothing to commit"
+          git commit -m "Log: run at $(date -u +%Y-%m-%dT%H:%M:%SZ) (cron=${{ steps.runtype.outputs.cron_schedule }}, dispatch=${{ steps.runtype.outputs.run_type }})" || echo "Nothing to commit"
           git push || echo "Push failed (non-fatal, log commit is best-effort)"
