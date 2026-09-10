@@ -1,35 +1,20 @@
-[2026-09-10 15:07:06 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-10 15:07:06 UTC] Desk run scoped to: India Desk
-[2026-09-10 15:07:07 UTC] Fetched 51 existing Notion entries for dedup reference.
-[2026-09-10 15:08:33 UTC] Generated briefing: 2026-09-10, 19:07 GST edition, 5 entries
-[2026-09-10 15:08:33 UTC] Gemini verification round 1...
-[2026-09-10 15:08:35 UTC] Gemini raised 3 concern(s):
-FLAGS: 3
-- The first entry refers to a "three-judge bench headed by Chief Justice of India Surya Kant," but Justice Surya Kant's actual tenure as Chief Justice of India does not align with a September 2026 timeline (or assumes a future appointment not yet established in reality as a verifiable fact).
-- The third entry names "Nitin Nabin" as the BJP president, whereas the current/actual BJP national president is a different individual (such as J.P. Nadda or his immediate successor), making this factually incorrect.
-- The fifth entry states that a BJP government under Chief Minister Suvendu Adhikari took office in West Bengal following the "2023 assembly elections," which contradicts actual historical and political facts (West Bengal assembly elections were held in 2021, and Mamata Banerjee's Trinamool Congress won them).
-[2026-09-10 15:10:05 UTC] Gemini verification round 2...
-[2026-09-10 15:10:06 UTC] Gemini raised 3 concern(s):
-FLAGS: 3
-- The entry regarding West Bengal states that a BJP government led by Chief Minister Suvendu Adhikari and Higher Education Minister Jagannath Chattopadhyay assumed office in May 2026, which contradicts the long-standing Trinamool Congress (TMC) government under Mamata Banerjee in West Bengal.
-- In the Supreme Court entry, the text mentions that the CBSE policy was introduced for students entering Class 9 from July 1, 2026, while the headline and body also discuss exemptions for Class 6 students, presenting an internal contradiction regarding which grade level the policy applies to.
-- In the Karnataka Vande Mataram entry, BJP president "Nitin Nabin" is referenced, but the current national president of the BJP or prominent state leaders do not match this name/role combination in a standard factual context for late 2026.
-[2026-09-10 15:10:06 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-10 15:10:06 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-10 15:11:42 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Delhi Court Frames Money Laundering Charges Against Lalu Yadav, Wife Rabri Devi and Son Tejashwi in IRCTC Scam': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:11:43 UTC] Created — Delhi Court Frames Money Laundering Charges Against Lalu Yadav, Wife Rabri Devi and Son Tejashwi in IRCTC Scam (India Desk)
-[2026-09-10 15:11:43 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Supreme Court Asks CBSE to Consider Exempting Class 6 Students From Three-Language Policy for 2026-27, Defers Hearing to September 17': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Supreme Court decision on Class 6 exemption request and broader challenge to three-language policy implementation', next_review='2026-09-17'
-[2026-09-10 15:11:43 UTC] Created — Supreme Court Asks CBSE to Consider Exempting Class 6 Students From Three-Language Policy for 2026-27, Defers Hearing to September 17 (India Desk)
-[2026-09-10 15:11:43 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Karnataka Government Orders Two-Stanza Rendition of Vande Mataram at State Events, Full Version Reserved for Centre-Attended Programmes': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:11:43 UTC] Created — Karnataka Government Orders Two-Stanza Rendition of Vande Mataram at State Events, Full Version Reserved for Centre-Attended Programmes (India Desk)
-[2026-09-10 15:11:43 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Meerut Police Seize 400 Kg of Explosives Intended for Illegal Firecracker Manufacturing Ahead of Diwali, One Detained': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:11:44 UTC] Created — Meerut Police Seize 400 Kg of Explosives Intended for Illegal Firecracker Manufacturing Ahead of Diwali, One Detained (India Desk)
-[2026-09-10 15:11:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'West Bengal Assembly Passes Bill Enabling Inter-University Transfer of Teachers and Staff Under BJP Government's One State, One Education Policy': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:11:44 UTC] Created — West Bengal Assembly Passes Bill Enabling Inter-University Transfer of Teachers and Staff Under BJP Government's One State, One Education Policy (India Desk)
-[2026-09-10 15:11:44 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-10 15:11:44 UTC]   Created — Delhi Court Frames Money Laundering Charges Against Lalu Yadav, Wife Rabri Devi and Son Tejashwi in IRCTC Scam (India Desk)
-[2026-09-10 15:11:44 UTC]   Created — Supreme Court Asks CBSE to Consider Exempting Class 6 Students From Three-Language Policy for 2026-27, Defers Hearing to September 17 (India Desk)
-[2026-09-10 15:11:44 UTC]   Created — Karnataka Government Orders Two-Stanza Rendition of Vande Mataram at State Events, Full Version Reserved for Centre-Attended Programmes (India Desk)
-[2026-09-10 15:11:44 UTC]   Created — Meerut Police Seize 400 Kg of Explosives Intended for Illegal Firecracker Manufacturing Ahead of Diwali, One Detained (India Desk)
-[2026-09-10 15:11:44 UTC]   Created — West Bengal Assembly Passes Bill Enabling Inter-University Transfer of Teachers and Staff Under BJP Government's One State, One Education Policy (India Desk)
-[2026-09-10 15:11:45 UTC] Ops notification sent.
+[2026-09-10 15:55:58 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-10 15:55:58 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-10 15:55:59 UTC] Fetched 56 existing Notion entries for dedup reference.
+[2026-09-10 15:57:19 UTC] Generated briefing: 2026-09-10, 19:55 GST edition, 4 entries
+[2026-09-10 15:57:19 UTC] Gemini verification round 1...
+[2026-09-10 15:57:20 UTC] Gemini review: no concerns raised.
+[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='November 2026 U.S. midterm election results will determine whether the trigger condition for the dividend proposal is met, and whether any legislation is subsequently introduced', next_review='2026-11-04'
+[2026-09-10 15:57:20 UTC] Created — Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention (Global Politics Desk)
+[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:57:20 UTC] Created — Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction (Global Politics Desk)
+[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 15:57:21 UTC] Created — U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour (Global Politics Desk)
+[2026-09-10 15:57:21 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Potential extension of the ceasefire beyond the initial three-month period, and whether Nigeria publicly acknowledges the negotiations despite its stated no-negotiation policy', next_review='2026-10-15'
+[2026-09-10 15:57:21 UTC] Created — Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance (Global Politics Desk) [NOTE: Story was first publicly reported September 7, 2026, though the ceasefire itself began in June 2026. Included here because the revelation is within the 48-hour recency window and represents a genuine shift in understanding of Nigeria's counterterrorism strategy.]
+[2026-09-10 15:57:21 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-10 15:57:21 UTC]   Created — Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention (Global Politics Desk)
+[2026-09-10 15:57:21 UTC]   Created — Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction (Global Politics Desk)
+[2026-09-10 15:57:21 UTC]   Created — U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour (Global Politics Desk)
+[2026-09-10 15:57:21 UTC]   Created — Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance (Global Politics Desk) [NOTE: Story was first publicly reported September 7, 2026, though the ceasefire itself began in June 2026. Included here because the revelation is within the 48-hour recency window and represents a genuine shift in understanding of Nigeria's counterterrorism strategy.]
+[2026-09-10 15:57:23 UTC] Ops notification sent.
