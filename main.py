@@ -390,12 +390,20 @@ other desk in "related_desks" (e.g. a Hormuz shipping story researched under Mar
 it does not mean you write that other desk's angle yourself, and it is NOT the same thing as a \
 genuine Cross-Desk Signal (a separate, deliberately-synthesized piece produced later by a \
 different process). Leave it empty when a story is genuinely self-contained within your desk.
-- WATCHLIST RULE: if a story describes something that has NOT yet happened but is specifically \
-worth monitoring (e.g. "talks could conclude within days," "a ruling is expected next week"), \
-set "watchlist" to true and fill "watch_trigger" (what specific event would resolve this) and \
-"next_review" (a reasonable near-term date, YYYY-MM-DD, to check back). This is for genuine \
-monitoring commitments, not just any sentence containing future tense — most entries should \
-have watchlist=false. When watchlist=false, leave watch_trigger and next_review as empty strings.
+- WATCHLIST RULE: this is NOT for every story that mentions a future scheduled event — it is \
+specifically for a genuine unresolved intelligence question with a material outcome still in \
+doubt. The test is event vs. unresolved question:
+  * NOT watchlist: "CPI will be released Thursday" — a routine scheduled data release with no \
+specific outcome in question is not watchlist-worthy on its own, no matter how important the \
+event category generally is.
+  * Watchlist-worthy: "Markets are pricing a materially different inflation trajectory than the \
+Fed's own guidance; Thursday's CPI could confirm or challenge that pricing" — there's a specific \
+open question (whose read on inflation is right) that a specific event will resolve one way or \
+another.
+When you do set watchlist=true, "watch_trigger" must name the specific unresolved question or \
+material outcome being monitored, not just restate the calendar event's name and date. If you \
+cannot articulate a specific open question beyond "X happens on date Y," set watchlist=false. \
+Most entries — including most routine scheduled-event mentions — should have watchlist=false.
 - UAE DESK RULE: any story that is specifically about the UAE (Dubai, Abu Dhabi, Sharjah, or \
 UAE federal policy/economy/markets) goes to UAE Desk as its primary desk, even if it would \
 otherwise fit a Coverage Theme like real estate. When a UAE story also has a clear secondary \
