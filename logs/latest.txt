@@ -1,28 +1,5 @@
-[2026-09-10 09:58:49 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-10 09:58:49 UTC] Desk run scoped to: India Desk
-[2026-09-10 09:58:49 UTC] Fetched 36 existing Notion entries for dedup reference.
-[2026-09-10 10:00:27 UTC] Generated briefing: 2026-09-10, 14:00 GST edition, 4 entries
-[2026-09-10 10:00:27 UTC] Gemini verification round 1...
-[2026-09-10 10:00:28 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the third entry, Delhi Chief Minister is identified as "Rekha Gupta", which is factually incorrect for the current political landscape in Delhi (Atishi Marlena / Arvind Kejriwal / successor context depending on standard timeline checks, but Rekha Gupta is not the Chief Minister of Delhi).
-[2026-09-10 10:01:51 UTC] Gemini verification round 2...
-[2026-09-10 10:01:51 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the third entry, Delhi Chief Minister "Rekha Gupta" is referenced. This is factually incorrect for the current political landscape in Delhi (where Rekha Gupta is not the Chief Minister).
-[2026-09-10 10:01:51 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-10 10:01:51 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-10 10:03:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Modi to Meet Xi and Putin at BRICS Summit; Xi's First India Visit in Seven Years Set for September 12 Bilateral': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 10:03:19 UTC] Updated — Modi to Meet Xi and Putin at BRICS Summit; Xi's First India Visit in Seven Years Set for September 12 Bilateral (India Desk)
-[2026-09-10 10:03:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Under-Construction Mall Collapses in Gujarat's Gandhinagar, 15 Workers Rescued with Around 12 Injured; No Fatalities Reported': coverage_theme=['Real Estate & Infrastructure'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 10:03:20 UTC] Created — Under-Construction Mall Collapses in Gujarat's Gandhinagar, 15 Workers Rescued with Around 12 Injured; No Fatalities Reported (India Desk)
-[2026-09-10 10:03:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Delhi Court Remands Satya Niketan Building Owner's Son, PG Operator, and Contractor to Two Days' Police Custody; Probe Finds Three Truckloads of Debris Filled Into Basement Before Collapse': coverage_theme=['Real Estate & Infrastructure'], related_desks=[], watchlist=True, watch_trigger='Supreme Court September 10 hearing outcome on pan-India PG safety audit; further court rulings or regulatory action on building safety standards for student housing', next_review='2026-09-11'
-[2026-09-10 10:03:20 UTC] Updated — Delhi Court Remands Satya Niketan Building Owner's Son, PG Operator, and Contractor to Two Days' Police Custody; Probe Finds Three Truckloads of Debris Filled Into Basement Before Collapse (India Desk)
-[2026-09-10 10:03:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sensex Opens Flat at 75,216, Nifty Gains 15 Points to 23,447 on September 10 as Brent Tops $100 Amid West Asia War; FIIs Sell ₹583 Crore': coverage_theme=[], related_desks=['Markets & Capital Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 10:03:21 UTC] Updated — Sensex Opens Flat at 75,216, Nifty Gains 15 Points to 23,447 on September 10 as Brent Tops $100 Amid West Asia War; FIIs Sell ₹583 Crore (India Desk)
-[2026-09-10 10:03:21 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-10 10:03:21 UTC]   Updated — Modi to Meet Xi and Putin at BRICS Summit; Xi's First India Visit in Seven Years Set for September 12 Bilateral (India Desk)
-[2026-09-10 10:03:21 UTC]   Created — Under-Construction Mall Collapses in Gujarat's Gandhinagar, 15 Workers Rescued with Around 12 Injured; No Fatalities Reported (India Desk)
-[2026-09-10 10:03:21 UTC]   Updated — Delhi Court Remands Satya Niketan Building Owner's Son, PG Operator, and Contractor to Two Days' Police Custody; Probe Finds Three Truckloads of Debris Filled Into Basement Before Collapse (India Desk)
-[2026-09-10 10:03:21 UTC]   Updated — Sensex Opens Flat at 75,216, Nifty Gains 15 Points to 23,447 on September 10 as Brent Tops $100 Amid West Asia War; FIIs Sell ₹583 Crore (India Desk)
-[2026-09-10 10:03:22 UTC] Ops notification sent.
+[2026-09-10 10:21:45 UTC] Starting NavvyaSignal automated run (type=watchlist_test)
+[2026-09-10 10:21:45 UTC] watchlist_test: fetched 17 recent entries to check against active Watchlist items.
+[2026-09-10 10:21:58 UTC] Watchlist: resolved 0 of 0 proposed resolutions.
+[2026-09-10 10:21:58 UTC] watchlist_test complete. Resolved: []
+[2026-09-10 10:22:00 UTC] Ops notification sent.
