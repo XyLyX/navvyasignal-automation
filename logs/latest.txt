@@ -1,5 +1,6 @@
-[2026-09-10 11:01:51 UTC] Starting NavvyaSignal automated run (type=weekly_synthesis)
-[2026-09-10 11:01:52 UTC] Fetched 97 entries from the last 7 days for weekly synthesis.
-[2026-09-10 11:02:46 UTC] Created Briefing entry: 'Gulf Briefing — Week 37' (id=3d711486-b145-8168-adc5-e1c526c94dd3)
-[2026-09-10 11:02:46 UTC] Weekly synthesis complete.
-[2026-09-10 11:02:47 UTC] Ops notification sent.
+[2026-09-10 13:13:34 UTC] Starting NavvyaSignal automated run (type=weekly_synthesis)
+[2026-09-10 13:13:34 UTC] Fetched 95 entries from the last 7 days for weekly synthesis.
+[2026-09-10 13:13:35 UTC] Found today's existing Briefing (3d711486-b145-8168-adc5-e1c526c94dd3) — will update instead of creating a duplicate.
+[2026-09-10 13:14:16 UTC] Updated Briefing entry: 'Gulf Briefing — Week 37' (id=3d711486-b145-8168-adc5-e1c526c94dd3)
+[2026-09-10 13:14:16 UTC] Weekly synthesis complete.
+[2026-09-10 13:14:18 UTC] Ops notification sent.
