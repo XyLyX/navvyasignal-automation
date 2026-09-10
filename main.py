@@ -109,11 +109,12 @@ def fail_hard(msg):
 # ---------- STEP 1: Fetch existing Notion entries (for dedup) ----------
 
 def _is_test_record(title):
-    """Permanent safety filter: any Notion page whose title starts with '[TEST' (used for
-    controlled Stage 1C-style pipeline testing) is excluded from every fetch function below,
-    so test/verification records can never accidentally reach a real compile, send, Today's
+    """Permanent safety filter: any Notion page whose title starts with '[TEST' or
+    '[DUPLICATE' is excluded from every fetch function below, so test/verification records
+    and known-bad duplicates can never accidentally reach a real compile, send, Today's
     Intelligence selection, Cross-Desk synthesis, or weekly Briefing."""
-    return title.strip().startswith("[TEST")
+    stripped = title.strip()
+    return stripped.startswith("[TEST") or stripped.startswith("[DUPLICATE")
 
 
 def fetch_existing_entries():
