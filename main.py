@@ -954,15 +954,19 @@ def push_to_notion(entries, valid_existing_ids):
     return summary
 
 
-def write_special_entry(title, body, sources_text, content_type, primary_desk=None, related_desks=None):
+def write_special_entry(title, body, sources_text, content_type, primary_desk=None,
+                         related_desks=None, existing_id=None):
     """Write a Cross-Desk or Briefing entry. Unlike push_to_notion, this does NOT require a
     single validated desk (Cross-Desk pieces span multiple desks by definition) — primary_desk
     is used only if provided (picking the most central desk as Category, per the same
-    convention as regular Signals), and related_desks captures the rest. Always creates a new
-    page — Cross-Desk and Briefing pieces are never updates to an existing Signal. Gated by
-    DRY_RUN and NEW_METADATA_STAGE_LIVE the same way push_to_notion is."""
+    convention as regular Signals), and related_desks captures the rest. If existing_id is
+    given, PATCHes that page instead of creating a new one — this is what makes repeated
+    compile_send runs idempotent instead of creating duplicate Cross-Desk/Briefing pieces for
+    the same underlying story. Gated by DRY_RUN and NEW_METADATA_STAGE_LIVE the same way
+    push_to_notion is."""
     if not NEW_METADATA_STAGE_LIVE:
-        log(f"DRY RUN (new metadata stage not live): would create {content_type} entry '{title}'")
+        action = "update" if existing_id else "create"
+        log(f"DRY RUN (new metadata stage not live): would {action} {content_type} entry '{title}'")
         return None
 
     properties = {
@@ -979,19 +983,26 @@ def write_special_entry(title, body, sources_text, content_type, primary_desk=No
     if related_desks:
         properties["Related Desks"] = {"multi_select": [{"name": d} for d in related_desks]}
 
+    action = "update" if existing_id else "create"
+
     if DRY_RUN:
-        log(f"DRY RUN: would create {content_type} entry '{title}' — "
+        log(f"DRY RUN: would {action} {content_type} entry '{title}' — "
             f"properties: {json.dumps(properties, default=str)[:600]}")
         return None
 
-    url = "https://api.notion.com/v1/pages"
-    payload = {"parent": {"database_id": NOTION_DATABASE_ID}, "properties": properties}
-    resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
+    if existing_id:
+        url = f"https://api.notion.com/v1/pages/{existing_id}"
+        resp = requests.patch(url, headers=NOTION_HEADERS, json={"properties": properties}, timeout=30)
+    else:
+        url = "https://api.notion.com/v1/pages"
+        payload = {"parent": {"database_id": NOTION_DATABASE_ID}, "properties": properties}
+        resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
+
     if resp.status_code not in (200, 201):
-        log(f"WARNING: Failed to write {content_type} entry '{title}': {resp.status_code} {resp.text[:500]}")
+        log(f"WARNING: Failed to {action} {content_type} entry '{title}': {resp.status_code} {resp.text[:500]}")
         return None
-    page_id = resp.json().get("id")
-    log(f"Created {content_type} entry: '{title}' (id={page_id})")
+    page_id = existing_id or resp.json().get("id")
+    log(f"{'Updated' if existing_id else 'Created'} {content_type} entry: '{title}' (id={page_id})")
     return page_id
 
 
@@ -1091,7 +1102,7 @@ Select today's Today's Intelligence entries per your instructions."""
 
 
 CROSS_DESK_SYSTEM_PROMPT = f"""You look for a genuine multi-domain connection among today's \
-NavvyaSignal entries and, if one exists, write it up as a single new Cross-Desk Signal. You do \
+NavvyaSignal entries and, if one exists, write it up as a single Cross-Desk Signal. You do \
 NOT do new research — synthesize only from the entries provided.
 
 A Cross-Desk Signal is a deliberately synthesized piece connecting 2+ domains — e.g. "Why a \
@@ -1103,11 +1114,22 @@ there's a real, specific, non-obvious connection worth a reader's attention.
 The 7 desks are EXACTLY these — use these exact strings, character for character, never an \
 older or approximated name: {", ".join(DESKS)}.
 
-If no genuine connection exists, output exactly: {{"has_cross_desk": false}}
+CRITICAL DEDUP RULE: you will be given any Cross-Desk pieces already published today. If the \
+underlying connection you'd write about is the same one already covered (even if today's \
+supporting figures have moved slightly, e.g. an updated oil price), you MUST treat it as an \
+UPDATE to that existing piece, not a new one — set "action" to "update" and copy its id EXACTLY \
+into "existing_id". Only use "action": "create" when the connection is genuinely different from \
+every existing Cross-Desk piece listed. Running this process multiple times in a day must not \
+produce duplicate pieces about the same connection — this is important for idempotency.
+
+If no genuine connection exists (or the only genuine connection is already fully covered by an \
+existing piece with nothing new to add), output exactly: {{"has_cross_desk": false}}
 
 If one exists, output:
 {{
   "has_cross_desk": true,
+  "action": "create" or "update",
+  "existing_id": "the exact id of the existing Cross-Desk piece if action=update, else null",
   "title": "string",
   "body": "string, max 1800 chars, flowing prose synthesizing the connection — plain text, no markdown",
   "sources_text": "string, referencing the underlying entries this draws from",
@@ -1118,17 +1140,59 @@ Output ONLY valid JSON, no preamble, no code fences.
 """
 
 
+def fetch_todays_cross_desk_entries():
+    """Existing Cross-Desk pieces from today's compile window, for dedup reference — this is
+    what lets generate_cross_desk_signal() update an existing piece instead of creating a
+    duplicate every time compile_send runs."""
+    if not NEW_METADATA_STAGE_LIVE:
+        return []
+    url = f"https://api.notion.com/v1/databases/{NOTION_DATABASE_ID}/query"
+    payload = {
+        "filter": {"property": "Content Type", "select": {"equals": "Cross-Desk"}},
+        "page_size": 20,
+        "sorts": [{"timestamp": "last_edited_time", "direction": "descending"}],
+    }
+    resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
+    if resp.status_code != 200:
+        log(f"WARNING: fetch_todays_cross_desk_entries failed: {resp.status_code} {resp.text[:500]}")
+        return []
+    cutoff = datetime.datetime.utcnow() - datetime.timedelta(hours=COMPILE_WINDOW_HOURS)
+    items = []
+    for page in resp.json().get("results", []):
+        edited_time_str = page.get("last_edited_time", "")
+        try:
+            edited_dt = datetime.datetime.strptime(edited_time_str[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            edited_dt = None
+        if edited_dt and edited_dt < cutoff:
+            continue
+        props = page.get("properties", {})
+        title = "".join(t.get("plain_text", "") for t in props.get("Name", {}).get("title", []))
+        if _is_test_record(title):
+            continue
+        body = "".join(t.get("plain_text", "") for t in props.get("Signal Brief", {}).get("rich_text", []))
+        items.append({"id": page["id"], "title": title, "body": body})
+    return items
+
+
 def generate_cross_desk_signal(todays_entries):
     """Zero is a valid, expected outcome most days. No new research — synthesis only from
-    today's already-written entries."""
+    today's already-written entries. Idempotent: checks today's existing Cross-Desk pieces
+    first and updates rather than duplicates when the same underlying connection recurs."""
     if not NEW_METADATA_STAGE_LIVE:
         log("generate_cross_desk_signal: new metadata stage not live yet — skipping.")
         return None
     if len(todays_entries) < 2:
         return None
 
+    existing_cross_desk = fetch_todays_cross_desk_entries()
+
     user_prompt = f"""Today's entries (desk | title | body):
 {json.dumps([{"desk": e["desk"], "title": e["title"], "body": e["body"]} for e in todays_entries], indent=2)}
+
+Cross-Desk pieces already published today (id | title | body) — check these BEFORE deciding to \
+create a new piece:
+{json.dumps(existing_cross_desk, indent=2)}
 
 Look for a genuine cross-desk connection per your instructions."""
 
@@ -1155,6 +1219,16 @@ Look for a genuine cross-desk connection per your instructions."""
         log("Cross-Desk: no genuine connection found today (this is a normal, expected outcome).")
         return None
 
+    # Guard against the model slightly mis-copying an id (same known LLM failure mode handled
+    # for regular Signals in push_to_notion) — if action=update but the claimed id doesn't
+    # match anything we actually fetched, fall back to create rather than a failed/wrong PATCH.
+    existing_id = data.get("existing_id")
+    valid_existing_ids = {e["id"] for e in existing_cross_desk}
+    if data.get("action") == "update" and existing_id not in valid_existing_ids:
+        log(f"WARNING: Cross-Desk existing_id '{existing_id}' doesn't match any fetched entry — "
+            f"treating as create instead of update.")
+        existing_id = None
+
     page_id = write_special_entry(
         title=data["title"],
         body=data["body"],
@@ -1162,6 +1236,7 @@ Look for a genuine cross-desk connection per your instructions."""
         content_type="Cross-Desk",
         primary_desk=data.get("primary_desk"),
         related_desks=data.get("related_desks", []),
+        existing_id=existing_id,
     )
     return page_id
 
