@@ -5,31 +5,49 @@ on:
     # GST = UTC+4. Cron times below are in UTC. Each offset a few minutes past the hour —
     # GitHub Actions documents that scheduled runs at the exact top of the hour are more
     # likely to be delayed or silently skipped under high load.
-    - cron: "30 1 * * *"    # 05:30 GST — Maritime & Energy (solo — dominates shared attention otherwise)
-    - cron: "30 2 * * *"    # 06:30 GST — West Asia (solo — same reason)
-    - cron: "30 11 * * *"   # 15:30 GST — UAE + Trends & Forecasting
-    - cron: "30 12 * * *"   # 16:30 GST — India + Real Estate & Infrastructure
-    - cron: "30 13 * * *"   # 17:30 GST — Markets & Capital + Global Politics + Sports
-    - cron: "30 14 * * *"   # 18:30 GST — Compile & Send: assembles today's entries, sends email + WhatsApp
+    #
+    # 7-desk structure: every desk gets its own solo run (no more multi-desk groups). West
+    # Asia, Maritime/Energy/Supply Chains, and Technology & AI are spread across different
+    # times from each other, not just given solo status, since all three intersect with the
+    # ongoing conflict narrative and were the desks most prone to under-coverage before.
+    - cron: "33 1 * * *"    # 05:33 GST — West Asia
+    - cron: "33 2 * * *"    # 06:33 GST — Maritime, Energy & Supply Chains
+    - cron: "33 10 * * *"   # 14:33 GST — Technology & AI
+    - cron: "3 11 * * *"    # 15:03 GST — UAE
+    - cron: "33 11 * * *"   # 15:33 GST — India
+    - cron: "3 12 * * *"    # 16:03 GST — Global Politics
+    - cron: "33 12 * * *"   # 16:33 GST — Markets & Capital
+    - cron: "3 14 * * *"    # 18:03 GST — Compile & Send: assembles today's entries, sends email + WhatsApp
+    # weekly_synthesis has NO schedule entry yet — manual/workflow_dispatch only for now.
+    # Friday automation is deliberately deferred until weekly_synthesis is confirmed working
+    # standalone (see main.py).
   workflow_dispatch:
     inputs:
       run_type:
-        description: "Run type: a desk-group key (research only, no send) or compile_send (sends)"
+        description: "Run type: one of the 7 desk keys (research only, no send), compile_send (sends), weekly_synthesis, or whapi_test"
         required: false
         default: "compile_send"
         type: choice
         options:
-          - "maritime_energy"
           - "west_asia"
-          - "uae_trends"
-          - "india_realestate"
-          - "markets_politics_sports"
+          - "maritime_energy"
+          - "technology_ai"
+          - "uae"
+          - "india"
+          - "global_politics"
+          - "markets_capital"
           - "compile_send"
+          - "weekly_synthesis"
           - "whapi_test"
       send_output:
-        description: "Send email/WhatsApp this run? (ignored for desk-group runs — they never send)"
+        description: "Send email/WhatsApp this run? (ignored for desk runs and weekly_synthesis — they never send)"
         required: false
         default: true
+        type: boolean
+      dry_run:
+        description: "Dry run — log intended Notion writes instead of performing them (for testing new logic paths safely)"
+        required: false
+        default: false
         type: boolean
 
 jobs:
@@ -48,30 +66,52 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Determine run type and send flag
+      # NOTE: schedule events in native GitHub Actions cron cannot carry custom inputs, so this
+      # mapping from cron string -> run_type is structurally required as long as native
+      # scheduling is in use — it isn't arbitrary duplication to "clean up" so much as an
+      # inherent constraint. It goes away entirely once the Cloudflare Worker (previously
+      # drafted, not yet deployed) replaces native scheduling with workflow_dispatch calls that
+      # always carry an explicit run_type. Until then, this list and the RUN_TYPE keys in
+      # main.py's GROUPS dict must be kept in sync manually.
+      - name: Determine run type and flags
         id: runtype
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run_type=${{ github.event.inputs.run_type }}" >> "$GITHUB_OUTPUT"
             echo "send_output=${{ github.event.inputs.send_output }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 1 * * *" ]; then
-            echo "run_type=maritime_energy" >> "$GITHUB_OUTPUT"
-            echo "send_output=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 2 * * *" ]; then
+            echo "dry_run=${{ github.event.inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "33 1 * * *" ]; then
             echo "run_type=west_asia" >> "$GITHUB_OUTPUT"
             echo "send_output=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 11 * * *" ]; then
-            echo "run_type=uae_trends" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "33 2 * * *" ]; then
+            echo "run_type=maritime_energy" >> "$GITHUB_OUTPUT"
             echo "send_output=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 12 * * *" ]; then
-            echo "run_type=india_realestate" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "33 10 * * *" ]; then
+            echo "run_type=technology_ai" >> "$GITHUB_OUTPUT"
             echo "send_output=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 13 * * *" ]; then
-            echo "run_type=markets_politics_sports" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "3 11 * * *" ]; then
+            echo "run_type=uae" >> "$GITHUB_OUTPUT"
             echo "send_output=false" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "33 11 * * *" ]; then
+            echo "run_type=india" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "3 12 * * *" ]; then
+            echo "run_type=global_politics" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "33 12 * * *" ]; then
+            echo "run_type=markets_capital" >> "$GITHUB_OUTPUT"
+            echo "send_output=false" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
           else
             echo "run_type=compile_send" >> "$GITHUB_OUTPUT"
             echo "send_output=true" >> "$GITHUB_OUTPUT"
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run briefing script
@@ -87,4 +127,5 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RUN_TYPE: ${{ steps.runtype.outputs.run_type }}
           SEND_OUTPUT: ${{ steps.runtype.outputs.send_output }}
+          DRY_RUN: ${{ steps.runtype.outputs.dry_run }}
         run: python main.py
