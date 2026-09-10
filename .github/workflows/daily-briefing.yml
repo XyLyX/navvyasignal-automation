@@ -11,7 +11,7 @@ on:
     # times from each other, not just given solo status, since all three intersect with the
     # ongoing conflict narrative and were the desks most prone to under-coverage before.
     - cron: "33 1 * * *"    # 05:33 GST — West Asia
-    - cron: "33 2 * * *"    # 06:33 GST — Maritime, Energy & Supply Chains
+    - cron: "33 2 * * *"    # 06:33 GST — Maritime Energy & Supply Chains
     - cron: "33 10 * * *"   # 14:33 GST — Technology & AI
     - cron: "3 11 * * *"    # 15:03 GST — UAE
     - cron: "33 11 * * *"   # 15:33 GST — India
