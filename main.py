@@ -69,6 +69,39 @@ GROUPS = {
     "markets_capital": ["Markets & Capital Desk"],
 }
 
+# Single source of truth mapping native GitHub Actions cron expressions to RUN_TYPE values.
+# The workflow YAML passes the raw matched cron string through as CRON_SCHEDULE (only set for
+# schedule-triggered runs) instead of resolving it itself via a bash elif-chain — this keeps
+# exactly one place (here) that knows which cron maps to which run, so future desk/run-type
+# changes only ever need updating in this one file, not silently drifting out of sync with
+# separate logic embedded in the YAML. workflow_dispatch runs set RUN_TYPE directly and never
+# touch this mapping at all.
+CRON_TO_RUN_TYPE = {
+    "33 1 * * *": "west_asia",           # 05:33 GST
+    "33 2 * * *": "maritime_energy",     # 06:33 GST
+    "33 10 * * *": "technology_ai",      # 14:33 GST
+    "3 11 * * *": "uae",                 # 15:03 GST
+    "33 11 * * *": "india",              # 15:33 GST
+    "3 12 * * *": "global_politics",     # 16:03 GST
+    "33 12 * * *": "markets_capital",    # 16:33 GST
+    "3 14 * * *": "compile_send",        # 18:03 GST, every day
+    "4 12 * * 5": "weekly_synthesis",    # 16:04 GST, Fridays only
+}
+
+CRON_SCHEDULE = os.environ.get("CRON_SCHEDULE", "")
+if CRON_SCHEDULE:
+    if CRON_SCHEDULE in CRON_TO_RUN_TYPE:
+        RUN_TYPE = CRON_TO_RUN_TYPE[CRON_SCHEDULE]
+        SEND_OUTPUT = RUN_TYPE == "compile_send"
+    else:
+        # Fail loudly rather than silently falling back to the RUN_TYPE default — an
+        # unrecognized cron string here means CRON_TO_RUN_TYPE and the workflow's schedule
+        # list have drifted out of sync, which is exactly the failure mode this mapping exists
+        # to catch early instead of masking.
+        print(f"FATAL: CRON_SCHEDULE '{CRON_SCHEDULE}' has no entry in CRON_TO_RUN_TYPE — "
+              f"the workflow's schedule list and this mapping are out of sync.")
+        sys.exit(1)
+
 # Controls whether the new metadata properties (Content Type, Coverage Theme, Today's
 # Intelligence, Watchlist, Watch Status, Watch Trigger, Next Review, Resolution Signal,
 # Related Desks) are actually included in Notion write payloads. Flipped True 2026-09-10 —
