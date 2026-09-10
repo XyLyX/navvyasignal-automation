@@ -1334,6 +1334,13 @@ def main():
     if missing:
         fail_hard(f"Missing required secret(s): {', '.join(missing)}. Check GitHub Actions secrets.")
 
+    if RUN_TYPE == "watchlist_test":
+        # Test-only path: isolates resolve_watchlist_items() against real Notion state, for
+        # controlled Stage 1C verification. Does not touch select_todays_intelligence,
+        # generate_cross_desk_signal, or any send path. Manual/workflow_dispatch only. Needs
+        # ANTHROPIC_API_KEY + Notion, hence placed after the secrets check above.
+        return run_watchlist_test()
+
     if RUN_TYPE in GROUPS:
         return run_group(RUN_TYPE)
     elif RUN_TYPE == "compile_send":
@@ -1342,7 +1349,17 @@ def main():
         return run_weekly_synthesis()
     else:
         fail_hard(f"Unrecognized RUN_TYPE '{RUN_TYPE}' — expected one of {list(GROUPS.keys())}, "
-                   f"'compile_send', 'weekly_synthesis', or 'whapi_test'.")
+                   f"'compile_send', 'weekly_synthesis', 'watchlist_test', or 'whapi_test'.")
+
+
+def run_watchlist_test():
+    """Test-only: isolates resolve_watchlist_items() for controlled Stage 1C verification
+    against real Notion state, without touching any other new mechanism or any send path."""
+    todays_entries = fetch_todays_entries_for_compile()
+    log(f"watchlist_test: fetched {len(todays_entries)} recent entries to check against active Watchlist items.")
+    resolved = resolve_watchlist_items(todays_entries)
+    log(f"watchlist_test complete. Resolved: {resolved}")
+    return {"edition_label": "watchlist_test", "entry_count": len(todays_entries), "notion_summary": [str(r) for r in resolved], "sent_output": False}
 
 
 def run_group(run_type):
