@@ -1,20 +1,30 @@
-[2026-09-10 15:55:58 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-10 15:55:58 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-10 15:55:59 UTC] Fetched 56 existing Notion entries for dedup reference.
-[2026-09-10 15:57:19 UTC] Generated briefing: 2026-09-10, 19:55 GST edition, 4 entries
-[2026-09-10 15:57:19 UTC] Gemini verification round 1...
-[2026-09-10 15:57:20 UTC] Gemini review: no concerns raised.
-[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='November 2026 U.S. midterm election results will determine whether the trigger condition for the dividend proposal is met, and whether any legislation is subsequently introduced', next_review='2026-11-04'
-[2026-09-10 15:57:20 UTC] Created — Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention (Global Politics Desk)
-[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:57:20 UTC] Created — Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction (Global Politics Desk)
-[2026-09-10 15:57:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-10 15:57:21 UTC] Created — U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour (Global Politics Desk)
-[2026-09-10 15:57:21 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Potential extension of the ceasefire beyond the initial three-month period, and whether Nigeria publicly acknowledges the negotiations despite its stated no-negotiation policy', next_review='2026-10-15'
-[2026-09-10 15:57:21 UTC] Created — Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance (Global Politics Desk) [NOTE: Story was first publicly reported September 7, 2026, though the ceasefire itself began in June 2026. Included here because the revelation is within the 48-hour recency window and represents a genuine shift in understanding of Nigeria's counterterrorism strategy.]
-[2026-09-10 15:57:21 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-10 15:57:21 UTC]   Created — Trump Promises $5,000 'Dividend' to Every Adult American if Republicans Hold Congress, Sparking Legal and Fiscal Questions at Dallas Convention (Global Politics Desk)
-[2026-09-10 15:57:21 UTC]   Created — Kyrgyzstan Appellate Court Acquits Former Security Chief Tashiev of Power-Seizure Charges, Reclassifies Case to Electoral Obstruction (Global Politics Desk)
-[2026-09-10 15:57:21 UTC]   Created — U.S. Designates Ecuadorian Gang Los Tiguerones as Foreign Terrorist Organization During Rubio's Latin America Security Tour (Global Politics Desk)
-[2026-09-10 15:57:21 UTC]   Created — Nigeria and Boko Haram Reportedly Maintained Secret Three-Month Ceasefire Following Hostage Release, Despite Public No-Negotiation Stance (Global Politics Desk) [NOTE: Story was first publicly reported September 7, 2026, though the ceasefire itself began in June 2026. Included here because the revelation is within the 48-hour recency window and represents a genuine shift in understanding of Nigeria's counterterrorism strategy.]
-[2026-09-10 15:57:23 UTC] Ops notification sent.
+[2026-09-10 16:35:02 UTC] Starting NavvyaSignal automated run (type=markets_capital)
+[2026-09-10 16:35:02 UTC] Desk run scoped to: Markets & Capital Desk
+[2026-09-10 16:35:02 UTC] Fetched 60 existing Notion entries for dedup reference.
+[2026-09-10 16:36:35 UTC] Generated briefing: 2026-09-10, 20:35 GST edition, 4 entries
+[2026-09-10 16:36:35 UTC] Gemini verification round 1...
+[2026-09-10 16:36:37 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- In the first and third articles, the text states that the 10-year Treasury yield climbed above 4.92 percent, "its highest since July 2023," but also mentions in the first article that the 30-year yield approached its 2007 peak. If yields are at their highest since 2003 (or 2007 for the 30-year), stating the 10-year is only at its highest since July 2023 is internally contradictory or understates the duration of the high-yield environment described by the 30-year peak.
+- In the fourth article, the text attributes CoinShares digital-asset fund outflow data (1.73 billion dollar outflow in "early June") to "Polymarket analysis," which is implausible as Polymarket is a prediction market platform rather than a financial data provider conducting institutional crypto flow research (which would typically come directly from CoinShares or blockchain analytics firms).
+[2026-09-10 16:37:50 UTC] Gemini verification round 2...
+[2026-09-10 16:37:51 UTC] Gemini raised 3 concern(s):
+FLAGS: 3
+- The first entry cites a Wednesday Dow Jones close of 52,381 and S&P 500 close of 7,636, which are implausibly high for actual market levels and appear to be hallucinated or erroneous index values.
+- The third entry cites gold trading near $4,365 per ounce, which is implausibly high compared to historical or current market ranges for gold.
+- The fourth entry cites Bitcoin opening at $78,291 and Ethereum at $2,467, while later referencing a CoinShares outflow report from "June 1, 2026" inside a briefing dated September 10, 2026—using an outdated data point months removed from the current briefing date.
+[2026-09-10 16:37:51 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-10 16:39:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'U.S. Equities Extend Selloff on Hot PPI and Oil Above $105, Treasury Yields Hit Multi-Year Highs': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Friday September 11 CPI report and September 16 FOMC decision will determine whether markets price in further rate hikes or stabilize if inflation moderates', next_review='2026-09-11'
+[2026-09-10 16:39:10 UTC] Updated — U.S. Equities Extend Selloff on Hot PPI and Oil Above $105, Treasury Yields Hit Multi-Year Highs (Markets & Capital Desk)
+[2026-09-10 16:39:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='October ECB meeting will determine whether the hiking cycle continues if energy-driven inflation remains elevated', next_review='2026-10-29'
+[2026-09-10 16:39:10 UTC] Created — ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures (Markets & Capital Desk)
+[2026-09-10 16:39:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Gold Trades in $4,340-$4,448 Range as Treasury Yields Surge Despite Safe-Haven Demand, Fed Hike Odds Rise': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Friday September 11 CPI report and September 16 Fed decision will determine whether yields continue pressuring gold or safe-haven demand resumes', next_review='2026-09-11'
+[2026-09-10 16:39:11 UTC] Updated — Gold Trades in $4,340-$4,448 Range as Treasury Yields Surge Despite Safe-Haven Demand, Fed Hike Odds Rise (Markets & Capital Desk)
+[2026-09-10 16:39:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bitcoin Slides to $77,942 and Ethereum to $2,465 Ahead of Inflation Data, Lowest Weekly Opens': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-10 16:39:11 UTC] Created — Bitcoin Slides to $77,942 and Ethereum to $2,465 Ahead of Inflation Data, Lowest Weekly Opens (Markets & Capital Desk)
+[2026-09-10 16:39:11 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-10 16:39:11 UTC]   Updated — U.S. Equities Extend Selloff on Hot PPI and Oil Above $105, Treasury Yields Hit Multi-Year Highs (Markets & Capital Desk)
+[2026-09-10 16:39:11 UTC]   Created — ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures (Markets & Capital Desk)
+[2026-09-10 16:39:11 UTC]   Updated — Gold Trades in $4,340-$4,448 Range as Treasury Yields Surge Despite Safe-Haven Demand, Fed Hike Odds Rise (Markets & Capital Desk)
+[2026-09-10 16:39:11 UTC]   Created — Bitcoin Slides to $77,942 and Ethereum to $2,465 Ahead of Inflation Data, Lowest Weekly Opens (Markets & Capital Desk)
+[2026-09-10 16:39:13 UTC] Ops notification sent.
