@@ -323,6 +323,40 @@ Write this week's Briefing per your instructions."""
     return data
 
 
+def fetch_todays_briefing():
+    """Checks for a Briefing already created today, so rerunning weekly_synthesis on the same
+    day updates that Briefing instead of creating a duplicate — same idempotency pattern as
+    Cross-Desk. Weekly Briefings are naturally keyed by time period rather than content
+    similarity, so a same-day check is the right idempotency boundary here (unlike Cross-Desk,
+    which needs content-based dedup since it could plausibly run more than once a day)."""
+    if not NEW_METADATA_STAGE_LIVE:
+        return None
+    url = f"https://api.notion.com/v1/databases/{NOTION_DATABASE_ID}/query"
+    payload = {
+        "filter": {"property": "Content Type", "select": {"equals": "Briefing"}},
+        "page_size": 5,
+        "sorts": [{"timestamp": "created_time", "direction": "descending"}],
+    }
+    resp = requests.post(url, headers=NOTION_HEADERS, json=payload, timeout=30)
+    if resp.status_code != 200:
+        log(f"WARNING: fetch_todays_briefing failed: {resp.status_code} {resp.text[:500]}")
+        return None
+    cutoff = datetime.datetime.utcnow() - datetime.timedelta(hours=20)
+    for page in resp.json().get("results", []):
+        created_time_str = page.get("created_time", "")
+        try:
+            created_dt = datetime.datetime.strptime(created_time_str[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            continue
+        if created_dt >= cutoff:
+            props = page.get("properties", {})
+            title = "".join(t.get("plain_text", "") for t in props.get("Name", {}).get("title", []))
+            if _is_test_record(title):
+                continue
+            return page["id"]
+    return None
+
+
 def run_weekly_synthesis():
     """Independently runnable RUN_TYPE — no Worker-side Friday automation wired up yet (the
     Worker isn't deployed). Manual/workflow_dispatch only for now, per the specified sequencing:
@@ -334,12 +368,17 @@ def run_weekly_synthesis():
         log("WARNING: no entries found in the weekly window — skipping Briefing generation this run.")
         return {"edition_label": "weekly_synthesis (no entries)", "entry_count": 0, "notion_summary": [], "sent_output": False}
 
+    existing_briefing_id = fetch_todays_briefing()
+    if existing_briefing_id:
+        log(f"Found today's existing Briefing ({existing_briefing_id}) — will update instead of creating a duplicate.")
+
     briefing_data = generate_weekly_briefing(week_entries)
     page_id = write_special_entry(
         title=briefing_data["title"],
         body=briefing_data["body"],
         sources_text=briefing_data.get("sources_text", ""),
         content_type="Briefing",
+        existing_id=existing_briefing_id,
     )
 
     log("Weekly synthesis complete.")
