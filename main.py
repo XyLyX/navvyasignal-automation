@@ -51,7 +51,7 @@ DESKS = [
     "Global Politics Desk",
     "Markets & Capital Desk",
     "Technology & AI Desk",
-    "Maritime, Energy & Supply Chains Desk",
+    "Maritime Energy & Supply Chains Desk",
 ]
 
 # Every desk gets its own solo dispatch (own isolated GitHub Actions job) — no more multi-desk
@@ -61,7 +61,7 @@ DESKS = [
 # daily-briefing.yml for the actual trigger times.
 GROUPS = {
     "west_asia": ["West Asia Desk"],
-    "maritime_energy": ["Maritime, Energy & Supply Chains Desk"],
+    "maritime_energy": ["Maritime Energy & Supply Chains Desk"],
     "technology_ai": ["Technology & AI Desk"],
     "uae": ["UAE Desk"],
     "india": ["India Desk"],
@@ -71,12 +71,9 @@ GROUPS = {
 
 # Controls whether the new metadata properties (Content Type, Coverage Theme, Today's
 # Intelligence, Watchlist, Watch Status, Watch Trigger, Next Review, Resolution Signal,
-# Related Desks) are actually included in Notion write payloads. MUST stay False until Stage 1C
-# creates these properties in the live Notion database — including an unrecognized property name
-# in a write payload causes Notion's API to reject the whole request with a 400 error, which
-# would break the currently-running live daily pipeline. Flip to True only in a dedicated
-# follow-up commit after Stage 1C is confirmed live, then test with DRY_RUN=true first.
-NEW_METADATA_STAGE_LIVE = False
+# Related Desks) are actually included in Notion write payloads. Flipped True 2026-09-10 —
+# Stage 1C confirmed all 9 new properties exist live in the Signal Feed database.
+NEW_METADATA_STAGE_LIVE = True
 
 # Re-enabled 2026-08-31 — Whapi channel IRONMN-2NYWG confirmed re-authorized with the new
 # number (+971569713611), verified AUTHORIZED status in the Whapi dashboard.
@@ -344,7 +341,7 @@ def run_weekly_synthesis():
 
 SYSTEM_PROMPT = """You are the editorial engine for NavvyaSignal, a daily intelligence \
 publication covering seven specialist desks: West Asia, India, UAE, Global Politics, Markets \
-& Capital, Technology & AI, and Maritime, Energy & Supply Chains.
+& Capital, Technology & AI, and Maritime Energy & Supply Chains.
 
 Rules you must follow strictly:
 - Research current developments using web search. Never fabricate facts, figures, or quotes.
@@ -374,7 +371,7 @@ by "this desk has recent activity so I'll move on." If your search genuinely tur
 new for an in-scope desk, that's a legitimate zero — but it must follow a real, thorough \
 search of that desk's beat, not an inference from the presence of unrelated existing entries.
 - Assign each entry to exactly one of these desks: West Asia Desk, India Desk, UAE Desk, \
-Global Politics Desk, Markets & Capital Desk, Technology & AI Desk, Maritime, Energy & Supply \
+Global Politics Desk, Markets & Capital Desk, Technology & AI Desk, Maritime Energy & Supply \
 Chains Desk. If genuinely ambiguous, pick the closest fit and note the ambiguity in a "notes" \
 field — do not leave it blank.
 - COVERAGE THEME RULE: some stories cut across desks without having their own desk (e.g. real \
@@ -385,7 +382,7 @@ Estate & Infrastructure"]) so the theme can be tracked across desks. Leave it as
 when no cross-cutting theme genuinely applies — do not force a tag onto every entry.
 - RELATED DESKS RULE: if, while researching your assigned desk, a story's implications clearly \
 and specifically extend into another desk's domain (not just a passing mention), list that \
-other desk in "related_desks" (e.g. a Hormuz shipping story researched under Maritime, Energy \
+other desk in "related_desks" (e.g. a Hormuz shipping story researched under Maritime Energy \
 & Supply Chains that has real West Asia and India dimensions). This is lightweight tagging — \
 it does not mean you write that other desk's angle yourself, and it is NOT the same thing as a \
 genuine Cross-Desk Signal (a separate, deliberately-synthesized piece produced later by a \
@@ -452,7 +449,7 @@ never as consumer/product tech news.
   * Global Politics Desk: general political roundup beyond elections/coups already tracked. No \
 generic political news — a politician saying something stupid is not automatically a signal; \
 it needs actual strategic consequence.
-  * Maritime, Energy & Supply Chains Desk: broad roundup covering oil, LNG, shipping, ports, \
+  * Maritime Energy & Supply Chains Desk: broad roundup covering oil, LNG, shipping, ports, \
 tankers, freight, maritime security, insurance, chokepoints, pipelines, critical minerals, and \
 supply chains generally — beyond whatever specific conflict thread or price level is already \
 being tracked.
@@ -478,7 +475,7 @@ developments (building collapses, major project cancellations/approvals, constru
 regulatory action, notable capture/compromise of autonomous or defence-linked technology.
   * Global Politics Desk: breaking political events — resignations, elections, \
 coups, sudden policy reversals — beyond scheduled/expected developments.
-  * Maritime, Energy & Supply Chains Desk: tanker/vessel incidents, port or refinery accidents, \
+  * Maritime Energy & Supply Chains Desk: tanker/vessel incidents, port or refinery accidents, \
 pipeline disruptions, shipping lane closures, critical-minerals supply disruptions — not just \
 price/index movements.
 An acute incident with real-world impact (injuries, fatalities, market/operational disruption) is \
@@ -609,7 +606,7 @@ factual claim, figure, or attribution — only format and organize.
 
 Rules:
 - Group entries by desk in this order where present: West Asia Desk, India Desk, UAE Desk, \
-Global Politics Desk, Markets & Capital Desk, Technology & AI Desk, Maritime, Energy & Supply \
+Global Politics Desk, Markets & Capital Desk, Technology & AI Desk, Maritime Energy & Supply \
 Chains Desk.
 - Subject lines and headers use proper case ("Navvya Signal - Daily Briefing"), never all-caps.
 - email_html: full HTML body, clean sections per desk, using the provided title/body/sources \
