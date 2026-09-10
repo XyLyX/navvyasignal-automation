@@ -1,5 +1,6 @@
-[2026-09-10 10:21:45 UTC] Starting NavvyaSignal automated run (type=watchlist_test)
-[2026-09-10 10:21:45 UTC] watchlist_test: fetched 17 recent entries to check against active Watchlist items.
-[2026-09-10 10:21:58 UTC] Watchlist: resolved 0 of 0 proposed resolutions.
-[2026-09-10 10:21:58 UTC] watchlist_test complete. Resolved: []
-[2026-09-10 10:22:00 UTC] Ops notification sent.
+[2026-09-10 10:22:54 UTC] Starting NavvyaSignal automated run (type=watchlist_test)
+[2026-09-10 10:22:55 UTC] watchlist_test: fetched 18 recent entries to check against active Watchlist items.
+[2026-09-10 10:22:59 UTC] Resolved watchlist item 3d711486-b145-810f-96a3-cc7b247eb7c7 -> 3d711486-b145-81b7-a36d-da092eb4ea5a
+[2026-09-10 10:22:59 UTC] Watchlist: resolved 1 of 1 proposed resolutions.
+[2026-09-10 10:22:59 UTC] watchlist_test complete. Resolved: ['3d711486-b145-810f-96a3-cc7b247eb7c7']
+[2026-09-10 10:23:00 UTC] Ops notification sent.
