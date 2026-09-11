@@ -1,7 +1,7 @@
-[2026-09-11 14:56:58 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-11 14:56:58 UTC] Desk run scoped to: UAE Desk
-[2026-09-11 14:56:59 UTC] Fetched 62 existing Notion entries for dedup reference.
-[2026-09-11 14:58:22 UTC] Ops notification sent.
+[2026-09-11 15:09:36 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-11 15:09:36 UTC] Desk run scoped to: India Desk
+[2026-09-11 15:09:36 UTC] Fetched 62 existing Notion entries for dedup reference.
+[2026-09-11 15:09:38 UTC] Ops notification sent.
 Traceback (most recent call last):
   File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
     result = main()
@@ -12,21 +12,14 @@ Traceback (most recent call last):
   File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
     briefing = generate_briefing(existing, scope_desks)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 652, in generate_briefing
-    response = stream.get_final_message()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 98, in get_final_message
-    self.until_done()
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 125, in until_done
-    consume_sync_iterator(self)
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_utils/_streams.py", line 6, in consume_sync_iterator
-    for _ in iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 72, in __iter__
-    for item in self._iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 133, in __stream__
-    for sse_event in self._raw_stream:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 48, in __iter__
-    for item in self._iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 140, in __stream__
-    raise self._client._make_status_error(
-anthropic.APIStatusError: {'type': 'error', 'error': {'details': None, 'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cewr75KgZbbBJCzHizmDs'}
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
+    with client.messages.stream(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1509, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1193, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cews4urioMfZqXgYLBkei'}
