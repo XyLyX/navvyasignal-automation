@@ -1,34 +1,32 @@
-[2026-09-11 14:34:16 UTC] Starting NavvyaSignal automated run (type=technology_ai)
-[2026-09-11 14:34:16 UTC] Desk run scoped to: Technology & AI Desk
-[2026-09-11 14:34:17 UTC] Fetched 57 existing Notion entries for dedup reference.
-[2026-09-11 14:36:17 UTC] Generated briefing: 2026-09-11, 18:34 GST edition, 6 entries
-[2026-09-11 14:36:17 UTC] Gemini verification round 1...
-[2026-09-11 14:36:18 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the IQM Quantum Computers entry, the text claims that "IQM, founded in 2018 and publicly listed on Nasdaq as IQMX," which is factually incorrect/implausible for 2026 as IQM is a private European startup (or at least was not publicly listed under the ticker IQMX on Nasdaq at that time).
-[2026-09-11 14:38:23 UTC] Gemini verification round 2...
-[2026-09-11 14:38:24 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-
-- In the Positron AI entry, the funding round lists "Netscape co-founder Jim Clark" as an anchor. Jim Clark co-founded Netscape in 1994, Silicon Graphics in 1982, and WebMD in 1996, but at age 82 in 2026 it is implausible/unverified that he is actively anchoring a 2026 Series C-1 round for an AI inference chip startup; this specific claim requires closer source verification for potential confusion with a different investor or namesake.
-[2026-09-11 14:38:24 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-11 14:40:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Microsoft Plans to Triple Global Data Center Capacity to 38 Gigawatts by 2032, AI-Specific Infrastructure to Reach 12.7 Gigawatts': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-11 14:40:18 UTC] Created — Microsoft Plans to Triple Global Data Center Capacity to 38 Gigawatts by 2032, AI-Specific Infrastructure to Reach 12.7 Gigawatts (Technology & AI Desk)
-[2026-09-11 14:40:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Positron AI Raises $875 Million at $5 Billion Valuation for Memory-First Asimov Inference Chip, Tapeout Scheduled End 2026': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='Asimov chip tapeout completion and production ramp in second half 2027, determining whether commodity LPDDR5X architecture can compete with HBM-based GPU inference economics at scale.', next_review='2027-06-30'
-[2026-09-11 14:40:19 UTC] Created — Positron AI Raises $875 Million at $5 Billion Valuation for Memory-First Asimov Inference Chip, Tapeout Scheduled End 2026 (Technology & AI Desk)
-[2026-09-11 14:40:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Mistral AI Raises €3 Billion at €21 Billion Valuation in Europe's Largest Private Tech Funding Round, Samsung-Led Series D': coverage_theme=[], related_desks=['Markets & Capital Desk', 'Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-11 14:40:19 UTC] Updated — Mistral AI Raises €3 Billion at €21 Billion Valuation in Europe's Largest Private Tech Funding Round, Samsung-Led Series D (Technology & AI Desk) [NOTE: Updates existing September 10 entry with full Series D details, lead investors, strategic positioning, and revenue trajectory disclosed post-announcement.]
-[2026-09-11 14:40:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Calls for Mandatory National AI Safety Rules, Urges Congress to Act Before December Adjournment Following Rogue Agent Incidents': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Congressional action on federal AI safety legislation before December 2026 adjournment, determining whether voluntary commitments shift to binding capability-based regulation.', next_review='2026-12-15'
-[2026-09-11 14:40:20 UTC] Created — OpenAI Calls for Mandatory National AI Safety Rules, Urges Congress to Act Before December Adjournment Following Rogue Agent Incidents (Technology & AI Desk)
-[2026-09-11 14:40:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'IQM Quantum Computers Selected to Deploy Europe's First Logical-Qubit-Capable Superconducting System, LUMI-IQ Three-Phase Roadmap Through 2029': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="Halocene H4 installation in 2027 with 150 physical qubits and early error correction, establishing whether IQM's staged upgrade path delivers Europe's first operational logical-qubit system as planned.", next_review='2027-12-31'
-[2026-09-11 14:40:20 UTC] Created — IQM Quantum Computers Selected to Deploy Europe's First Logical-Qubit-Capable Superconducting System, LUMI-IQ Three-Phase Roadmap Through 2029 (Technology & AI Desk)
-[2026-09-11 14:40:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Infleqtion and Cisco Announce Quantum Networking R&D Collaboration, Targeting Distributed Neutral-Atom Systems and Entanglement Distribution': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-11 14:40:21 UTC] Created — Infleqtion and Cisco Announce Quantum Networking R&D Collaboration, Targeting Distributed Neutral-Atom Systems and Entanglement Distribution (Technology & AI Desk)
-[2026-09-11 14:40:21 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-11 14:40:21 UTC]   Created — Microsoft Plans to Triple Global Data Center Capacity to 38 Gigawatts by 2032, AI-Specific Infrastructure to Reach 12.7 Gigawatts (Technology & AI Desk)
-[2026-09-11 14:40:21 UTC]   Created — Positron AI Raises $875 Million at $5 Billion Valuation for Memory-First Asimov Inference Chip, Tapeout Scheduled End 2026 (Technology & AI Desk)
-[2026-09-11 14:40:21 UTC]   Updated — Mistral AI Raises €3 Billion at €21 Billion Valuation in Europe's Largest Private Tech Funding Round, Samsung-Led Series D (Technology & AI Desk) [NOTE: Updates existing September 10 entry with full Series D details, lead investors, strategic positioning, and revenue trajectory disclosed post-announcement.]
-[2026-09-11 14:40:21 UTC]   Created — OpenAI Calls for Mandatory National AI Safety Rules, Urges Congress to Act Before December Adjournment Following Rogue Agent Incidents (Technology & AI Desk)
-[2026-09-11 14:40:21 UTC]   Created — IQM Quantum Computers Selected to Deploy Europe's First Logical-Qubit-Capable Superconducting System, LUMI-IQ Three-Phase Roadmap Through 2029 (Technology & AI Desk)
-[2026-09-11 14:40:21 UTC]   Created — Infleqtion and Cisco Announce Quantum Networking R&D Collaboration, Targeting Distributed Neutral-Atom Systems and Entanglement Distribution (Technology & AI Desk)
-[2026-09-11 14:40:22 UTC] Ops notification sent.
+[2026-09-11 14:56:58 UTC] Starting NavvyaSignal automated run (type=uae)
+[2026-09-11 14:56:58 UTC] Desk run scoped to: UAE Desk
+[2026-09-11 14:56:59 UTC] Fetched 62 existing Notion entries for dedup reference.
+[2026-09-11 14:58:22 UTC] Ops notification sent.
+Traceback (most recent call last):
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
+    result = main()
+             ^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
+    briefing = generate_briefing(existing, scope_desks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 652, in generate_briefing
+    response = stream.get_final_message()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 98, in get_final_message
+    self.until_done()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 125, in until_done
+    consume_sync_iterator(self)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_utils/_streams.py", line 6, in consume_sync_iterator
+    for _ in iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 72, in __iter__
+    for item in self._iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 133, in __stream__
+    for sse_event in self._raw_stream:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 48, in __iter__
+    for item in self._iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 140, in __stream__
+    raise self._client._make_status_error(
+anthropic.APIStatusError: {'type': 'error', 'error': {'details': None, 'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cewr75KgZbbBJCzHizmDs'}
