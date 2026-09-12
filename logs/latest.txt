@@ -1,20 +1,26 @@
-[2026-09-12 14:19:39 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-12 14:19:39 UTC] Desk run scoped to: India Desk
-[2026-09-12 14:19:39 UTC] Fetched 49 existing Notion entries for dedup reference.
-[2026-09-12 14:20:20 UTC] Generated briefing: 2026-09-12, 18:19 GST edition, 1 entries
-[2026-09-12 14:20:20 UTC] Gemini verification round 1...
-[2026-09-12 14:20:21 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The text states that Prime Minister Modi held bilateral talks with Russian President Vladimir Putin on "Friday, September 11," but September 11, 2026, falls on a Friday, whereas the opening sentence states the summit began on September 12-13, and later mentions Xi Jinping arriving on Saturday; furthermore, Putin's arrival and bilateral meetings on a date prior to the official summit start or on a misaligned day of the week should be verified for chronological consistency. (Note: September 11, 2026 is indeed a Friday, but the text says the summit began September 12, making a Friday bilateral before the summit an internal contradiction or timeline error worth checking).
-[2026-09-12 14:20:46 UTC] Gemini verification round 2...
-[2026-09-12 14:20:47 UTC] Gemini raised 2 concern(s):
-FLAGS: 2
-- The text states that Prime Minister Narendra Modi held bilateral talks with Vladimir Putin on September 11, but also mentions Putin arrived in New Delhi "early Friday morning" (September 12th) and that the summit begins September 12, making the September 11 bilateral date internally contradictory.
-- The text states Chinese President Xi Jinping arrived "Saturday morning" (September 13) and met with PM Modi on the sidelines, but the draft is dated Friday, September 12, 2026 (18:19 GST), meaning an event on Saturday morning is described as having already occurred in a same-day or future-dated context.
-[2026-09-12 14:20:47 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-12 14:20:47 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-12 14:21:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Hosts 18th BRICS Summit in New Delhi as Modi Holds Bilateral Meetings with Putin and Xi Jinping': coverage_theme=[], related_desks=['Global Politics Desk', 'West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 14:21:12 UTC] Created — India Hosts 18th BRICS Summit in New Delhi as Modi Holds Bilateral Meetings with Putin and Xi Jinping (India Desk)
-[2026-09-12 14:21:12 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-12 14:21:12 UTC]   Created — India Hosts 18th BRICS Summit in New Delhi as Modi Holds Bilateral Meetings with Putin and Xi Jinping (India Desk)
-[2026-09-12 14:21:13 UTC] Ops notification sent.
+[2026-09-12 15:07:27 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-12 15:07:27 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-12 15:07:28 UTC] Fetched 38 existing Notion entries for dedup reference.
+[2026-09-12 15:09:25 UTC] Generated briefing: 2026-09-12, 19:07 GST edition, 6 entries
+[2026-09-12 15:09:25 UTC] Gemini verification round 1...
+[2026-09-12 15:09:25 UTC] Gemini review: no concerns raised.
+[2026-09-12 15:09:25 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:09:26 UTC] Created — North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills (Global Politics Desk)
+[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:09:26 UTC] Created — Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi (Global Politics Desk)
+[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:09:26 UTC] Created — Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration (Global Politics Desk)
+[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:09:27 UTC] Created — Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort (Global Politics Desk)
+[2026-09-12 15:09:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:09:27 UTC] Created — Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges (Global Politics Desk)
+[2026-09-12 15:09:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Sunday September 13, 2026 election results will resolve whether the far-right Sweden Democrats enter government for the first time, marking a potential turning point in European far-right normalization', next_review='2026-09-14'
+[2026-09-12 15:09:28 UTC] Created — Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time (Global Politics Desk)
+[2026-09-12 15:09:28 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-12 15:09:28 UTC]   Created — North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills (Global Politics Desk)
+[2026-09-12 15:09:28 UTC]   Created — Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi (Global Politics Desk)
+[2026-09-12 15:09:28 UTC]   Created — Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration (Global Politics Desk)
+[2026-09-12 15:09:28 UTC]   Created — Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort (Global Politics Desk)
+[2026-09-12 15:09:28 UTC]   Created — Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges (Global Politics Desk)
+[2026-09-12 15:09:28 UTC]   Created — Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time (Global Politics Desk)
+[2026-09-12 15:09:29 UTC] Ops notification sent.
