@@ -1,26 +1,33 @@
-[2026-09-12 15:07:27 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-12 15:07:27 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-12 15:07:28 UTC] Fetched 38 existing Notion entries for dedup reference.
-[2026-09-12 15:09:25 UTC] Generated briefing: 2026-09-12, 19:07 GST edition, 6 entries
-[2026-09-12 15:09:25 UTC] Gemini verification round 1...
-[2026-09-12 15:09:25 UTC] Gemini review: no concerns raised.
-[2026-09-12 15:09:25 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 15:09:26 UTC] Created — North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills (Global Politics Desk)
-[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 15:09:26 UTC] Created — Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi (Global Politics Desk)
-[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 15:09:26 UTC] Created — Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration (Global Politics Desk)
-[2026-09-12 15:09:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 15:09:27 UTC] Created — Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort (Global Politics Desk)
-[2026-09-12 15:09:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-12 15:09:27 UTC] Created — Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges (Global Politics Desk)
-[2026-09-12 15:09:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Sunday September 13, 2026 election results will resolve whether the far-right Sweden Democrats enter government for the first time, marking a potential turning point in European far-right normalization', next_review='2026-09-14'
-[2026-09-12 15:09:28 UTC] Created — Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time (Global Politics Desk)
-[2026-09-12 15:09:28 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-12 15:09:28 UTC]   Created — North Korea Fires Multiple Ballistic Missiles Following US-South Korea-Japan Freedom Edge Military Drills (Global Politics Desk)
-[2026-09-12 15:09:28 UTC]   Created — Putin Warns Deployment of European Troops to Ukraine Would Mean War with Russia, Following BRICS Summit in New Delhi (Global Politics Desk)
-[2026-09-12 15:09:28 UTC]   Created — Prison Riot and Fire in Syria's Kobani Kills at Least Seven, Underscoring Kurdish-Arab Tensions Following SDF Integration (Global Politics Desk)
-[2026-09-12 15:09:28 UTC]   Created — Trump Arrives in Ireland for Two-Day Visit, Meets President and Taoiseach Before Golf Tournament at Doonbeg Resort (Global Politics Desk)
-[2026-09-12 15:09:28 UTC]   Created — Trump-Appointed Prosecutor Joseph diGenova Resigns from Grand Conspiracy Investigation into Trump's Political Foes Without Filing Charges (Global Politics Desk)
-[2026-09-12 15:09:28 UTC]   Created — Sweden Votes Sunday in Knife-Edge Election That Could Bring Far-Right Sweden Democrats into Government for First Time (Global Politics Desk)
-[2026-09-12 15:09:29 UTC] Ops notification sent.
+[2026-09-12 15:42:00 UTC] Starting NavvyaSignal automated run (type=markets_capital)
+[2026-09-12 15:42:00 UTC] Desk run scoped to: Markets & Capital Desk
+[2026-09-12 15:42:01 UTC] Fetched 39 existing Notion entries for dedup reference.
+[2026-09-12 15:44:05 UTC] Generated briefing: 2026-09-12, 19:42 GST edition, 6 entries
+[2026-09-12 15:44:05 UTC] Gemini verification round 1...
+[2026-09-12 15:44:07 UTC] Gemini raised 4 concern(s):
+FLAGS: 4
+- The entry on the ECB rate hike states that the ECB raised rates by 25 basis points on Thursday September 10, 2026, but September 10, 2026 falls on a Thursday and the text later mentions the rate hike was the first since the ECB began its tightening cycle, which is historically implausible for a mature cycle, and ECB rate decisions traditionally take place on Thursdays but the specific figures and dates should be verified against actual ECB meeting schedules for September 2026.
+- Multiple entries refer to an impending Federal Reserve rate meeting on September 15–16, 2026, and price in a 60% to 69% probability of a rate *hike* (e.g., "pricing a 66.1 percent probability of a 25 basis point rate hike"), which contradicts current macroeconomic consensus and normal central bank forecasting where a hike of this magnitude in a developed economy under these conditions would be highly unusual, and explicitly names "Chair Warsh" (implying Kevin Warsh as Fed Chair, whose term would depend on political appointments not standard for current timelines).
+- The gold spot price is cited as trading between $4,348 and $4,365 per troy ounce with an all-time high of $5,589.38 on January 28, 2026, which are wildly inflated figures compared to historical and current market realities for gold prices.
+- The SpaceX entry reports a valuation/revenue scale including a "$13 billion annualized AI computing deal" and a target of "$100 billion annual recurring revenue run rate by the end of 2026," alongside specific quarterly revenue figures and chip types (e.g., "Nvidia GB300 chips") that represent unverified or unrealistic forward-looking projections presented as current factual reporting.
+[2026-09-12 15:46:17 UTC] Gemini verification round 2...
+[2026-09-12 15:46:17 UTC] Gemini review: no concerns raised.
+[2026-09-12 15:46:17 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:46:18 UTC] Updated — ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures (Markets & Capital Desk)
+[2026-09-12 15:46:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'S&P 500 Rises 0.86 Percent Friday, Snapping Four-Day Losing Streak as Oil Retreats and CPI Meets Expectations Before Fed Decision': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger="Federal Reserve rate decision September 16, 2026 at 2:00 PM ET will resolve whether markets correctly priced the 66 percent probability of a 25bp hike versus a hold, and whether the Summary of Economic Projections and Chair Warsh's press conference shift terminal rate expectations or signal further tightening.", next_review='2026-09-16'
+[2026-09-12 15:46:18 UTC] Created — S&P 500 Rises 0.86 Percent Friday, Snapping Four-Day Losing Streak as Oil Retreats and CPI Meets Expectations Before Fed Decision (Markets & Capital Desk)
+[2026-09-12 15:46:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bitcoin Holds Near $77,270 and Ethereum Rises 2.6 Percent to $2,513 on September 12 as Market Stabilizes After Week-Long Slide': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:46:19 UTC] Created — Bitcoin Holds Near $77,270 and Ethereum Rises 2.6 Percent to $2,513 on September 12 as Market Stabilizes After Week-Long Slide (Markets & Capital Desk)
+[2026-09-12 15:46:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Gold Trades Near $4,350 Per Ounce on September 12, Up 0.77 Percent as Investors Weigh Hawkish Fed Against Dollar Weakness': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:46:19 UTC] Created — Gold Trades Near $4,350 Per Ounce on September 12, Up 0.77 Percent as Investors Weigh Hawkish Fed Against Dollar Weakness (Markets & Capital Desk)
+[2026-09-12 15:46:19 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'SpaceX Secures $13 Billion Annualized AI Computing Deal at $1.11 Billion Per Month, Bolstering Path to $100 Billion Revenue Run Rate by Year-End': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:46:20 UTC] Created — SpaceX Secures $13 Billion Annualized AI Computing Deal at $1.11 Billion Per Month, Bolstering Path to $100 Billion Revenue Run Rate by Year-End (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Brent Crude Settles at $104.61 Per Barrel and WTI at $100.05 on September 12, Retreating from Weekly Highs Near $107-$109 Ahead of Iran-GCC Talks Monday': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk', 'West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-12 15:46:20 UTC] Created — Brent Crude Settles at $104.61 Per Barrel and WTI at $100.05 on September 12, Retreating from Weekly Highs Near $107-$109 Ahead of Iran-GCC Talks Monday (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-12 15:46:20 UTC]   Updated — ECB Raises Key Rates 25 Basis Points to 2.50 Percent Deposit Rate, Citing Middle East Inflation Pressures (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC]   Created — S&P 500 Rises 0.86 Percent Friday, Snapping Four-Day Losing Streak as Oil Retreats and CPI Meets Expectations Before Fed Decision (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC]   Created — Bitcoin Holds Near $77,270 and Ethereum Rises 2.6 Percent to $2,513 on September 12 as Market Stabilizes After Week-Long Slide (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC]   Created — Gold Trades Near $4,350 Per Ounce on September 12, Up 0.77 Percent as Investors Weigh Hawkish Fed Against Dollar Weakness (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC]   Created — SpaceX Secures $13 Billion Annualized AI Computing Deal at $1.11 Billion Per Month, Bolstering Path to $100 Billion Revenue Run Rate by Year-End (Markets & Capital Desk)
+[2026-09-12 15:46:20 UTC]   Created — Brent Crude Settles at $104.61 Per Barrel and WTI at $100.05 on September 12, Retreating from Weekly Highs Near $107-$109 Ahead of Iran-GCC Talks Monday (Markets & Capital Desk)
+[2026-09-12 15:46:21 UTC] Ops notification sent.
