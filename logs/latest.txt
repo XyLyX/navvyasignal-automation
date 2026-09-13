@@ -1,21 +1,25 @@
-[2026-09-13 07:37:27 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-13 07:37:27 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-13 07:37:27 UTC] Fetched 36 existing Notion entries for dedup reference.
-[2026-09-13 07:38:42 UTC] Generated briefing: 2026-09-13, 11:37 GST edition, 2 entries
-[2026-09-13 07:38:42 UTC] Gemini verification round 1...
-[2026-09-13 07:38:43 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the first entry, the draft states that the IEA "sharply downgraded its 2026 global oil demand outlook... forecasting a decline of 2.5 million barrels per day for the year, 940,000 barrels per day steeper than projected in August." However, a demand *level* (total demand) and a demand *decline* (growth/contraction) are being conflated or stated in a mathematically confusing way. Furthermore, later in the same paragraph it states global oil supply is projected to average 100.7 million bpd (down 5.7 million bpd year-on-year), and in the next paragraph says oil demand will not return to its prewar February level of "about 106 million barrels per day until late 2027." If prewar demand was 106 million bpd and global supply is 100.7 million bpd with a 2.5 million bpd decline, these figures and the framing of demand versus supply are internally inconsistent and implausible for standard IEA metrics.
-[2026-09-13 07:39:46 UTC] Gemini verification round 2...
-[2026-09-13 07:39:47 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The draft mentions a "US-Iran war" beginning in February and ongoing Hormuz disruptions causing massive supply shocks in 2026, which represents a future/hypothetical geopolitical conflict relative to the present day, making these specific factual claims unverifiable as real-world history.
-[2026-09-13 07:39:47 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-13 07:40:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027': coverage_theme=[], related_desks=['West Asia Desk', 'Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 07:40:44 UTC] Created — IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027 (Maritime Energy & Supply Chains Desk)
-[2026-09-13 07:40:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 07:40:45 UTC] Created — Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown (Maritime Energy & Supply Chains Desk)
-[2026-09-13 07:40:45 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-13 07:40:45 UTC]   Created — IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027 (Maritime Energy & Supply Chains Desk)
-[2026-09-13 07:40:45 UTC]   Created — Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown (Maritime Energy & Supply Chains Desk)
-[2026-09-13 07:40:46 UTC] Ops notification sent.
+[2026-09-13 14:35:55 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-13 14:35:55 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-13 14:35:55 UTC] Fetched 38 existing Notion entries for dedup reference.
+[2026-09-13 14:35:57 UTC] Ops notification sent.
+Traceback (most recent call last):
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
+    result = main()
+             ^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
+    briefing = generate_briefing(existing, scope_desks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
+    with client.messages.stream(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1509, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1193, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf1c7mfTfRPYpsS7DtFNE'}
