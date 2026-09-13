@@ -1,34 +1,21 @@
-[2026-09-13 06:43:11 UTC] Starting NavvyaSignal automated run (type=west_asia)
-[2026-09-13 06:43:11 UTC] Desk run scoped to: West Asia Desk
-[2026-09-13 06:43:12 UTC] Fetched 34 existing Notion entries for dedup reference.
-[2026-09-13 06:44:48 UTC] Generated briefing: 2026-09-13, 10:43 GST edition, 6 entries
-[2026-09-13 06:44:48 UTC] Gemini verification round 1...
-[2026-09-13 06:44:49 UTC] Gemini raised 1 concern(s):
+[2026-09-13 07:37:27 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
+[2026-09-13 07:37:27 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
+[2026-09-13 07:37:27 UTC] Fetched 36 existing Notion entries for dedup reference.
+[2026-09-13 07:38:42 UTC] Generated briefing: 2026-09-13, 11:37 GST edition, 2 entries
+[2026-09-13 07:38:42 UTC] Gemini verification round 1...
+[2026-09-13 07:38:43 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- In the entry regarding Iraq reopening its border crossings, the text refers to "Iraqi Prime Minister Ali al-Zaidi". As of 2024–2026, the Prime Minister of Iraq is Mohammed Shia' al-Sudani; "Ali al-Zaidi" appears to be factually incorrect or a hallucinated name for the current Iraqi premier.
-[2026-09-13 06:46:11 UTC] Gemini verification round 2...
-[2026-09-13 06:46:12 UTC] Gemini raised 1 concern(s):
+- In the first entry, the draft states that the IEA "sharply downgraded its 2026 global oil demand outlook... forecasting a decline of 2.5 million barrels per day for the year, 940,000 barrels per day steeper than projected in August." However, a demand *level* (total demand) and a demand *decline* (growth/contraction) are being conflated or stated in a mathematically confusing way. Furthermore, later in the same paragraph it states global oil supply is projected to average 100.7 million bpd (down 5.7 million bpd year-on-year), and in the next paragraph says oil demand will not return to its prewar February level of "about 106 million barrels per day until late 2027." If prewar demand was 106 million bpd and global supply is 100.7 million bpd with a 2.5 million bpd decline, these figures and the framing of demand versus supply are internally inconsistent and implausible for standard IEA metrics.
+[2026-09-13 07:39:46 UTC] Gemini verification round 2...
+[2026-09-13 07:39:47 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- In the entry regarding Iraq reopening border crossings, the text refers to "Iraqi Prime Minister Ali al-Zaidi." As of recent history up through 2026, the Prime Minister of Iraq is Mohammed Shia' al-Sudani, not Ali al-Zaidi. This appears to be a hallucinated or incorrect name for the sitting Iraqi Prime Minister.
-[2026-09-13 06:46:12 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-13 06:46:12 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-13 06:47:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Iranian Commercial Vessel Struck in Hormuz Early Sunday, One Killed and Three Injured as Strait Tensions Persist Ahead of Monday Talks': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger="Monday's Salalah ministerial meeting outcome and whether any interim Hormuz shipping agreement emerges or collapses", next_review='2026-09-15'
-[2026-09-13 06:47:50 UTC] Created — Iranian Commercial Vessel Struck in Hormuz Early Sunday, One Killed and Three Injured as Strait Tensions Persist Ahead of Monday Talks (West Asia Desk)
-[2026-09-13 06:47:50 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Iran Sends Seven Conditions to US for Reopening Hormuz, Tasnim Reports Strait Will Remain Closed Until Washington Complies': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk', 'Markets & Capital Desk'], watchlist=True, watch_trigger='Whether the seven conditions are publicly disclosed and whether any US response or counter-proposal emerges', next_review='2026-09-16'
-[2026-09-13 06:47:50 UTC] Created — Iran Sends Seven Conditions to US for Reopening Hormuz, Tasnim Reports Strait Will Remain Closed Until Washington Complies (West Asia Desk)
-[2026-09-13 06:47:50 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Houthis Claim Drone and Missile Attack on Saudi Sharurah Base as Bab al-Mandeb Fighting Continues, Two Wounded in Separate Jazan Strike': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 06:47:50 UTC] Created — Houthis Claim Drone and Missile Attack on Saudi Sharurah Base as Bab al-Mandeb Fighting Continues, Two Wounded in Separate Jazan Strike (West Asia Desk) [NOTE: Story encompasses both the Sharurah claim and the Jazan strike as part of the same escalatory cycle.]
-[2026-09-13 06:47:50 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bahrain Refuses to Attend Monday's Hormuz Meeting with Iran Until Diplomatic Ties Restored, Calls for Strait Open Without Fees or Permits': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 06:47:51 UTC] Created — Bahrain Refuses to Attend Monday's Hormuz Meeting with Iran Until Diplomatic Ties Restored, Calls for Strait Open Without Fees or Permits (West Asia Desk)
-[2026-09-13 06:47:51 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Iran's Pezeshkian Meets Abu Dhabi Crown Prince in Delhi at BRICS Summit, Highest-Level Iran-UAE Contact Since War Began': coverage_theme=[], related_desks=['UAE Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 06:47:51 UTC] Created — Iran's Pezeshkian Meets Abu Dhabi Crown Prince in Delhi at BRICS Summit, Highest-Level Iran-UAE Contact Since War Began (West Asia Desk)
-[2026-09-13 06:47:51 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Iraq Closes Border Crossings with Iran Following Pipeline Drone Attack Investigation, Dismisses Maysan Military Commander': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-13 06:47:51 UTC] Created — Iraq Closes Border Crossings with Iran Following Pipeline Drone Attack Investigation, Dismisses Maysan Military Commander (West Asia Desk)
-[2026-09-13 06:47:51 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-13 06:47:51 UTC]   Created — Iranian Commercial Vessel Struck in Hormuz Early Sunday, One Killed and Three Injured as Strait Tensions Persist Ahead of Monday Talks (West Asia Desk)
-[2026-09-13 06:47:51 UTC]   Created — Iran Sends Seven Conditions to US for Reopening Hormuz, Tasnim Reports Strait Will Remain Closed Until Washington Complies (West Asia Desk)
-[2026-09-13 06:47:51 UTC]   Created — Houthis Claim Drone and Missile Attack on Saudi Sharurah Base as Bab al-Mandeb Fighting Continues, Two Wounded in Separate Jazan Strike (West Asia Desk) [NOTE: Story encompasses both the Sharurah claim and the Jazan strike as part of the same escalatory cycle.]
-[2026-09-13 06:47:51 UTC]   Created — Bahrain Refuses to Attend Monday's Hormuz Meeting with Iran Until Diplomatic Ties Restored, Calls for Strait Open Without Fees or Permits (West Asia Desk)
-[2026-09-13 06:47:51 UTC]   Created — Iran's Pezeshkian Meets Abu Dhabi Crown Prince in Delhi at BRICS Summit, Highest-Level Iran-UAE Contact Since War Began (West Asia Desk)
-[2026-09-13 06:47:51 UTC]   Created — Iraq Closes Border Crossings with Iran Following Pipeline Drone Attack Investigation, Dismisses Maysan Military Commander (West Asia Desk)
-[2026-09-13 06:47:53 UTC] Ops notification sent.
+- The draft mentions a "US-Iran war" beginning in February and ongoing Hormuz disruptions causing massive supply shocks in 2026, which represents a future/hypothetical geopolitical conflict relative to the present day, making these specific factual claims unverifiable as real-world history.
+[2026-09-13 07:39:47 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-13 07:40:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027': coverage_theme=[], related_desks=['West Asia Desk', 'Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-13 07:40:44 UTC] Created — IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027 (Maritime Energy & Supply Chains Desk)
+[2026-09-13 07:40:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-13 07:40:45 UTC] Created — Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown (Maritime Energy & Supply Chains Desk)
+[2026-09-13 07:40:45 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-13 07:40:45 UTC]   Created — IEA Cuts 2026 Global Oil Demand Growth Forecast, Now Expects 2.5 Million Barrel Per Day Annual Decline as Hormuz Disruptions Push Gulf Supply Recovery Into 2027 (Maritime Energy & Supply Chains Desk)
+[2026-09-13 07:40:45 UTC]   Created — Kuwait Petroleum Offers Ship-to-Ship Transfers Outside Hormuz to Buyers, Exports Recover to 50 Percent of Prewar Levels After April Shutdown (Maritime Energy & Supply Chains Desk)
+[2026-09-13 07:40:46 UTC] Ops notification sent.
