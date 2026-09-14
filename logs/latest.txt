@@ -1,39 +1,8 @@
-[2026-09-14 16:55:20 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-14 16:55:20 UTC] Desk run scoped to: UAE Desk
-[2026-09-14 16:55:23 UTC] Fetched 21 existing Notion entries for dedup reference.
-[2026-09-14 16:57:26 UTC] Generated briefing: 2026-09-14, 20:55 GST edition, 8 entries
-[2026-09-14 16:57:26 UTC] Gemini verification round 1...
-[2026-09-14 16:57:27 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The first entry states that the state visit to Germany marks "the first state visit by a UAE president to Germany," which is factually incorrect and implausible, as former UAE President Sheikh Khalifa bin Zayed Al Nahyan made a prominent state visit to Germany in June 2004.
-[2026-09-14 16:59:25 UTC] Gemini verification round 2...
-[2026-09-14 16:59:27 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In entry 6 (Global Village Season 31), the title states it is "Season 31", but the body text immediately refers to it as the "31st season" while later detailing that "Season 30" closed on May 31, 2026; a transition from Season 30 to the upcoming season makes the next season mathematically Season 31, but the text later says "Global Village closed its 30th season on May 31, 2026", meaning the upcoming opening is for Season 31, yet the title and body present a math inconsistency or typo regarding the historical numbering (if Season 30 just concluded, the upcoming season should be Season 31, but the title says Season 31 and the body mixes up 30th and 31st season counts). Additionally, Global Village celebrated its 28th season in 2023-2024, making a 31st season in 2026-2027 chronologically implausible (it should be Season 29 or 30).
-[2026-09-14 16:59:27 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-14 17:01:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE Announces €40 Billion Investment in Germany Targeting AI, Energy and Digital Infrastructure as President Sheikh Mohamed Completes State Visit': coverage_theme=[], related_desks=['Technology & AI Desk', 'Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:39 UTC] Created — UAE Announces €40 Billion Investment in Germany Targeting AI, Energy and Digital Infrastructure as President Sheikh Mohamed Completes State Visit (UAE Desk)
-[2026-09-14 17:01:39 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two UAE Servicemen Killed During Training Mission on September 14, Ministry of Defence Announces Deaths of Major Abdalla Shamis Almenhali and Candidate Saeed Abdalla Alshamsi': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:39 UTC] Created — Two UAE Servicemen Killed During Training Mission on September 14, Ministry of Defence Announces Deaths of Major Abdalla Shamis Almenhali and Candidate Saeed Abdalla Alshamsi (UAE Desk)
-[2026-09-14 17:01:39 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Tourism Records 869,000 Visitors in August 2026, Strongest Monthly Performance Since February as Hotel Occupancy Recovers to 66 Percent': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:40 UTC] Created — Dubai Tourism Records 869,000 Visitors in August 2026, Strongest Monthly Performance Since February as Hotel Occupancy Recovers to 66 Percent (UAE Desk)
-[2026-09-14 17:01:40 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Abu Dhabi Completes First Off-Plan Mortgage Registration Under New Framework Allowing Buyers to Secure Financing at 50 Percent Payment Threshold During Construction': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:40 UTC] Created — Abu Dhabi Completes First Off-Plan Mortgage Registration Under New Framework Allowing Buyers to Secure Financing at 50 Percent Payment Threshold During Construction (UAE Desk)
-[2026-09-14 17:01:40 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Etihad Rail Dubai Station at Jumeirah Golf Estates Nearly Complete Ahead of September 30 Opening, 57-Minute Journey to Abu Dhabi with Direct Metro Red Line Connection': coverage_theme=['Real Estate & Infrastructure'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:40 UTC] Created — Etihad Rail Dubai Station at Jumeirah Golf Estates Nearly Complete Ahead of September 30 Opening, 57-Minute Journey to Abu Dhabi with Direct Metro Red Line Connection (UAE Desk)
-[2026-09-14 17:01:40 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai's Global Village Announces October 14 Opening for Season 31 Under Theme A More Wonderful World, Running Through May 2027': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:41 UTC] Created — Dubai's Global Village Announces October 14 Opening for Season 31 Under Theme A More Wonderful World, Running Through May 2027 (UAE Desk)
-[2026-09-14 17:01:41 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'More Than 170 Flights Delayed at Dubai and Abu Dhabi Airports on September 13, Two Flydubai Services to Bahrain Cancelled': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:41 UTC] Created — More Than 170 Flights Delayed at Dubai and Abu Dhabi Airports on September 13, Two Flydubai Services to Bahrain Cancelled (UAE Desk)
-[2026-09-14 17:01:41 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE Foreign Minister Holds Calls with Saudi and Iraqi Counterparts on September 14 to Coordinate Efforts on Preventing Wider Regional Conflict': coverage_theme=[], related_desks=['West Asia Desk', 'Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-14 17:01:42 UTC] Created — UAE Foreign Minister Holds Calls with Saudi and Iraqi Counterparts on September 14 to Coordinate Efforts on Preventing Wider Regional Conflict (UAE Desk)
-[2026-09-14 17:01:42 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-14 17:01:42 UTC]   Created — UAE Announces €40 Billion Investment in Germany Targeting AI, Energy and Digital Infrastructure as President Sheikh Mohamed Completes State Visit (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — Two UAE Servicemen Killed During Training Mission on September 14, Ministry of Defence Announces Deaths of Major Abdalla Shamis Almenhali and Candidate Saeed Abdalla Alshamsi (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — Dubai Tourism Records 869,000 Visitors in August 2026, Strongest Monthly Performance Since February as Hotel Occupancy Recovers to 66 Percent (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — Abu Dhabi Completes First Off-Plan Mortgage Registration Under New Framework Allowing Buyers to Secure Financing at 50 Percent Payment Threshold During Construction (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — Etihad Rail Dubai Station at Jumeirah Golf Estates Nearly Complete Ahead of September 30 Opening, 57-Minute Journey to Abu Dhabi with Direct Metro Red Line Connection (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — Dubai's Global Village Announces October 14 Opening for Season 31 Under Theme A More Wonderful World, Running Through May 2027 (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — More Than 170 Flights Delayed at Dubai and Abu Dhabi Airports on September 13, Two Flydubai Services to Bahrain Cancelled (UAE Desk)
-[2026-09-14 17:01:42 UTC]   Created — UAE Foreign Minister Holds Calls with Saudi and Iraqi Counterparts on September 14 to Coordinate Efforts on Preventing Wider Regional Conflict (UAE Desk)
-[2026-09-14 17:01:43 UTC] Ops notification sent.
+[2026-09-14 17:49:35 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-14 17:49:35 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-14 17:49:35 UTC] Fetched 29 existing Notion entries for dedup reference.
+[2026-09-14 17:50:00 UTC] Generated briefing: 2026-09-14, 21:49 GST edition, 0 entries
+[2026-09-14 17:50:00 UTC] Gemini verification round 1...
+[2026-09-14 17:50:01 UTC] Gemini review: no concerns raised.
+[2026-09-14 17:50:01 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-14 17:50:02 UTC] Ops notification sent.
