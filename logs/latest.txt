@@ -1,8 +1,26 @@
-[2026-09-14 17:49:35 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-14 17:49:35 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-14 17:49:35 UTC] Fetched 29 existing Notion entries for dedup reference.
-[2026-09-14 17:50:00 UTC] Generated briefing: 2026-09-14, 21:49 GST edition, 0 entries
-[2026-09-14 17:50:00 UTC] Gemini verification round 1...
-[2026-09-14 17:50:01 UTC] Gemini review: no concerns raised.
-[2026-09-14 17:50:01 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-14 17:50:02 UTC] Ops notification sent.
+[2026-09-14 18:07:35 UTC] Starting NavvyaSignal automated run (type=markets_capital)
+[2026-09-14 18:07:35 UTC] Desk run scoped to: Markets & Capital Desk
+[2026-09-14 18:07:36 UTC] Fetched 28 existing Notion entries for dedup reference.
+[2026-09-14 18:08:45 UTC] Generated briefing: 2026-09-14, 22:07 GST edition, 3 entries
+[2026-09-14 18:08:45 UTC] Gemini verification round 1...
+[2026-09-14 18:08:46 UTC] Gemini raised 3 concern(s):
+FLAGS: 3
+- The gold spot prices cited ($4,277 to $4,310 per ounce) and the historical peak mentioned ($5,589 on January 28, 2026) are significantly higher than any historical or current reality for gold prices as of 2026, representing an extreme factual implausibility.
+- The claim that OpenAI plans to delay its "initial public offering until 2027" contains a fundamental contradiction/factual error, as OpenAI is structured as a non-profit controlled entity and has not had a public IPO (nor is it a publicly traded corporation with shares available to the public in that manner).
+- The text reports that Saudi Arabia "shut down the critical East-West pipeline" and that Iran-GCC talks were postponed, driving oil to $107–$108 per barrel; this is a major geopolitical/market disruption claim that lacks verification and appears to be fabricated or wildly exaggerated for current market conditions.
+[2026-09-14 18:09:51 UTC] Gemini verification round 2...
+[2026-09-14 18:09:52 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- The draft states that markets are pricing in an 88 percent probability of a Federal Reserve "rate hike" ahead of Wednesday's policy meeting. Given that current interest rate projections for late 2026 involve potential cuts or pauses, pricing in a hike to an already restrictive policy rate (and treating it as standard monetary policy) contradicts typical modern central bank behavior unless explicitly framed as an extraordinary emergency move, and contradicts the premise that rising yields/inflation are pushing rates higher rather than the Fed already actively tightening.
+[2026-09-14 18:09:52 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-14 18:11:00 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US 10-Year Treasury Yield Breaches 5 Percent for First Time Since 2023 as Fed Rate Hike Expectations Hit 88 Percent Ahead of Wednesday Decision': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Federal Reserve policy decision on September 16, 2026 — whether the Fed raises rates by 25 basis points as markets expect, or surprises with a larger move or no action, will determine whether the 10-year yield sustains above 5 percent or retreats, with direct implications for mortgage rates, corporate borrowing costs, and equity valuations', next_review='2026-09-16'
+[2026-09-14 18:11:00 UTC] Created — US 10-Year Treasury Yield Breaches 5 Percent for First Time Since 2023 as Fed Rate Hike Expectations Hit 88 Percent Ahead of Wednesday Decision (Markets & Capital Desk)
+[2026-09-14 18:11:00 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'S&P 500 Falls 0.7 Percent and Nasdaq Drops 1.2 Percent on September 14 as Anthropic and OpenAI CEOs Call for AI Development Slowdown, Semiconductor Stocks Tumble 5.7 Percent': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-14 18:11:01 UTC] Created — S&P 500 Falls 0.7 Percent and Nasdaq Drops 1.2 Percent on September 14 as Anthropic and OpenAI CEOs Call for AI Development Slowdown, Semiconductor Stocks Tumble 5.7 Percent (Markets & Capital Desk)
+[2026-09-14 18:11:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Gold Falls to $4,277 to $4,310 Per Ounce on September 14, Down Over 1.5 Percent as Federal Reserve Rate Hike Odds Surge to 88 Percent': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-14 18:11:02 UTC] Created — Gold Falls to $4,277 to $4,310 Per Ounce on September 14, Down Over 1.5 Percent as Federal Reserve Rate Hike Odds Surge to 88 Percent (Markets & Capital Desk)
+[2026-09-14 18:11:02 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-14 18:11:02 UTC]   Created — US 10-Year Treasury Yield Breaches 5 Percent for First Time Since 2023 as Fed Rate Hike Expectations Hit 88 Percent Ahead of Wednesday Decision (Markets & Capital Desk)
+[2026-09-14 18:11:02 UTC]   Created — S&P 500 Falls 0.7 Percent and Nasdaq Drops 1.2 Percent on September 14 as Anthropic and OpenAI CEOs Call for AI Development Slowdown, Semiconductor Stocks Tumble 5.7 Percent (Markets & Capital Desk)
+[2026-09-14 18:11:02 UTC]   Created — Gold Falls to $4,277 to $4,310 Per Ounce on September 14, Down Over 1.5 Percent as Federal Reserve Rate Hike Odds Surge to 88 Percent (Markets & Capital Desk)
+[2026-09-14 18:11:03 UTC] Ops notification sent.
