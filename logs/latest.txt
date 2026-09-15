@@ -1,40 +1,33 @@
-[2026-09-15 07:59:01 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-15 07:59:01 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-15 07:59:03 UTC] Fetched 25 existing Notion entries for dedup reference.
-[2026-09-15 08:00:41 UTC] Generated briefing: 2026-09-15, 11:59 GST edition, 5 entries
-[2026-09-15 08:00:41 UTC] Gemini verification round 1...
-[2026-09-15 08:00:42 UTC] Gemini raised 1 concern(s):
+[2026-09-15 15:12:07 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-15 15:12:07 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-15 15:12:08 UTC] Fetched 25 existing Notion entries for dedup reference.
+[2026-09-15 15:14:08 UTC] Generated briefing: 2026-09-15, 19:12 GST edition, 6 entries
+[2026-09-15 15:14:08 UTC] Gemini verification round 1...
+[2026-09-15 15:14:10 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- The draft contains an internal contradiction and mutual exclusivity regarding the status of the tanker *El Gaia*: Entry 1 and Entry 4 both report on the *El Gaia*, but Entry 1 states the vessel exploded and sank ("with firefighting efforts failing and the entire vessel engulfed in flames"), while Entry 4 states the vessel is "currently being towed by a regional partner" according to U.S. Central Command.
-[2026-09-15 08:01:56 UTC] Ops notification sent.
-Traceback (most recent call last):
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
-    result = main()
-             ^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
-    return run_group(RUN_TYPE)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1557, in run_group
-    briefing = verify_with_gemini_loop(briefing)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 914, in verify_with_gemini_loop
-    briefing_data = claude_respond_to_flags(briefing_data, review, is_repeat_concern=force_hedge)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 840, in claude_respond_to_flags
-    response = stream.get_final_message()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 98, in get_final_message
-    self.until_done()
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 125, in until_done
-    consume_sync_iterator(self)
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_utils/_streams.py", line 6, in consume_sync_iterator
-    for _ in iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 72, in __iter__
-    for item in self._iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 133, in __stream__
-    for sse_event in self._raw_stream:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 48, in __iter__
-    for item in self._iterator:
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 140, in __stream__
-    raise self._client._make_status_error(
-anthropic.APIStatusError: {'type': 'error', 'error': {'details': None, 'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf4sbbTanjW1PzGtgKNmU'}
+- In the sixth entry ("US Air Force Secretary Confirms Weapons Deployed in Space for First Time..."), the text refers to "US Air Force Secretary Troy Meink" and "Secretary of Defense Pete Hegseth" in the context of the current US administration in September 2026. However, Troy Meink is a career civil servant/undersecretary-level official and was not the Secretary of the Air Force, and Pete Hegseth is not the Secretary of Defense in 2026. This is a hallucinated/incorrect political leadership attribution for the current US administration.
+[2026-09-15 15:15:55 UTC] Gemini verification round 2...
+[2026-09-15 15:15:56 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the sixth entry about the US Air Force, the text refers to "US Air Force Secretary Troy Meink" and "Deputy Secretary of Defense Steve Feinberg" and "Secretary of Defense Pete Hegseth". These individuals do not hold those cabinet or service secretary positions in real life (the current Secretary of the Air Force and Secretary of Defense roles are held by different individuals), representing a fabrication of official leadership roles.
+[2026-09-15 15:15:56 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-15 15:17:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Rejects AI Slowdown Push as China Calls It Cold War Fearmongering, Widening Geopolitical Split Over Safety Versus Strategic Competition': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:46 UTC] Created — Trump Rejects AI Slowdown Push as China Calls It Cold War Fearmongering, Widening Geopolitical Split Over Safety Versus Strategic Competition (Technology & AI Desk)
+[2026-09-15 15:17:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Agility Robotics Unveils Digit 5 Humanoid Robot With Safety Systems Enabling Unbarricaded Human Collaboration, Backed by $300 Million in Orders and December Shipment Target': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:46 UTC] Created — Agility Robotics Unveils Digit 5 Humanoid Robot With Safety Systems Enabling Unbarricaded Human Collaboration, Backed by $300 Million in Orders and December Shipment Target (Technology & AI Desk)
+[2026-09-15 15:17:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'South Korea Expands Espionage Law to All Foreign Countries on September 13, Targeting Semiconductor and AI Technology Leaks With Minimum Three-Year Prison Terms': coverage_theme=[], related_desks=['Global Politics Desk', 'Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:46 UTC] Created — South Korea Expands Espionage Law to All Foreign Countries on September 13, Targeting Semiconductor and AI Technology Leaks With Minimum Three-Year Prison Terms (Technology & AI Desk)
+[2026-09-15 15:17:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kioxia Eyes At Least $10 Billion US ADR Listing for 2027, Following SK Hynix in Tapping American AI Memory Investor Demand': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:47 UTC] Created — Kioxia Eyes At Least $10 Billion US ADR Listing for 2027, Following SK Hynix in Tapping American AI Memory Investor Demand (Technology & AI Desk)
+[2026-09-15 15:17:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Cloudflare's September 15 Default Block on AI Training Crawlers Takes Effect, Applying to New Customers and Free-Tier Sites on Ad-Supported Pages': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:48 UTC] Created — Cloudflare's September 15 Default Block on AI Training Crawlers Takes Effect, Applying to New Customers and Free-Tier Sites on Ad-Supported Pages (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Air Force Secretary Confirms Weapons Deployed in Space for First Time, Projects Autonomous Attack Drones Will Replace Artillery as Primary Killer by 2032': coverage_theme=['Defence & Security'], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 15:17:48 UTC] Created — US Air Force Secretary Confirms Weapons Deployed in Space for First Time, Projects Autonomous Attack Drones Will Replace Artillery as Primary Killer by 2032 (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-15 15:17:48 UTC]   Created — Trump Rejects AI Slowdown Push as China Calls It Cold War Fearmongering, Widening Geopolitical Split Over Safety Versus Strategic Competition (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC]   Created — Agility Robotics Unveils Digit 5 Humanoid Robot With Safety Systems Enabling Unbarricaded Human Collaboration, Backed by $300 Million in Orders and December Shipment Target (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC]   Created — South Korea Expands Espionage Law to All Foreign Countries on September 13, Targeting Semiconductor and AI Technology Leaks With Minimum Three-Year Prison Terms (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC]   Created — Kioxia Eyes At Least $10 Billion US ADR Listing for 2027, Following SK Hynix in Tapping American AI Memory Investor Demand (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC]   Created — Cloudflare's September 15 Default Block on AI Training Crawlers Takes Effect, Applying to New Customers and Free-Tier Sites on Ad-Supported Pages (Technology & AI Desk)
+[2026-09-15 15:17:48 UTC]   Created — US Air Force Secretary Confirms Weapons Deployed in Space for First Time, Projects Autonomous Attack Drones Will Replace Artillery as Primary Killer by 2032 (Technology & AI Desk)
+[2026-09-15 15:17:49 UTC] Ops notification sent.
