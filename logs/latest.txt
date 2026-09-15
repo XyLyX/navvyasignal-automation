@@ -1,32 +1,23 @@
-[2026-09-15 15:39:36 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-15 15:39:36 UTC] Desk run scoped to: India Desk
-[2026-09-15 15:39:37 UTC] Fetched 34 existing Notion entries for dedup reference.
-[2026-09-15 15:41:27 UTC] Generated briefing: 2026-09-15, 19:39 GST edition, 5 entries
-[2026-09-15 15:41:27 UTC] Gemini verification round 1...
-[2026-09-15 15:41:28 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-
-- In the fourth entry regarding the RBI Governor meeting the Finance Minister, the text states that Sanjay Malhotra is the Reserve Bank of India Governor. Shaktikanta Das has been the RBI Governor, and Sanjay Malhotra is the current Revenue Secretary (or other officials, but not RBI Governor); more importantly, Shaktikanta Das's term as RBI Governor was extended previously, and Sanjay Malhotra has not been appointed as RBI Governor in reality or in the stated timeframe.
-[2026-09-15 15:43:07 UTC] Gemini verification round 2...
-[2026-09-15 15:43:08 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the fourth entry regarding the RBI Governor meeting the Finance Minister, Sanjay Malhotra is named as the RBI Governor who took office in December 2024, but Shaktikanta Das's term as RBI Governor was officially extended in late 2024 (through December 2026), making Sanjay Malhotra's appointment as the 26th Governor in December 2024 factually incorrect for the current timeline.
-[2026-09-15 15:43:08 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-15 15:43:08 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-15 15:44:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US House Committee Considers Russia Sanctions Bill Naming India for Up to 100 Percent Tariffs on Goods Over Russian Oil Purchases': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='House floor vote on the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026, determining whether the 100 percent secondary-tariff provision on Russian oil buyers remains in the final legislation', next_review='2026-09-20'
-[2026-09-15 15:44:48 UTC] Created — US House Committee Considers Russia Sanctions Bill Naming India for Up to 100 Percent Tariffs on Goods Over Russian Oil Purchases (India Desk)
-[2026-09-15 15:44:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Air India Issued Show-Cause Notice After Three Italian Nationals Bypassed Delhi Airport Immigration on September 4, Home Ministry Convenes Emergency Meeting': coverage_theme=[], related_desks=['UAE Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-15 15:44:49 UTC] Created — Air India Issued Show-Cause Notice After Three Italian Nationals Bypassed Delhi Airport Immigration on September 4, Home Ministry Convenes Emergency Meeting (India Desk)
-[2026-09-15 15:44:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dinesh Sharma Sworn in as 14th Lieutenant Governor of Andaman and Nicobar Islands on September 15, Assumes Office Amid Great Nicobar Island Project Expansion': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-15 15:44:49 UTC] Created — Dinesh Sharma Sworn in as 14th Lieutenant Governor of Andaman and Nicobar Islands on September 15, Assumes Office Amid Great Nicobar Island Project Expansion (India Desk)
-[2026-09-15 15:44:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'RBI Governor Meets Finance Minister on September 15 as Crude Oil Above $100 and October MPC Meeting Looms, Policy Pause Continues at 5.25 Percent Repo Rate': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='October 5-7 MPC meeting policy decision and accompanying statement, determining whether RBI shifts from neutral stance or adjusts repo rate in response to crude-driven inflation and global monetary tightening', next_review='2026-10-07'
-[2026-09-15 15:44:50 UTC] Created — RBI Governor Meets Finance Minister on September 15 as Crude Oil Above $100 and October MPC Meeting Looms, Policy Pause Continues at 5.25 Percent Repo Rate (India Desk)
-[2026-09-15 15:44:50 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Indian Equity Markets Open Higher on September 15 with Nifty 50 Up 0.45 Percent and Sensex Gaining 397 Points Despite Crude Oil and Global Yield Concerns': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-15 15:44:50 UTC] Created — Indian Equity Markets Open Higher on September 15 with Nifty 50 Up 0.45 Percent and Sensex Gaining 397 Points Despite Crude Oil and Global Yield Concerns (India Desk)
-[2026-09-15 15:44:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-15 15:44:50 UTC]   Created — US House Committee Considers Russia Sanctions Bill Naming India for Up to 100 Percent Tariffs on Goods Over Russian Oil Purchases (India Desk)
-[2026-09-15 15:44:50 UTC]   Created — Air India Issued Show-Cause Notice After Three Italian Nationals Bypassed Delhi Airport Immigration on September 4, Home Ministry Convenes Emergency Meeting (India Desk)
-[2026-09-15 15:44:50 UTC]   Created — Dinesh Sharma Sworn in as 14th Lieutenant Governor of Andaman and Nicobar Islands on September 15, Assumes Office Amid Great Nicobar Island Project Expansion (India Desk)
-[2026-09-15 15:44:50 UTC]   Created — RBI Governor Meets Finance Minister on September 15 as Crude Oil Above $100 and October MPC Meeting Looms, Policy Pause Continues at 5.25 Percent Repo Rate (India Desk)
-[2026-09-15 15:44:50 UTC]   Created — Indian Equity Markets Open Higher on September 15 with Nifty 50 Up 0.45 Percent and Sensex Gaining 397 Points Despite Crude Oil and Global Yield Concerns (India Desk)
-[2026-09-15 15:44:51 UTC] Ops notification sent.
+[2026-09-15 16:25:27 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-15 16:25:27 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-15 16:25:27 UTC] Fetched 39 existing Notion entries for dedup reference.
+[2026-09-15 16:27:09 UTC] Generated briefing: 2026-09-15, 20:25 GST edition, 5 entries
+[2026-09-15 16:27:09 UTC] Gemini verification round 1...
+[2026-09-15 16:27:09 UTC] Gemini review: no concerns raised.
+[2026-09-15 16:27:09 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Russian Drone Strikes Ukrainian Passenger Train Near Poland Border Shortly After Boris Johnson and European Security Officials Depart Station on September 14': coverage_theme=['Defence & Security'], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 16:27:10 UTC] Created — Russian Drone Strikes Ukrainian Passenger Train Near Poland Border Shortly After Boris Johnson and European Security Officials Depart Station on September 14 (Global Politics Desk)
+[2026-09-15 16:27:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Supreme Court Rejects Trump Administration Request to Implement Mail-In Voting Restrictions for November 3 Midterm Elections on September 14': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='November 3, 2026 midterm election results and whether mail-in ballot delivery proceeded without disruption', next_review='2026-11-04'
+[2026-09-15 16:27:10 UTC] Created — US Supreme Court Rejects Trump Administration Request to Implement Mail-In Voting Restrictions for November 3 Midterm Elections on September 14 (Global Politics Desk)
+[2026-09-15 16:27:10 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Kennedy Center Warns of Bankruptcy and Possible Closure as Early as September 15 Board Meeting, Trump-Appointed Leaders Say Only President's Name on Building Can Secure Rescue': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="September 15 board meeting decision on closure and/or renaming, and Judge Cooper's status hearing outcome", next_review='2026-09-16'
+[2026-09-15 16:27:11 UTC] Created — Kennedy Center Warns of Bankruptcy and Possible Closure as Early as September 15 Board Meeting, Trump-Appointed Leaders Say Only President's Name on Building Can Secure Rescue (Global Politics Desk) [NOTE: Ambiguity: technically a US domestic cultural policy story but carries clear political implications given Trump board control and renaming lawsuit]
+[2026-09-15 16:27:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Alex Saab, Ally of Ousted Venezuelan President Maduro, Expected to Plead Guilty in Miami Federal Court on September 15 to Money Laundering Charges': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='September 15 change of plea hearing outcome and whether cooperation agreement details emerge', next_review='2026-09-16'
+[2026-09-15 16:27:11 UTC] Created — Alex Saab, Ally of Ousted Venezuelan President Maduro, Expected to Plead Guilty in Miami Federal Court on September 15 to Money Laundering Charges (Global Politics Desk)
+[2026-09-15 16:27:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Senator Mitch McConnell Returns to US Senate on September 14 After Three-Month Absence Following June Fall, Casts First Vote Since Hospitalization in Wheelchair': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-15 16:27:13 UTC] Created — Senator Mitch McConnell Returns to US Senate on September 14 After Three-Month Absence Following June Fall, Casts First Vote Since Hospitalization in Wheelchair (Global Politics Desk)
+[2026-09-15 16:27:13 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-15 16:27:13 UTC]   Created — Russian Drone Strikes Ukrainian Passenger Train Near Poland Border Shortly After Boris Johnson and European Security Officials Depart Station on September 14 (Global Politics Desk)
+[2026-09-15 16:27:13 UTC]   Created — US Supreme Court Rejects Trump Administration Request to Implement Mail-In Voting Restrictions for November 3 Midterm Elections on September 14 (Global Politics Desk)
+[2026-09-15 16:27:13 UTC]   Created — Kennedy Center Warns of Bankruptcy and Possible Closure as Early as September 15 Board Meeting, Trump-Appointed Leaders Say Only President's Name on Building Can Secure Rescue (Global Politics Desk) [NOTE: Ambiguity: technically a US domestic cultural policy story but carries clear political implications given Trump board control and renaming lawsuit]
+[2026-09-15 16:27:13 UTC]   Created — Alex Saab, Ally of Ousted Venezuelan President Maduro, Expected to Plead Guilty in Miami Federal Court on September 15 to Money Laundering Charges (Global Politics Desk)
+[2026-09-15 16:27:13 UTC]   Created — Senator Mitch McConnell Returns to US Senate on September 14 After Three-Month Absence Following June Fall, Casts First Vote Since Hospitalization in Wheelchair (Global Politics Desk)
+[2026-09-15 16:27:14 UTC] Ops notification sent.
