@@ -1,21 +1,40 @@
-[2026-09-15 06:37:16 UTC] Starting NavvyaSignal automated run (type=west_asia)
-[2026-09-15 06:37:16 UTC] Desk run scoped to: West Asia Desk
-[2026-09-15 06:37:17 UTC] Fetched 32 existing Notion entries for dedup reference.
-[2026-09-15 06:37:59 UTC] Generated briefing: 2026-09-15, 10:37 GST edition, 1 entries
-[2026-09-15 06:37:59 UTC] Gemini verification round 1...
-[2026-09-15 06:38:00 UTC] Gemini raised 4 concern(s):
-FLAGS: 4
-- The claim that the Houthis captured the strategic Bab al-Mandeb Strait last week is geopolitically implausible and contradicts long-standing control patterns in the region.
-- The claim that Iran maintains effective closure of the Strait of Hormuz in September 2026 is a major geopolitical event that would dominate global news and is factually incorrect for the stated timeframe.
-- The claim that Saudi Arabia's East-West pipeline has been shut down since drone attacks on September 11 is unsubstantiated and contradicts standard operations of the Petroline.
-- The reference to "twelve years of inconclusive fighting" starting from the current date of September 2026 implies the Yemen war began around 2014, whereas the Saudi-led intervention (Operation Decisive Storm) actually began in March 2015 (roughly 11.5 years ago, and the civil war itself began in 2014, making "twelve years" imprecise or premature).
-[2026-09-15 06:38:39 UTC] Gemini verification round 2...
-[2026-09-15 06:38:40 UTC] Gemini raised 1 concern(s):
+[2026-09-15 07:59:01 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
+[2026-09-15 07:59:01 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
+[2026-09-15 07:59:03 UTC] Fetched 25 existing Notion entries for dedup reference.
+[2026-09-15 08:00:41 UTC] Generated briefing: 2026-09-15, 11:59 GST edition, 5 entries
+[2026-09-15 08:00:41 UTC] Gemini verification round 1...
+[2026-09-15 08:00:42 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- The text claims Iran maintains "effective closure of the Strait of Hormuz on the Gulf side," which is factually implausible as an ongoing reality for a general news briefing without a major global economic collapse having occurred, and the cited sources ("Straits.live, Carra Globe") do not support a total or effective closure of this magnitude.
-[2026-09-15 06:38:40 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-15 06:39:22 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Saudi Arabia Warns of Firm Response After Houthi Attacks Wound 13 Civilians, Issues Emergency Alerts for Six Cities Including Yanbu Oil Port': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether Saudi Arabia follows through on its warning of a firm response against Houthi positions, and whether that triggers further Houthi escalation against Saudi energy infrastructure or shipping', next_review='2026-09-18'
-[2026-09-15 06:39:25 UTC] Created — Saudi Arabia Warns of Firm Response After Houthi Attacks Wound 13 Civilians, Issues Emergency Alerts for Six Cities Including Yanbu Oil Port (West Asia Desk)
-[2026-09-15 06:39:25 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-15 06:39:25 UTC]   Created — Saudi Arabia Warns of Firm Response After Houthi Attacks Wound 13 Civilians, Issues Emergency Alerts for Six Cities Including Yanbu Oil Port (West Asia Desk)
-[2026-09-15 06:39:26 UTC] Ops notification sent.
+- The draft contains an internal contradiction and mutual exclusivity regarding the status of the tanker *El Gaia*: Entry 1 and Entry 4 both report on the *El Gaia*, but Entry 1 states the vessel exploded and sank ("with firefighting efforts failing and the entire vessel engulfed in flames"), while Entry 4 states the vessel is "currently being towed by a regional partner" according to U.S. Central Command.
+[2026-09-15 08:01:56 UTC] Ops notification sent.
+Traceback (most recent call last):
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
+    result = main()
+             ^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1557, in run_group
+    briefing = verify_with_gemini_loop(briefing)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 914, in verify_with_gemini_loop
+    briefing_data = claude_respond_to_flags(briefing_data, review, is_repeat_concern=force_hedge)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 840, in claude_respond_to_flags
+    response = stream.get_final_message()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 98, in get_final_message
+    self.until_done()
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 125, in until_done
+    consume_sync_iterator(self)
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_utils/_streams.py", line 6, in consume_sync_iterator
+    for _ in iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 72, in __iter__
+    for item in self._iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 133, in __stream__
+    for sse_event in self._raw_stream:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 48, in __iter__
+    for item in self._iterator:
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_streaming.py", line 140, in __stream__
+    raise self._client._make_status_error(
+anthropic.APIStatusError: {'type': 'error', 'error': {'details': None, 'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf4sbbTanjW1PzGtgKNmU'}
