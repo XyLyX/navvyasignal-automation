@@ -1,24 +1,25 @@
-[2026-09-17 16:23:34 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-17 16:23:34 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-17 16:23:34 UTC] Fetched 56 existing Notion entries for dedup reference.
-[2026-09-17 16:24:55 UTC] Generated briefing: 2026-09-17, 20:23 GST edition, 3 entries
-[2026-09-17 16:24:55 UTC] Gemini verification round 1...
-[2026-09-17 16:24:56 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the second article regarding the secret US-Houthi meeting, the text states that the meeting took place at the US Embassy in Muscat on "Sunday, September 15". However, September 15, 2026, falls on a Tuesday, not a Sunday (September 13 was Sunday).
-[2026-09-17 16:25:56 UTC] Gemini verification round 2...
-[2026-09-17 16:25:58 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The text states that a UN fact-finding mission report (A/HRC/63/61) was released on September 17, 2026, regarding a US-led war in Iran that allegedly began in February 2026. This describes a major, unprecedented global military conflict between the US and Iran involving large-scale civilian casualties, airstrikes on schools, and Houthi offensives routing Saudi forces in late 2025/2026, which contradicts actual historical and current geopolitical reality as of early 2026.
-[2026-09-17 16:25:58 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-17 16:27:00 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 16:27:01 UTC] Created — UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown (Global Politics Desk)
-[2026-09-17 16:27:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains': coverage_theme=[], related_desks=['West Asia Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 16:27:01 UTC] Created — US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains (Global Politics Desk) [NOTE: Story overlaps with West Asia and Maritime Energy desks on regional dimension but is fundamentally a US diplomatic policy development.]
-[2026-09-17 16:27:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 16:27:02 UTC] Created — Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal (Global Politics Desk)
-[2026-09-17 16:27:02 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-17 16:27:02 UTC]   Created — UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown (Global Politics Desk)
-[2026-09-17 16:27:02 UTC]   Created — US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains (Global Politics Desk) [NOTE: Story overlaps with West Asia and Maritime Energy desks on regional dimension but is fundamentally a US diplomatic policy development.]
-[2026-09-17 16:27:02 UTC]   Created — Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal (Global Politics Desk)
-[2026-09-17 16:27:03 UTC] Ops notification sent.
+[2026-09-17 17:11:20 UTC] Starting NavvyaSignal automated run (type=markets_capital)
+[2026-09-17 17:11:20 UTC] Desk run scoped to: Markets & Capital Desk
+[2026-09-17 17:11:21 UTC] Fetched 54 existing Notion entries for dedup reference.
+[2026-09-17 17:11:23 UTC] Ops notification sent.
+Traceback (most recent call last):
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
+    result = main()
+             ^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
+    briefing = generate_briefing(existing, scope_desks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
+    with client.messages.stream(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1511, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf9PCt4aoup1YC16aSf4V'}
