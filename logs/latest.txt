@@ -1,23 +1,24 @@
-[2026-09-17 15:37:41 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-17 15:37:41 UTC] Desk run scoped to: India Desk
-[2026-09-17 15:37:42 UTC] Fetched 57 existing Notion entries for dedup reference.
-[2026-09-17 15:39:29 UTC] Generated briefing: 2026-09-17, 19:37 GST edition, 5 entries
-[2026-09-17 15:39:29 UTC] Gemini verification round 1...
-[2026-09-17 15:39:30 UTC] Gemini review: no concerns raised.
-[2026-09-17 15:39:30 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:39:30 UTC] Created — Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation (India Desk)
-[2026-09-17 15:39:30 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger="Whether Tata Trusts or Noel Tata will challenge the September 17 board resolution in court, and whether Chandrasekaran's reappointment will be confirmed or blocked at the next shareholder or legal stage.", next_review='2026-10-01'
-[2026-09-17 15:39:31 UTC] Created — Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid (India Desk)
-[2026-09-17 15:39:31 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests': coverage_theme=[], related_desks=['Global Politics Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether President Trump signs the Russia sanctions bill and, if so, whether the White House exempts India or imposes the authorized tariffs on Indian goods.', next_review='2026-09-24'
-[2026-09-17 15:39:32 UTC] Updated — India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests (India Desk)
-[2026-09-17 15:39:32 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:39:32 UTC] Created — Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers (India Desk)
-[2026-09-17 15:39:32 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather': coverage_theme=['Defence & Security'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:39:32 UTC] Created — Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather (India Desk)
-[2026-09-17 15:39:32 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-17 15:39:32 UTC]   Created — Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation (India Desk)
-[2026-09-17 15:39:32 UTC]   Created — Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid (India Desk)
-[2026-09-17 15:39:32 UTC]   Updated — India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests (India Desk)
-[2026-09-17 15:39:32 UTC]   Created — Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers (India Desk)
-[2026-09-17 15:39:32 UTC]   Created — Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather (India Desk)
-[2026-09-17 15:39:34 UTC] Ops notification sent.
+[2026-09-17 16:23:34 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-17 16:23:34 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-17 16:23:34 UTC] Fetched 56 existing Notion entries for dedup reference.
+[2026-09-17 16:24:55 UTC] Generated briefing: 2026-09-17, 20:23 GST edition, 3 entries
+[2026-09-17 16:24:55 UTC] Gemini verification round 1...
+[2026-09-17 16:24:56 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the second article regarding the secret US-Houthi meeting, the text states that the meeting took place at the US Embassy in Muscat on "Sunday, September 15". However, September 15, 2026, falls on a Tuesday, not a Sunday (September 13 was Sunday).
+[2026-09-17 16:25:56 UTC] Gemini verification round 2...
+[2026-09-17 16:25:58 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- The text states that a UN fact-finding mission report (A/HRC/63/61) was released on September 17, 2026, regarding a US-led war in Iran that allegedly began in February 2026. This describes a major, unprecedented global military conflict between the US and Iran involving large-scale civilian casualties, airstrikes on schools, and Houthi offensives routing Saudi forces in late 2025/2026, which contradicts actual historical and current geopolitical reality as of early 2026.
+[2026-09-17 16:25:58 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-17 16:27:00 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 16:27:01 UTC] Created — UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown (Global Politics Desk)
+[2026-09-17 16:27:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains': coverage_theme=[], related_desks=['West Asia Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 16:27:01 UTC] Created — US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains (Global Politics Desk) [NOTE: Story overlaps with West Asia and Maritime Energy desks on regional dimension but is fundamentally a US diplomatic policy development.]
+[2026-09-17 16:27:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 16:27:02 UTC] Created — Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal (Global Politics Desk)
+[2026-09-17 16:27:02 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-17 16:27:02 UTC]   Created — UN Fact-Finding Mission Finds Reasonable Grounds US Committed War Crimes in Iran School Strikes, Iran Committed Crimes Against Humanity in Protest Crackdown (Global Politics Desk)
+[2026-09-17 16:27:02 UTC]   Created — US Officials Hold Secret Meeting With Houthi Representatives in Oman Over Weekend as Iran-Backed Group Consolidates Red Sea Territorial Gains (Global Politics Desk) [NOTE: Story overlaps with West Asia and Maritime Energy desks on regional dimension but is fundamentally a US diplomatic policy development.]
+[2026-09-17 16:27:02 UTC]   Created — Zelenskyy Appoints Anton Kovalskyi Acting Prosecutor General on September 17 Following Kravchenko Dismissal Amid Call Center Corruption Scandal (Global Politics Desk)
+[2026-09-17 16:27:03 UTC] Ops notification sent.
