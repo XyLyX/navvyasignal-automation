@@ -1,18 +1,26 @@
-[2026-09-17 06:36:09 UTC] Starting NavvyaSignal automated run (type=west_asia)
-[2026-09-17 06:36:09 UTC] Desk run scoped to: West Asia Desk
-[2026-09-17 06:36:10 UTC] Fetched 54 existing Notion entries for dedup reference.
-[2026-09-17 06:37:06 UTC] Generated briefing: 2026-09-17, 06:36 GST edition, 1 entries
-[2026-09-17 06:37:06 UTC] Gemini verification round 1...
-[2026-09-17 06:37:07 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The claim that the Houthis "last week seized control of the entirety of Yemen's Red Sea coast and the Bab el-Mandeb Strait following their July declaration of a maritime blockade" contradicts the established military control map of the Yemeni civil war (where coastal areas like Khokha and Mocha have long been held by anti-Houthi forces, specifically the Joint Forces led by Tariq Saleh), presenting a major strategic shift without verifiable precedent.
-[2026-09-17 06:37:49 UTC] Gemini verification round 2...
-[2026-09-17 06:37:50 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The claim that the Houthis captured Mocha and Yemen's entire Red Sea coastline, along with Mayyun Island, between September 10-11, 2026, contradicts the historical reality that Mocha has long been controlled by forces loyal to the Yemeni government/Tariq Saleh and that the Bab el-Mandeb coastline has been heavily contested rather than subject to a sudden total Houthi sweep in September 2026.
-[2026-09-17 06:37:50 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-17 06:38:35 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Saudi Arabia Shoots Down Houthi Drone Near Mecca, Launches Fresh Airstrikes on Yemen as Rebels Deny Attack on Islam's Holiest City': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether Saudi Arabia, Turkey, or Pakistan take concrete military or diplomatic action under their defence pact; whether the Houthis maintain or escalate their Red Sea blockade posture; whether the alleged Mecca targeting claim gains or loses credibility with verifiable evidence; whether other Gulf or Muslim-majority states move beyond condemnation to material support for Riyadh.', next_review='2026-09-20'
-[2026-09-17 06:38:35 UTC] Updated — Saudi Arabia Shoots Down Houthi Drone Near Mecca, Launches Fresh Airstrikes on Yemen as Rebels Deny Attack on Islam's Holiest City (West Asia Desk)
-[2026-09-17 06:38:35 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-17 06:38:35 UTC]   Updated — Saudi Arabia Shoots Down Houthi Drone Near Mecca, Launches Fresh Airstrikes on Yemen as Rebels Deny Attack on Islam's Holiest City (West Asia Desk)
-[2026-09-17 06:38:37 UTC] Ops notification sent.
+[2026-09-17 07:56:41 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
+[2026-09-17 07:56:41 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
+[2026-09-17 07:56:41 UTC] Fetched 53 existing Notion entries for dedup reference.
+[2026-09-17 07:58:43 UTC] Generated briefing: 2026-09-17, 11:56 GST edition, 6 entries
+[2026-09-17 07:58:43 UTC] Gemini verification round 1...
+[2026-09-17 07:58:44 UTC] Gemini review: no concerns raised.
+[2026-09-17 07:58:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:44 UTC] Updated — European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:45 UTC] Updated — Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:45 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:45 UTC] Created — VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:45 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo': coverage_theme=[], related_desks=['UAE Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:46 UTC] Created — DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:47 UTC] Created — Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 07:58:47 UTC] Created — Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-17 07:58:47 UTC]   Updated — European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC]   Updated — Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC]   Created — VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC]   Created — DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC]   Created — Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:47 UTC]   Created — Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels (Maritime Energy & Supply Chains Desk)
+[2026-09-17 07:58:49 UTC] Ops notification sent.
