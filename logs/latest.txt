@@ -1,34 +1,23 @@
-[2026-09-17 15:30:18 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-17 15:30:18 UTC] Desk run scoped to: UAE Desk
-[2026-09-17 15:30:18 UTC] Fetched 54 existing Notion entries for dedup reference.
-[2026-09-17 15:31:48 UTC] Generated briefing: 2026-09-17, 19:30 GST edition, 6 entries
-[2026-09-17 15:31:48 UTC] Gemini verification round 1...
-[2026-09-17 15:31:49 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The draft casually asserts in multiple entries (the Russia-UAE talks and the British Airways schedule updates) that a "US-Iran war began in February 2026" which has directly impacted the UAE through missile and drone attacks. There is no record of a US-Iran war starting in February 2026, making this a major fabricated or historically/prospectively incorrect geopolitical claim for a factual news briefing.
-[2026-09-17 15:33:21 UTC] Gemini verification round 2...
-[2026-09-17 15:33:22 UTC] Gemini raised 2 concern(s):
-FLAGS: 2
-- Entry 4 mentions a "US-Israel war with Iran that began on February 28, 2026, and has directly impacted the emirate through Iranian missile and drone attacks" — as of September 2026, a full-scale US-Israel war with Iran involving direct missile and drone attacks on the UAE is a major geopolitical fiction that does not exist in reality and contradicts current real-world events.
-- Entries 4 and 6 similarly cite this fictional "US-Israel strike on Iran" and subsequent war on February 28, 2026, as the reason for British Airways flight suspensions and regional instability, which is factually unsupported and incorrect.
-[2026-09-17 15:33:22 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-17 15:35:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sheikh Zayed Grand Mosque Introduces Entry Fee for First Time: Dh5 for UAE Residents, Dh10 for Tourists, With Over 3.1 Million Visitors in First Half of 2026': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:02 UTC] Created — Sheikh Zayed Grand Mosque Introduces Entry Fee for First Time: Dh5 for UAE Residents, Dh10 for Tourists, With Over 3.1 Million Visitors in First Half of 2026 (UAE Desk)
-[2026-09-17 15:35:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Abu Dhabi Opens Holiday Home Market to Tenants Under New DCT Regulations, Expanding Short-Term Rental Eligibility Beyond Property Owners': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:03 UTC] Created — Abu Dhabi Opens Holiday Home Market to Tenants Under New DCT Regulations, Expanding Short-Term Rental Eligibility Beyond Property Owners (UAE Desk)
-[2026-09-17 15:35:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE Nuclear Regulator Wins IAEA Innovation Award for AI-Powered Climate Risk Monitoring at Barakah Plant, Presented at 70th General Conference in Vienna': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:03 UTC] Created — UAE Nuclear Regulator Wins IAEA Innovation Award for AI-Powered Climate Risk Monitoring at Barakah Plant, Presented at 70th General Conference in Vienna (UAE Desk)
-[2026-09-17 15:35:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE and Russia Hold High-Level Talks in Abu Dhabi on September 17, Lana Nusseibeh and Georgy Borisenko Discuss Regional Stability and Diplomacy': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:04 UTC] Created — UAE and Russia Hold High-Level Talks in Abu Dhabi on September 17, Lana Nusseibeh and Georgy Borisenko Discuss Regional Stability and Diplomacy (UAE Desk)
-[2026-09-17 15:35:04 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai International Film Festival Revived for December 2027 Edition Announced at Arab Media Summit on September 17, Focus on Arab Cinema and Regional Production Hub': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:04 UTC] Created — Dubai International Film Festival Revived for December 2027 Edition Announced at Arab Media Summit on September 17, Focus on Arab Cinema and Regional Production Hub (UAE Desk)
-[2026-09-17 15:35:04 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'British Airways Confirms Dubai Flights Resume November 3 With Daily Service, Abu Dhabi Suspended Until Winter 2027-28 Season': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 15:35:05 UTC] Created — British Airways Confirms Dubai Flights Resume November 3 With Daily Service, Abu Dhabi Suspended Until Winter 2027-28 Season (UAE Desk)
-[2026-09-17 15:35:05 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-17 15:35:05 UTC]   Created — Sheikh Zayed Grand Mosque Introduces Entry Fee for First Time: Dh5 for UAE Residents, Dh10 for Tourists, With Over 3.1 Million Visitors in First Half of 2026 (UAE Desk)
-[2026-09-17 15:35:05 UTC]   Created — Abu Dhabi Opens Holiday Home Market to Tenants Under New DCT Regulations, Expanding Short-Term Rental Eligibility Beyond Property Owners (UAE Desk)
-[2026-09-17 15:35:05 UTC]   Created — UAE Nuclear Regulator Wins IAEA Innovation Award for AI-Powered Climate Risk Monitoring at Barakah Plant, Presented at 70th General Conference in Vienna (UAE Desk)
-[2026-09-17 15:35:05 UTC]   Created — UAE and Russia Hold High-Level Talks in Abu Dhabi on September 17, Lana Nusseibeh and Georgy Borisenko Discuss Regional Stability and Diplomacy (UAE Desk)
-[2026-09-17 15:35:05 UTC]   Created — Dubai International Film Festival Revived for December 2027 Edition Announced at Arab Media Summit on September 17, Focus on Arab Cinema and Regional Production Hub (UAE Desk)
-[2026-09-17 15:35:05 UTC]   Created — British Airways Confirms Dubai Flights Resume November 3 With Daily Service, Abu Dhabi Suspended Until Winter 2027-28 Season (UAE Desk)
-[2026-09-17 15:35:06 UTC] Ops notification sent.
+[2026-09-17 15:37:41 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-17 15:37:41 UTC] Desk run scoped to: India Desk
+[2026-09-17 15:37:42 UTC] Fetched 57 existing Notion entries for dedup reference.
+[2026-09-17 15:39:29 UTC] Generated briefing: 2026-09-17, 19:37 GST edition, 5 entries
+[2026-09-17 15:39:29 UTC] Gemini verification round 1...
+[2026-09-17 15:39:30 UTC] Gemini review: no concerns raised.
+[2026-09-17 15:39:30 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:39:30 UTC] Created — Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation (India Desk)
+[2026-09-17 15:39:30 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger="Whether Tata Trusts or Noel Tata will challenge the September 17 board resolution in court, and whether Chandrasekaran's reappointment will be confirmed or blocked at the next shareholder or legal stage.", next_review='2026-10-01'
+[2026-09-17 15:39:31 UTC] Created — Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid (India Desk)
+[2026-09-17 15:39:31 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests': coverage_theme=[], related_desks=['Global Politics Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether President Trump signs the Russia sanctions bill and, if so, whether the White House exempts India or imposes the authorized tariffs on Indian goods.', next_review='2026-09-24'
+[2026-09-17 15:39:32 UTC] Updated — India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests (India Desk)
+[2026-09-17 15:39:32 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:39:32 UTC] Created — Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers (India Desk)
+[2026-09-17 15:39:32 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather': coverage_theme=['Defence & Security'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:39:32 UTC] Created — Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather (India Desk)
+[2026-09-17 15:39:32 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-17 15:39:32 UTC]   Created — Supreme Court Rebukes Manipur Government Over 25 Unnatural Deaths in Relief Camps, Orders Chief Secretary to File Affidavit on Investigations and Compensation (India Desk)
+[2026-09-17 15:39:32 UTC]   Created — Tata Sons Board Reappoints N. Chandrasekaran as Chairman for Five Years Despite August Decision Not to Seek Third Term, Tata Trusts Declares Resolution Legally Invalid (India Desk)
+[2026-09-17 15:39:32 UTC]   Updated — India Warns US That Russia Sanctions Bill Authorizing 100 Percent Tariffs on Oil Buyers Could Impact Bilateral Ties, Vows to Protect Energy Security and Trade Interests (India Desk)
+[2026-09-17 15:39:32 UTC]   Created — Cabinet Approves Raising EPFO Wage Ceiling from Rs 15,000 to Rs 25,000 Per Month Effective September 17, Extending Mandatory Provident Fund Coverage to 5.1 Million Additional Workers (India Desk)
+[2026-09-17 15:39:32 UTC]   Created — Two Jaish-e-Mohammad Terrorists Killed in Overnight Encounter in Udhampur District's Brattal Area, Joint Operation by Army, Police, and CRPF Continues Despite Hostile Weather (India Desk)
+[2026-09-17 15:39:34 UTC] Ops notification sent.
