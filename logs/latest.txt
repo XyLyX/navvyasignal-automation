@@ -1,26 +1,17 @@
-[2026-09-17 07:56:41 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-17 07:56:41 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-17 07:56:41 UTC] Fetched 53 existing Notion entries for dedup reference.
-[2026-09-17 07:58:43 UTC] Generated briefing: 2026-09-17, 11:56 GST edition, 6 entries
-[2026-09-17 07:58:43 UTC] Gemini verification round 1...
-[2026-09-17 07:58:44 UTC] Gemini review: no concerns raised.
-[2026-09-17 07:58:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:44 UTC] Updated — European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:45 UTC] Updated — Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:45 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:45 UTC] Created — VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:45 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo': coverage_theme=[], related_desks=['UAE Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:46 UTC] Created — DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:47 UTC] Created — Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-17 07:58:47 UTC] Created — Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-17 07:58:47 UTC]   Updated — European Natural Gas Rises to €81.69 Per MWh on September 17, Up 2.04 Percent as Hormuz Disruptions and Low Storage Levels Maintain Upward Pressure (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC]   Updated — Crude Oil Falls to $102.13 Per Barrel on September 17, Down 0.29 Percent as Markets Assess Saudi Pipeline Recovery and Ongoing Hormuz Restrictions (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC]   Created — VLCC Rates Surge Past $980,000 Per Day on September 13 as Hormuz Closure and Tanker Attacks Drive Freight Costs to Unprecedented Levels (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC]   Created — DP World Expands Trucking Fleet 40 Percent and Commits $800 Million to Jeddah and Tartus Terminals, Betting Hormuz Will Not Return to Pre-War Status Quo (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC]   Created — Asian LNG Demand Set to Decline 3 to 10 Percent in 2026, Second Consecutive Annual Drop as Prices Hit $26 Per MMBtu and China Delays Discretionary Stocking (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:47 UTC]   Created — Container Freight Index Flat at 3,662 Points on September 17, Up 9.15 Percent Month-Over-Month and 162 Percent Year-Over-Year as Transpacific Rates Hold Near Peak Levels (Maritime Energy & Supply Chains Desk)
-[2026-09-17 07:58:49 UTC] Ops notification sent.
+[2026-09-17 15:12:47 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-17 15:12:47 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-17 15:12:48 UTC] Fetched 57 existing Notion entries for dedup reference.
+[2026-09-17 15:14:00 UTC] Generated briefing: 2026-09-17, 19:12 GST edition, 3 entries
+[2026-09-17 15:14:00 UTC] Gemini verification round 1...
+[2026-09-17 15:14:00 UTC] Gemini review: no concerns raised.
+[2026-09-17 15:14:00 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'China AI Stocks Slide $33 Billion as US Labs Push Frontier Model Restrictions, Z.AI and MiniMax Down Over 30 Percent in September': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:14:01 UTC] Created — China AI Stocks Slide $33 Billion as US Labs Push Frontier Model Restrictions, Z.AI and MiniMax Down Over 30 Percent in September (Technology & AI Desk)
+[2026-09-17 15:14:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Google DeepMind Safety Researcher Resigns With Public Warning That AI May Kill Us All, Cites Default Trajectory Concerns': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:14:02 UTC] Created — Google DeepMind Safety Researcher Resigns With Public Warning That AI May Kill Us All, Cites Default Trajectory Concerns (Technology & AI Desk)
+[2026-09-17 15:14:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Meta Launches Meta One Subscription With Higher AI Usage and Enhanced Features, 15 Million Subscriptions and Trials to Date Across Facebook, Instagram, and WhatsApp': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-17 15:14:03 UTC] Created — Meta Launches Meta One Subscription With Higher AI Usage and Enhanced Features, 15 Million Subscriptions and Trials to Date Across Facebook, Instagram, and WhatsApp (Technology & AI Desk)
+[2026-09-17 15:14:03 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-17 15:14:03 UTC]   Created — China AI Stocks Slide $33 Billion as US Labs Push Frontier Model Restrictions, Z.AI and MiniMax Down Over 30 Percent in September (Technology & AI Desk)
+[2026-09-17 15:14:03 UTC]   Created — Google DeepMind Safety Researcher Resigns With Public Warning That AI May Kill Us All, Cites Default Trajectory Concerns (Technology & AI Desk)
+[2026-09-17 15:14:03 UTC]   Created — Meta Launches Meta One Subscription With Higher AI Usage and Enhanced Features, 15 Million Subscriptions and Trials to Date Across Facebook, Instagram, and WhatsApp (Technology & AI Desk)
+[2026-09-17 15:14:04 UTC] Ops notification sent.
