@@ -1,24 +1,17 @@
-[2026-09-18 14:54:27 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-18 14:54:27 UTC] Desk run scoped to: UAE Desk
-[2026-09-18 14:54:28 UTC] Fetched 51 existing Notion entries for dedup reference.
-[2026-09-18 14:55:22 UTC] Generated briefing: 2026-09-18, 18:54 GST edition, 3 entries
-[2026-09-18 14:55:22 UTC] Gemini verification round 1...
-[2026-09-18 14:55:23 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the second entry, South Korea's President is identified as Lee Jae-myung, and the meeting is stated to have taken place at Cheong Wa Dae (the Blue House) in Seoul. Yoon Suk Yeol is the historical president of South Korea, and Cheong Wa Dae ceased to be the presidential office in 2022 (though reopened as a park/venue, current presidential offices are elsewhere), raising accuracy concerns about the leader's identity and location given the 2026 timeframe.
-[2026-09-18 14:56:07 UTC] Gemini verification round 2...
-[2026-09-18 14:56:09 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the second entry, South Korea's President is identified as Lee Jae-myung, and the meeting is reported to take place at Cheong Wa Dae in Seoul on September 18, 2026. However, Yoon Suk Yeol is the President of South Korea whose term runs through 2027, and Cheong Wa Dae (the Blue House) was closed and converted into a public park in May 2022, with the presidential office relocated to Yongsan. Furthermore, specifying exact future political meetings and developments for September 2026 appears implausible/fictitious.
-[2026-09-18 14:56:09 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-18 14:56:56 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE and Sweden Arrest Swedish Fugitive Leading International Money Laundering Network in Joint Operation on September 18, Network Handled $7.1 Million Over 10 Months': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 14:56:56 UTC] Created — UAE and Sweden Arrest Swedish Fugitive Leading International Money Laundering Network in Joint Operation on September 18, Network Handled $7.1 Million Over 10 Months (UAE Desk)
-[2026-09-18 14:56:56 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'South Korea President Lee Jae-myung Meets Khaldoon Al Mubarak on September 18 at Blue House, Discussing UAE-Korea Cooperation and Thanking UAE for Prioritizing Crude Oil Supply': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 14:56:57 UTC] Created — South Korea President Lee Jae-myung Meets Khaldoon Al Mubarak on September 18 at Blue House, Discussing UAE-Korea Cooperation and Thanking UAE for Prioritizing Crude Oil Supply (UAE Desk)
-[2026-09-18 14:56:57 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Police Arrest Three Suspects for Dh190,000 Theft on September 18, Recover Full Amount Within Four Minutes Using E-Scooter Patrol': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 14:56:57 UTC] Created — Dubai Police Arrest Three Suspects for Dh190,000 Theft on September 18, Recover Full Amount Within Four Minutes Using E-Scooter Patrol (UAE Desk)
-[2026-09-18 14:56:57 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-18 14:56:57 UTC]   Created — UAE and Sweden Arrest Swedish Fugitive Leading International Money Laundering Network in Joint Operation on September 18, Network Handled $7.1 Million Over 10 Months (UAE Desk)
-[2026-09-18 14:56:57 UTC]   Created — South Korea President Lee Jae-myung Meets Khaldoon Al Mubarak on September 18 at Blue House, Discussing UAE-Korea Cooperation and Thanking UAE for Prioritizing Crude Oil Supply (UAE Desk)
-[2026-09-18 14:56:57 UTC]   Created — Dubai Police Arrest Three Suspects for Dh190,000 Theft on September 18, Recover Full Amount Within Four Minutes Using E-Scooter Patrol (UAE Desk)
-[2026-09-18 14:56:58 UTC] Ops notification sent.
+[2026-09-18 15:06:29 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-18 15:06:29 UTC] Desk run scoped to: India Desk
+[2026-09-18 15:06:29 UTC] Fetched 54 existing Notion entries for dedup reference.
+[2026-09-18 15:07:35 UTC] Generated briefing: 2026-09-18, 19:06 GST edition, 3 entries
+[2026-09-18 15:07:35 UTC] Gemini verification round 1...
+[2026-09-18 15:07:36 UTC] Gemini review: no concerns raised.
+[2026-09-18 15:07:36 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Rejects Pakistan's Naval Collision Allegations on September 18, Says PNS Hunain Conducted Unsafe Manoeuvre Violating 1991 Agreement': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-18 15:07:37 UTC] Updated — India Rejects Pakistan's Naval Collision Allegations on September 18, Says PNS Hunain Conducted Unsafe Manoeuvre Violating 1991 Agreement (India Desk)
+[2026-09-18 15:07:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Election Commission Allots Football Player Symbol to Mamata Banerjee Faction, Envelope Symbol to Arup Roy Faction on September 18 After Freezing TMC Name': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='October 6 bypoll results in Nandigram and Rejinagar will reveal which faction retains grassroots support after the TMC split.', next_review='2026-10-09'
+[2026-09-18 15:07:37 UTC] Created — Election Commission Allots Football Player Symbol to Mamata Banerjee Faction, Envelope Symbol to Arup Roy Faction on September 18 After Freezing TMC Name (India Desk)
+[2026-09-18 15:07:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Indian Equity Indices Open Higher on September 18 With Sensex Up 261 Points and Nifty Above 23,300 as Crude Eases, Though FII Selling and Tata Stocks Weigh': coverage_theme=['Markets & Capital'], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-18 15:07:37 UTC] Created — Indian Equity Indices Open Higher on September 18 With Sensex Up 261 Points and Nifty Above 23,300 as Crude Eases, Though FII Selling and Tata Stocks Weigh (India Desk)
+[2026-09-18 15:07:37 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-18 15:07:37 UTC]   Updated — India Rejects Pakistan's Naval Collision Allegations on September 18, Says PNS Hunain Conducted Unsafe Manoeuvre Violating 1991 Agreement (India Desk)
+[2026-09-18 15:07:37 UTC]   Created — Election Commission Allots Football Player Symbol to Mamata Banerjee Faction, Envelope Symbol to Arup Roy Faction on September 18 After Freezing TMC Name (India Desk)
+[2026-09-18 15:07:37 UTC]   Created — Indian Equity Indices Open Higher on September 18 With Sensex Up 261 Points and Nifty Above 23,300 as Crude Eases, Though FII Selling and Tata Stocks Weigh (India Desk)
+[2026-09-18 15:07:39 UTC] Ops notification sent.
