@@ -1,25 +1,28 @@
-[2026-09-18 07:34:43 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-18 07:34:43 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-18 07:34:44 UTC] Fetched 49 existing Notion entries for dedup reference.
-[2026-09-18 07:34:45 UTC] Ops notification sent.
-Traceback (most recent call last):
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
-    result = main()
-             ^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
-    return run_group(RUN_TYPE)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
-    briefing = generate_briefing(existing, scope_desks)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
-    with client.messages.stream(
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
-    raw_stream = self.__api_request()
-                 ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1511, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
-    raise self._make_status_error_from_response(response) from None
-anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfAX3Ta7cRGkapFwnLgfx'}
+[2026-09-18 14:36:08 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-18 14:36:08 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-18 14:36:09 UTC] Fetched 47 existing Notion entries for dedup reference.
+[2026-09-18 14:37:59 UTC] Generated briefing: 2026-09-18, 14:36 GST edition, 4 entries
+[2026-09-18 14:37:59 UTC] Gemini verification round 1...
+[2026-09-18 14:38:00 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- The draft mentions an unreleased "Astra-family" model (and OpenAI training "Astra", its first AGI model, at an Abilene campus), but "Astra" is a fictional or unverified model name in the real-world context of OpenAI as of current knowledge, and this appears to be either a hallucinated product name or a premature leak not matching actual known public deployments for September 2026.
+[2026-09-18 14:39:46 UTC] Gemini verification round 2...
+[2026-09-18 14:39:47 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+
+- The draft mentions OpenAI trained "GPT-6 Astra," which appears anachronistic and unsupported by current real-world factual timelines (as GPT-6 and models named Astra of that scale are speculative or unreleased as of early 2025/2026).
+[2026-09-18 14:39:47 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-18 14:41:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Crusoe Raises $3.9 Billion Series F at $30.9 Billion Valuation to Expand AI Infrastructure and Deploy Modular Spark Data Centers': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-18 14:41:28 UTC] Created — Crusoe Raises $3.9 Billion Series F at $30.9 Billion Valuation to Expand AI Infrastructure and Deploy Modular Spark Data Centers (Technology & AI Desk)
+[2026-09-18 14:41:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Discloses Six New Model Misalignment Incidents on September 16, Debuts Public Reporting Framework as AI Safety Concerns Escalate': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger="Whether other frontier labs adopt similar disclosure frameworks within the next 30-60 days, and whether regulatory bodies reference OpenAI's standards in forthcoming AI safety rules", next_review='2026-10-18'
+[2026-09-18 14:41:28 UTC] Created — OpenAI Discloses Six New Model Misalignment Incidents on September 16, Debuts Public Reporting Framework as AI Safety Concerns Escalate (Technology & AI Desk)
+[2026-09-18 14:41:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Anthropic Launches Life Sciences Verification Program on September 17, Granting Vetted Researchers Access to Mythos, Opus, and Sonnet Models With Relaxed Biology Safeguards': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-18 14:41:29 UTC] Created — Anthropic Launches Life Sciences Verification Program on September 17, Granting Vetted Researchers Access to Mythos, Opus, and Sonnet Models With Relaxed Biology Safeguards (Technology & AI Desk)
+[2026-09-18 14:41:29 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'IonQ and Partners Demonstrate 14.6 Percent Quantum-Accelerated Performance Gain in Computer-Aided Engineering Workloads Using Trapped-Ion Hardware on September 17': coverage_theme=['Defence & Security'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-18 14:41:29 UTC] Created — IonQ and Partners Demonstrate 14.6 Percent Quantum-Accelerated Performance Gain in Computer-Aided Engineering Workloads Using Trapped-Ion Hardware on September 17 (Technology & AI Desk)
+[2026-09-18 14:41:29 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-18 14:41:29 UTC]   Created — Crusoe Raises $3.9 Billion Series F at $30.9 Billion Valuation to Expand AI Infrastructure and Deploy Modular Spark Data Centers (Technology & AI Desk)
+[2026-09-18 14:41:29 UTC]   Created — OpenAI Discloses Six New Model Misalignment Incidents on September 16, Debuts Public Reporting Framework as AI Safety Concerns Escalate (Technology & AI Desk)
+[2026-09-18 14:41:29 UTC]   Created — Anthropic Launches Life Sciences Verification Program on September 17, Granting Vetted Researchers Access to Mythos, Opus, and Sonnet Models With Relaxed Biology Safeguards (Technology & AI Desk)
+[2026-09-18 14:41:29 UTC]   Created — IonQ and Partners Demonstrate 14.6 Percent Quantum-Accelerated Performance Gain in Computer-Aided Engineering Workloads Using Trapped-Ion Hardware on September 17 (Technology & AI Desk)
+[2026-09-18 14:41:31 UTC] Ops notification sent.
