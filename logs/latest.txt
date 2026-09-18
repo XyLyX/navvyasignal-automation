@@ -1,37 +1,5 @@
-[2026-09-18 15:56:51 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-18 15:56:51 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-18 15:56:51 UTC] Fetched 39 existing Notion entries for dedup reference.
-[2026-09-18 15:59:04 UTC] Generated briefing: 2026-09-18, 15:56 GST edition, 7 entries
-[2026-09-18 15:59:04 UTC] Gemini verification round 1...
-[2026-09-18 15:59:06 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the entry regarding the Bank of Japan, the text states the BOJ benchmark rate reached "1.25 percent on Friday September 18, the highest level in 31 years since 1995" and "last at 1.25% in April 1995"; however, 31 years prior to 2026 is 1995, but an interest rate of 1.25% in 1995 is historically inaccurate for Japan (Japan's policy rates were significantly higher in the early 1990s and dropped to near-zero/zero later in the decade, and 1.25% does not align with historical BOJ rate levels from 1995).
-[2026-09-18 16:01:19 UTC] Gemini verification round 2...
-[2026-09-18 16:01:20 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-
-- In the seventh briefing entry regarding the US Postal Service, David Steiner is identified as the Postmaster General, but the actual Postmaster General of the United States as of recent years is Louis DeJoy (and David Steiner is a former CEO of Waste Management, not the head of the USPS).
-[2026-09-18 16:01:20 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-18 16:03:24 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Swedish Prime Minister Ulf Kristersson Resigns After Right-Wing Bloc Loses Parliament Majority by Three Seats in September 13 Election': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 16:03:25 UTC] Created — Swedish Prime Minister Ulf Kristersson Resigns After Right-Wing Bloc Loses Parliament Majority by Three Seats in September 13 Election (Global Politics Desk)
-[2026-09-18 16:03:25 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Romanian President Nicușor Dan Nominates Liberal MEP Siegfried Mureșan as Prime Minister on September 17, Third Attempt to End Four-Month Political Crisis': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether Mureșan secures parliamentary confidence vote within the 10-day deadline and whether a stable coalition emerges to end the crisis', next_review='2026-09-27'
-[2026-09-18 16:03:25 UTC] Created — Romanian President Nicușor Dan Nominates Liberal MEP Siegfried Mureșan as Prime Minister on September 17, Third Attempt to End Four-Month Political Crisis (Global Politics Desk)
-[2026-09-18 16:03:25 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'French President Macron Warns of Intensifying Russian Hybrid Attacks, Orders Critical Infrastructure Protection Plan on September 18': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 16:03:26 UTC] Created — French President Macron Warns of Intensifying Russian Hybrid Attacks, Orders Critical Infrastructure Protection Plan on September 18 (Global Politics Desk)
-[2026-09-18 16:03:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'South Korean President Lee Jae-myung Rules Out Troop Deployment to Iran War on September 18, Resisting US Pressure Amid Public Opposition at Home': coverage_theme=[], related_desks=['West Asia Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 16:03:26 UTC] Created — South Korean President Lee Jae-myung Rules Out Troop Deployment to Iran War on September 18, Resisting US Pressure Amid Public Opposition at Home (Global Politics Desk)
-[2026-09-18 16:03:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UN Security Council Holds Third Straw Poll on September 18 to Select Next Secretary-General Ahead of High-Level General Assembly Week': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Results of the third straw poll and whether a clear frontrunner emerges ahead of UNGA high-level week, with formal Security Council recommendation expected by October-December', next_review='2026-09-22'
-[2026-09-18 16:03:27 UTC] Created — UN Security Council Holds Third Straw Poll on September 18 to Select Next Secretary-General Ahead of High-Level General Assembly Week (Global Politics Desk)
-[2026-09-18 16:03:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bank of Japan Raises Interest Rate to 1.25 Percent on September 18 in Split 7-2 Vote, Highest Level Since April 1995 Amid US Pressure and Rising Inflation': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 16:03:27 UTC] Created — Bank of Japan Raises Interest Rate to 1.25 Percent on September 18 in Split 7-2 Vote, Highest Level Since April 1995 Amid US Pressure and Rising Inflation (Global Politics Desk) [NOTE: While primarily a monetary policy story, this has significant Global Politics dimensions: explicit US pressure on Japan to raise rates, coordination between Washington and Tokyo on currency intervention, and geopolitical risks (Iran war, AI demand) cited by Governor Ueda as factors in the decision. The split vote and US involvement elevate this beyond pure central bank technocracy.]
-[2026-09-18 16:03:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Postal Service Halts Work on Trump Mail Ballot Restriction System After Supreme Court Injunction, Postmaster General Confirms on September 17': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-18 16:03:28 UTC] Created — US Postal Service Halts Work on Trump Mail Ballot Restriction System After Supreme Court Injunction, Postmaster General Confirms on September 17 (Global Politics Desk)
-[2026-09-18 16:03:28 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-18 16:03:28 UTC]   Created — Swedish Prime Minister Ulf Kristersson Resigns After Right-Wing Bloc Loses Parliament Majority by Three Seats in September 13 Election (Global Politics Desk)
-[2026-09-18 16:03:28 UTC]   Created — Romanian President Nicușor Dan Nominates Liberal MEP Siegfried Mureșan as Prime Minister on September 17, Third Attempt to End Four-Month Political Crisis (Global Politics Desk)
-[2026-09-18 16:03:28 UTC]   Created — French President Macron Warns of Intensifying Russian Hybrid Attacks, Orders Critical Infrastructure Protection Plan on September 18 (Global Politics Desk)
-[2026-09-18 16:03:28 UTC]   Created — South Korean President Lee Jae-myung Rules Out Troop Deployment to Iran War on September 18, Resisting US Pressure Amid Public Opposition at Home (Global Politics Desk)
-[2026-09-18 16:03:28 UTC]   Created — UN Security Council Holds Third Straw Poll on September 18 to Select Next Secretary-General Ahead of High-Level General Assembly Week (Global Politics Desk)
-[2026-09-18 16:03:28 UTC]   Created — Bank of Japan Raises Interest Rate to 1.25 Percent on September 18 in Split 7-2 Vote, Highest Level Since April 1995 Amid US Pressure and Rising Inflation (Global Politics Desk) [NOTE: While primarily a monetary policy story, this has significant Global Politics dimensions: explicit US pressure on Japan to raise rates, coordination between Washington and Tokyo on currency intervention, and geopolitical risks (Iran war, AI demand) cited by Governor Ueda as factors in the decision. The split vote and US involvement elevate this beyond pure central bank technocracy.]
-[2026-09-18 16:03:28 UTC]   Created — US Postal Service Halts Work on Trump Mail Ballot Restriction System After Supreme Court Injunction, Postmaster General Confirms on September 17 (Global Politics Desk)
-[2026-09-18 16:03:29 UTC] Ops notification sent.
+[2026-09-18 16:18:02 UTC] Starting NavvyaSignal automated run (type=weekly_synthesis)
+[2026-09-18 16:18:03 UTC] Fetched 100 entries from the last 7 days for weekly synthesis.
+[2026-09-18 16:18:28 UTC] Created Briefing entry: 'Gulf Briefing — Week 38' (id=3df11486-b145-8147-823c-cfb16ccea7ea)
+[2026-09-18 16:18:28 UTC] Weekly synthesis complete.
+[2026-09-18 16:18:29 UTC] Ops notification sent.
