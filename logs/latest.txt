@@ -1,20 +1,18 @@
-[2026-09-17 18:08:01 UTC] Starting NavvyaSignal automated run (type=compile_send)
-[2026-09-17 18:08:02 UTC] Fetched 24 entries from today's desk runs to compile.
-[2026-09-17 18:08:04 UTC] Ops notification sent.
+[2026-09-18 06:32:14 UTC] Starting NavvyaSignal automated run (type=west_asia)
+[2026-09-18 06:32:14 UTC] Desk run scoped to: West Asia Desk
+[2026-09-18 06:32:15 UTC] Fetched 51 existing Notion entries for dedup reference.
+[2026-09-18 06:32:16 UTC] Ops notification sent.
 Traceback (most recent call last):
   File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
     result = main()
              ^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1514, in main
-    return run_compile_send()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1603, in run_compile_send
-    briefing, todays_entries = compile_daily_signals()
-                               ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1095, in compile_daily_signals
-    briefing = compile_briefing(todays_entries)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 727, in compile_briefing
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
+    briefing = generate_briefing(existing, scope_desks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
     with client.messages.stream(
   File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
     raw_stream = self.__api_request()
@@ -24,4 +22,4 @@ Traceback (most recent call last):
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
     raise self._make_status_error_from_response(response) from None
-anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf9TXZjGQZdesveKArAuY'}
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfASH7g6ydnJXMp3ayZDi'}
