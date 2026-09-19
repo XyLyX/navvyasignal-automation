@@ -1,24 +1,25 @@
-[2026-09-19 14:18:30 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-19 14:18:30 UTC] Desk run scoped to: UAE Desk
-[2026-09-19 14:18:30 UTC] Fetched 41 existing Notion entries for dedup reference.
-[2026-09-19 14:20:00 UTC] Generated briefing: 2026-09-19, 18:18 GST edition, 4 entries
-[2026-09-19 14:20:00 UTC] Gemini verification round 1...
-[2026-09-19 14:20:01 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the first entry regarding GISEC Global 2026, the body text states the event "runs September 16-18 at Dubai Exhibition Centre," but the announcement and edition date are given as September 19, 2026, meaning the event is described as running in the past while being announced or concluded on the 19th; however, the timeline is contradictory/implausible since an announcement cannot be made on September 19 at an event that reportedly ended the day before on September 18.
-[2026-09-19 14:21:07 UTC] Gemini verification round 2...
-[2026-09-19 14:21:08 UTC] Gemini review: no concerns raised.
-[2026-09-19 14:21:08 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'UAE Launches Cybrani National Cyber Security Training Initiative at GISEC Global 2026, Bridging University Education with Industry Through Seven-University Pilot': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-19 14:21:08 UTC] Created — UAE Launches Cybrani National Cyber Security Training Initiative at GISEC Global 2026, Bridging University Education with Industry Through Seven-University Pilot (UAE Desk)
-[2026-09-19 14:21:08 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Abu Dhabi Launches Phase 2 of Livability Strategy on September 19 After Completing Over 60 Projects Worth Dh12 Billion, Shifting Focus from Building Facilities to Measuring Operational Quality': coverage_theme=['Real Estate & Infrastructure'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-19 14:21:09 UTC] Created — Abu Dhabi Launches Phase 2 of Livability Strategy on September 19 After Completing Over 60 Projects Worth Dh12 Billion, Shifting Focus from Building Facilities to Measuring Operational Quality (UAE Desk)
-[2026-09-19 14:21:09 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Mallathon 2026 Draws Record 160,475 Participants Logging 290 Million Steps Across Nine Malls Over Three-Month Summer Event Ending September 15': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-19 14:21:09 UTC] Created — Dubai Mallathon 2026 Draws Record 160,475 Participants Logging 290 Million Steps Across Nine Malls Over Three-Month Summer Event Ending September 15 (UAE Desk)
-[2026-09-19 14:21:09 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Media Launches New Cohort of Media Pioneer Program on September 19, Eight-Week Initiative Developing Emirati Journalists Through Hands-On Newsroom Experience': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-19 14:21:10 UTC] Created — Dubai Media Launches New Cohort of Media Pioneer Program on September 19, Eight-Week Initiative Developing Emirati Journalists Through Hands-On Newsroom Experience (UAE Desk)
-[2026-09-19 14:21:10 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-19 14:21:10 UTC]   Created — UAE Launches Cybrani National Cyber Security Training Initiative at GISEC Global 2026, Bridging University Education with Industry Through Seven-University Pilot (UAE Desk)
-[2026-09-19 14:21:10 UTC]   Created — Abu Dhabi Launches Phase 2 of Livability Strategy on September 19 After Completing Over 60 Projects Worth Dh12 Billion, Shifting Focus from Building Facilities to Measuring Operational Quality (UAE Desk)
-[2026-09-19 14:21:10 UTC]   Created — Dubai Mallathon 2026 Draws Record 160,475 Participants Logging 290 Million Steps Across Nine Malls Over Three-Month Summer Event Ending September 15 (UAE Desk)
-[2026-09-19 14:21:10 UTC]   Created — Dubai Media Launches New Cohort of Media Pioneer Program on September 19, Eight-Week Initiative Developing Emirati Journalists Through Hands-On Newsroom Experience (UAE Desk)
-[2026-09-19 14:21:11 UTC] Ops notification sent.
+[2026-09-19 14:43:09 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-19 14:43:09 UTC] Desk run scoped to: India Desk
+[2026-09-19 14:43:10 UTC] Fetched 45 existing Notion entries for dedup reference.
+[2026-09-19 14:43:12 UTC] Ops notification sent.
+Traceback (most recent call last):
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
+    result = main()
+             ^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1512, in main
+    return run_group(RUN_TYPE)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1542, in run_group
+    briefing = generate_briefing(existing, scope_desks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 645, in generate_briefing
+    with client.messages.stream(
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1511, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfCyXJQ2aoGQaC6QfRAyy'}
