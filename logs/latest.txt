@@ -1,21 +1,8 @@
-[2026-09-19 06:30:33 UTC] Starting NavvyaSignal automated run (type=west_asia)
-[2026-09-19 06:30:33 UTC] Desk run scoped to: West Asia Desk
-[2026-09-19 06:30:34 UTC] Fetched 44 existing Notion entries for dedup reference.
-[2026-09-19 06:31:46 UTC] Generated briefing: 2026-09-19, 10:30 GST edition, 2 entries
-[2026-09-19 06:31:46 UTC] Gemini verification round 1...
-[2026-09-19 06:31:47 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the second entry, the text states that falling debris from an intercepted drone killed one person and injured two others in **Taif**, which is located deep in western Saudi Arabia (near Mecca/Jabal Druz/Hijaz region), while attributing it to Houthi attacks; however, citing Taif as the location for a drone attack casualty from Yemen-based Houthis is geographically implausible given the extreme distance (~1,000+ km from Houthi-controlled territory) and lack of precedent for successful long-range drone strikes or debris fatalities reaching Taif in this context without prior major escalation milestones.
-[2026-09-19 06:32:50 UTC] Gemini verification round 2...
-[2026-09-19 06:32:51 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the second entry, the text states that Saudi Arabia reported its first fatality in Taif ("falling debris from an intercepted drone killing one person and injuring two others in Taif"), but Taif is located in the Mecca Province of western Saudi Arabia, roughly 700+ kilometers away from the Yemeni border, making it implausible for Houthi drone/missile debris from Yemen to reach Taif under standard operating assumptions without a major, highly exceptional long-range strike that would require separate verification or context regarding the specific geography/incident.
-[2026-09-19 06:32:51 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-19 06:33:57 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Says He Faces Big Decision Whether to Annihilate Iran After Two More Tankers Hit in Hormuz, IRGC Claims Togo-Flagged Vessel Strike': coverage_theme=[], related_desks=['Global Politics Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger="Trump's decision on whether to resume major combat operations against Iran, expected to be shaped by his September 22 meeting with Gulf leaders in New York", next_review='2026-09-23'
-[2026-09-19 06:33:57 UTC] Created — Trump Says He Faces Big Decision Whether to Annihilate Iran After Two More Tankers Hit in Hormuz, IRGC Claims Togo-Flagged Vessel Strike (West Asia Desk)
-[2026-09-19 06:33:57 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Houthi-Saudi Fighting Intensifies With 63 Combatants Killed in 24 Hours, First Saudi Fatality as Pakistan Vows Unconditional Defense Commitment': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Whether Pakistan or Turkey will deploy additional forces or systems under the Makkah Joint Defence Agreement in response to continued Houthi strikes on Saudi Arabia', next_review='2026-09-22'
-[2026-09-19 06:33:58 UTC] Updated — Houthi-Saudi Fighting Intensifies With 63 Combatants Killed in 24 Hours, First Saudi Fatality as Pakistan Vows Unconditional Defense Commitment (West Asia Desk) [NOTE: This updates the existing Sept 18 entry on regional escalation. The previous entry focused on cross-border missile/drone exchanges and South Korea refusing deployment; this update adds the 24-hour casualty figures, first Saudi fatality in Taif (confirmed by Saudi Civil Defense, Saudi Press Agency, Al Arabiya, AP, and The National), Pakistan's defense commitment statement, and latest Houthi claim of 26 Saudi strikes in 24 hours.]
-[2026-09-19 06:33:58 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-19 06:33:58 UTC]   Created — Trump Says He Faces Big Decision Whether to Annihilate Iran After Two More Tankers Hit in Hormuz, IRGC Claims Togo-Flagged Vessel Strike (West Asia Desk)
-[2026-09-19 06:33:58 UTC]   Updated — Houthi-Saudi Fighting Intensifies With 63 Combatants Killed in 24 Hours, First Saudi Fatality as Pakistan Vows Unconditional Defense Commitment (West Asia Desk) [NOTE: This updates the existing Sept 18 entry on regional escalation. The previous entry focused on cross-border missile/drone exchanges and South Korea refusing deployment; this update adds the 24-hour casualty figures, first Saudi fatality in Taif (confirmed by Saudi Civil Defense, Saudi Press Agency, Al Arabiya, AP, and The National), Pakistan's defense commitment statement, and latest Houthi claim of 26 Saudi strikes in 24 hours.]
-[2026-09-19 06:33:59 UTC] Ops notification sent.
+[2026-09-19 07:30:07 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
+[2026-09-19 07:30:07 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
+[2026-09-19 07:30:08 UTC] Fetched 45 existing Notion entries for dedup reference.
+[2026-09-19 07:30:50 UTC] Generated briefing: 2026-09-19, 11:30 GST edition, 0 entries
+[2026-09-19 07:30:50 UTC] Gemini verification round 1...
+[2026-09-19 07:30:50 UTC] Gemini review: no concerns raised.
+[2026-09-19 07:30:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-19 07:30:52 UTC] Ops notification sent.
