@@ -1,8 +1,8 @@
-[2026-09-19 07:30:07 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-19 07:30:07 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-19 07:30:08 UTC] Fetched 45 existing Notion entries for dedup reference.
-[2026-09-19 07:30:50 UTC] Generated briefing: 2026-09-19, 11:30 GST edition, 0 entries
-[2026-09-19 07:30:50 UTC] Gemini verification round 1...
-[2026-09-19 07:30:50 UTC] Gemini review: no concerns raised.
-[2026-09-19 07:30:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-19 07:30:52 UTC] Ops notification sent.
+[2026-09-19 13:58:05 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-19 13:58:05 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-19 13:58:06 UTC] Fetched 41 existing Notion entries for dedup reference.
+[2026-09-19 13:58:34 UTC] Generated briefing: 2026-09-19, 13:58 GST edition, 0 entries
+[2026-09-19 13:58:34 UTC] Gemini verification round 1...
+[2026-09-19 13:58:35 UTC] Gemini review: no concerns raised.
+[2026-09-19 13:58:35 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-19 13:58:36 UTC] Ops notification sent.
