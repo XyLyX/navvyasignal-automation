@@ -1,7 +1,7 @@
-[2026-09-20 14:48:19 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-20 14:48:19 UTC] Desk run scoped to: India Desk
-[2026-09-20 14:48:20 UTC] Fetched 25 existing Notion entries for dedup reference.
-[2026-09-20 14:48:22 UTC] Ops notification sent.
+[2026-09-20 15:34:04 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-20 15:34:04 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-20 15:34:04 UTC] Fetched 20 existing Notion entries for dedup reference.
+[2026-09-20 15:34:06 UTC] Ops notification sent.
 Traceback (most recent call last):
   File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
     result = main()
@@ -22,4 +22,4 @@ Traceback (most recent call last):
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
     raise self._make_status_error_from_response(response) from None
-anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfEsj3aCERjVUCFPFetdA'}
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfEwDM24KbYjwRCdCyq25'}
