@@ -1,31 +1,22 @@
-[2026-09-21 18:15:38 UTC] Starting NavvyaSignal automated run (type=markets_capital)
-[2026-09-21 18:15:38 UTC] Desk run scoped to: Markets & Capital Desk
-[2026-09-21 18:15:39 UTC] Fetched 24 existing Notion entries for dedup reference.
-[2026-09-21 18:17:18 UTC] Generated briefing: 2026-09-21, 22:15 GST edition, 5 entries
-[2026-09-21 18:17:18 UTC] Gemini verification round 1...
-[2026-09-21 18:17:19 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In entry 3 (Novo Nordisk), the draft states: "The stock closed Friday September 18 at $43.40 before opening sharply lower Monday". September 18, 2026 was a Friday, but $43.40 is implausibly low for a major pharmaceutical giant like Novo Nordisk (whose ADRs/shares historically trade in the triple digits, and the text notes a market cap wipeout of billions from an 8% drop, which doesn't align with a $43.40 share price unless there was a massive unmentioned stock split).
-[2026-09-21 18:18:56 UTC] Gemini verification round 2...
-[2026-09-21 18:18:57 UTC] Gemini raised 2 concern(s):
-FLAGS: 2
-- The Intel article claims an Intel share price of approximately $121.52 representing a year-to-date gain of 194% and a 12-month gain of 278%, putting its market valuation out of line with historical norms and current semiconductor sector reality. Furthermore, it attributes a "Terafab partnership with SpaceX and Tesla" and mentions Northland upgrading Intel with a $120 target while the stock is already trading at $121.52, which are factually implausible / hallucinatory details for Intel.
-- The first article mentions "the Federal Reserve's first rate hike in three years, with the central bank raising its benchmark rate by 25 basis points to a range of 3.75 to 4 percent on September 16", but a federal funds rate of 3.75–4% is a rate-cutting cycle or post-hiking level (given rates reached 5.25–5.50% by 2023–2024), making a "first rate hike in three years" to 3.75–4% logically contradictory and factually incorrect.
-[2026-09-21 18:18:57 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-21 18:20:42 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'S&P 500 Rises 1% as Oil Retreat and Trump-Xi Summit Hopes Lift Equities After Volatile Post-Fed Week': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Trump-Xi summit on September 24, 2026 outcome and any trade or AI policy announcements', next_review='2026-09-25'
-[2026-09-21 18:20:43 UTC] Created — S&P 500 Rises 1% as Oil Retreat and Trump-Xi Summit Hopes Lift Equities After Volatile Post-Fed Week (Markets & Capital Desk)
-[2026-09-21 18:20:43 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bitcoin Tops $85,000 and Gold Climbs to $4,360 as Safe-Haven Demand Mixes With Risk-On Sentiment Following Fed Hike': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 18:20:43 UTC] Created — Bitcoin Tops $85,000 and Gold Climbs to $4,360 as Safe-Haven Demand Mixes With Risk-On Sentiment Following Fed Hike (Markets & Capital Desk)
-[2026-09-21 18:20:43 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Novo Nordisk Shares Plunge 8% on Disappointing Long-Term Growth Outlook Despite Ambitious Obesity Drug Pipeline Through 2035': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 18:20:44 UTC] Created — Novo Nordisk Shares Plunge 8% on Disappointing Long-Term Growth Outlook Despite Ambitious Obesity Drug Pipeline Through 2035 (Markets & Capital Desk)
-[2026-09-21 18:20:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'HP Shares Slide 3.4% After Company Warns Global PC Unit Volumes Will Shrink Mid-Single Digits in 2027': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 18:20:44 UTC] Created — HP Shares Slide 3.4% After Company Warns Global PC Unit Volumes Will Shrink Mid-Single Digits in 2027 (Markets & Capital Desk)
-[2026-09-21 18:20:44 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Intel Jumps 5.8% as Chip Stocks Rally on AI Optimism, Analyst Upgrades, and Lower Oil Prices Ahead of Trump-Xi Summit': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 18:20:45 UTC] Created — Intel Jumps 5.8% as Chip Stocks Rally on AI Optimism, Analyst Upgrades, and Lower Oil Prices Ahead of Trump-Xi Summit (Markets & Capital Desk)
-[2026-09-21 18:20:45 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-21 18:20:45 UTC]   Created — S&P 500 Rises 1% as Oil Retreat and Trump-Xi Summit Hopes Lift Equities After Volatile Post-Fed Week (Markets & Capital Desk)
-[2026-09-21 18:20:45 UTC]   Created — Bitcoin Tops $85,000 and Gold Climbs to $4,360 as Safe-Haven Demand Mixes With Risk-On Sentiment Following Fed Hike (Markets & Capital Desk)
-[2026-09-21 18:20:45 UTC]   Created — Novo Nordisk Shares Plunge 8% on Disappointing Long-Term Growth Outlook Despite Ambitious Obesity Drug Pipeline Through 2035 (Markets & Capital Desk)
-[2026-09-21 18:20:45 UTC]   Created — HP Shares Slide 3.4% After Company Warns Global PC Unit Volumes Will Shrink Mid-Single Digits in 2027 (Markets & Capital Desk)
-[2026-09-21 18:20:45 UTC]   Created — Intel Jumps 5.8% as Chip Stocks Rally on AI Optimism, Analyst Upgrades, and Lower Oil Prices Ahead of Trump-Xi Summit (Markets & Capital Desk)
-[2026-09-21 18:20:46 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
+[2026-09-21 19:17:03 UTC] Starting NavvyaSignal automated run (type=compile_send)
+[2026-09-21 19:17:04 UTC] Fetched 28 entries from today's desk runs to compile.
+[2026-09-21 19:25:25 UTC] Compiled: September 21, 2026, 19:17 UTC edition
+[2026-09-21 19:25:49 UTC] Today's Intelligence: selected 7 of 28 entries.
+[2026-09-21 19:26:11 UTC] Created Cross-Desk entry: 'Why Saudi Arabia's Forced Return to Hormuz Is Tightening Oil Markets More Than the Pipeline Attack Itself' (id=3e211486-b145-813b-b4ba-fa4eba375030)
+[2026-09-21 19:26:22 UTC] Resolved watchlist item 3e211486-b145-8158-8152-e8505c053db8 -> 3e211486-b145-8158-8152-e8505c053db8
+[2026-09-21 19:26:23 UTC] Resolved watchlist item 3e211486-b145-81e9-9d64-f61d532c072c -> 3e211486-b145-81e9-9d64-f61d532c072c
+[2026-09-21 19:26:24 UTC] Resolved watchlist item 3e211486-b145-819b-becb-cf93f4f015d6 -> 3e211486-b145-819b-becb-cf93f4f015d6
+[2026-09-21 19:26:25 UTC] Resolved watchlist item 3e211486-b145-8144-b957-e304cb559eee -> 3e211486-b145-8144-b957-e304cb559eee
+[2026-09-21 19:26:25 UTC] Resolved watchlist item 3e211486-b145-8173-8c98-edfa8b6af80e -> 3e211486-b145-8173-8c98-edfa8b6af80e
+[2026-09-21 19:26:26 UTC] Resolved watchlist item 3e211486-b145-819f-854b-ff50d388e885 -> 3e211486-b145-819f-854b-ff50d388e885
+[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-81c8-bcf0-de208e63faf6 -> 3e211486-b145-81c8-bcf0-de208e63faf6
+[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-8153-8892-ff7943eccc49 -> 3e211486-b145-8153-8892-ff7943eccc49
+[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-81c8-9f60-c1b87575b2c9 -> 3e211486-b145-81c8-9f60-c1b87575b2c9
+[2026-09-21 19:26:27 UTC] Watchlist: resolved 9 of 9 proposed resolutions.
+[2026-09-21 19:26:29 UTC] Kit broadcast created: id=26023391, send_at=2026-09-21T19:28:27Z
+[2026-09-21 19:28:47 UTC] Kit broadcast 26023391 confirmed completed.
+[2026-09-21 19:28:47 UTC] DEBUG: Whapi payload length = 5412 chars. First 150 chars: 'Navvya Signal September 21 2026\n\nWest Bank: Father of six killed at Neve Tzuf spring hours before Yom Kippur. IDF captured shooter after manhunt. Sepa'
+[2026-09-21 19:28:47 UTC] DEBUG: Whapi payload last 150 chars: ' cyberattack early September Mediterranean. Third tanker incident since late August. US monitoring nearly 20 ships globally.\n\nMore at navvyasignal.com'
+[2026-09-21 19:28:48 UTC] DEBUG: Whapi raw response status=401 body={"error":{"code":401,"message":"need channel authorization for send message"}}
+[2026-09-21 19:28:48 UTC] FATAL: Whapi send failed: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
+[2026-09-21 19:28:48 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
