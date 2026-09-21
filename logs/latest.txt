@@ -1,24 +1,8 @@
-[2026-09-21 16:57:25 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-21 16:57:25 UTC] Desk run scoped to: UAE Desk
-[2026-09-21 16:57:26 UTC] Fetched 13 existing Notion entries for dedup reference.
-[2026-09-21 16:58:43 UTC] Generated briefing: 2026-09-21, 20:57 GST edition, 3 entries
-[2026-09-21 16:58:43 UTC] Gemini verification round 1...
-[2026-09-21 16:58:44 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The first article mentions that Sheikh Ahmed bin Rashid Al Maktoum was born in 1950, graduated from Sandhurst, and was a founding figure of Al Wasl Sports Club in 1960. Being born in 1950 would mean he was only 10 years old in 1960 when he supposedly founded the sports club, which is implausible.
-[2026-09-21 17:00:01 UTC] Gemini verification round 2...
-[2026-09-21 17:00:02 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The third entry states that "Fujairah also gained a passenger rail link this year, with services between Abu Dhabi and Fujairah starting on June 30 [2026]." While Etihad Rail's freight network is operational, the national passenger train service has not yet launched commercial operations, and a specific June 30, 2026 passenger launch date between Abu Dhabi and Fujairah is currently unsupported and factually incorrect.
-[2026-09-21 17:00:02 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-21 17:01:24 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Declares 10 Days of Mourning Following Death of Sheikh Ahmed bin Rashid Al Maktoum, Youngest Brother of Ruler Sheikh Mohammed': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 17:01:25 UTC] Created — Dubai Declares 10 Days of Mourning Following Death of Sheikh Ahmed bin Rashid Al Maktoum, Youngest Brother of Ruler Sheikh Mohammed (UAE Desk)
-[2026-09-21 17:01:25 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sheikh Zayed Grand Mosque Introduces Entry Fee of Dh5 for UAE Residents and Dh10 for Tourists as Landmark Draws Over 3 Million Guests in First Half of 2026': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 17:01:26 UTC] Created — Sheikh Zayed Grand Mosque Introduces Entry Fee of Dh5 for UAE Residents and Dh10 for Tourists as Landmark Draws Over 3 Million Guests in First Half of 2026 (UAE Desk)
-[2026-09-21 17:01:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Etihad Rail and AD Ports Group Launch Direct Freight Service Linking Fujairah Terminals to Industrial City of Abu Dhabi, Extending Port Reach 200km Inland by Rail': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-21 17:01:26 UTC] Created — Etihad Rail and AD Ports Group Launch Direct Freight Service Linking Fujairah Terminals to Industrial City of Abu Dhabi, Extending Port Reach 200km Inland by Rail (UAE Desk)
-[2026-09-21 17:01:26 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-21 17:01:26 UTC]   Created — Dubai Declares 10 Days of Mourning Following Death of Sheikh Ahmed bin Rashid Al Maktoum, Youngest Brother of Ruler Sheikh Mohammed (UAE Desk)
-[2026-09-21 17:01:26 UTC]   Created — Sheikh Zayed Grand Mosque Introduces Entry Fee of Dh5 for UAE Residents and Dh10 for Tourists as Landmark Draws Over 3 Million Guests in First Half of 2026 (UAE Desk)
-[2026-09-21 17:01:26 UTC]   Created — Etihad Rail and AD Ports Group Launch Direct Freight Service Linking Fujairah Terminals to Industrial City of Abu Dhabi, Extending Port Reach 200km Inland by Rail (UAE Desk)
-[2026-09-21 17:01:27 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
+[2026-09-21 17:09:53 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-21 17:09:53 UTC] Desk run scoped to: India Desk
+[2026-09-21 17:09:54 UTC] Fetched 16 existing Notion entries for dedup reference.
+[2026-09-21 17:10:33 UTC] Generated briefing: 2026-09-21, 21:09 GST edition, 0 entries
+[2026-09-21 17:10:33 UTC] Gemini verification round 1...
+[2026-09-21 17:10:33 UTC] Gemini review: no concerns raised.
+[2026-09-21 17:10:33 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-21 17:10:33 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
