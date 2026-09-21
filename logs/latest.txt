@@ -1,28 +1,24 @@
-[2026-09-20 17:24:16 UTC] Starting NavvyaSignal automated run (type=compile_send)
-[2026-09-20 17:24:17 UTC] Fetched 0 entries from today's desk runs to compile.
-[2026-09-20 17:24:17 UTC] WARNING: no entries found from today's desk runs within the compile window — this likely means one or more desk runs failed or didn't produce anything. Proceeding with an honest 'quiet day' edition rather than failing silently.
-[2026-09-20 17:24:18 UTC] Ops notification sent.
-Traceback (most recent call last):
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1656, in <module>
-    result = main()
-             ^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1514, in main
-    return run_compile_send()
-           ^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1603, in run_compile_send
-    briefing, todays_entries = compile_daily_signals()
-                               ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 1095, in compile_daily_signals
-    briefing = compile_briefing(todays_entries)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/navvyasignal-automation/navvyasignal-automation/main.py", line 727, in compile_briefing
-    with client.messages.stream(
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
-    raw_stream = self.__api_request()
-                 ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1511, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1195, in request
-    raise self._make_status_error_from_response(response) from None
-anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfF5cnaXRniyqNMZt8Z3B'}
+[2026-09-21 06:59:56 UTC] Starting NavvyaSignal automated run (type=west_asia)
+[2026-09-21 06:59:56 UTC] Desk run scoped to: West Asia Desk
+[2026-09-21 06:59:59 UTC] Fetched 5 existing Notion entries for dedup reference.
+[2026-09-21 07:01:06 UTC] Generated briefing: 2026-09-21, 10:59 GST edition, 2 entries
+[2026-09-21 07:01:06 UTC] Gemini verification round 1...
+[2026-09-21 07:01:07 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- In the first entry, Lt.-Gen. Eyal Zamir is cited as IDF Chief of Staff; however, Herzi Halevi is the IDF Chief of Staff, and Eyal Zamir is the Director-General of the Ministry of Defense (or former Deputy Chief of Staff).
+- In the second entry, the reference to the "Meccan Joint Defence Agreement" involving Pakistan, Saudi Arabia, and Turkey appears factually incorrect or completely non-existent in standard international relations and security pacts (no such formal tripartite mutual defense pact under that specific name exists between Pakistan, Turkey, and Saudi Arabia).
+[2026-09-21 07:02:11 UTC] Gemini verification round 2...
+[2026-09-21 07:02:12 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- In the first entry, Lt.-Gen. Eyal Zamir is identified as IDF Chief of Staff; however, Herzi Halevi (or a successor) holds that military role, and Eyal Zamir has historically served as Director-General of the Ministry of Defense rather than Chief of Staff.
+- In the second entry, the "Mecca Joint Defence Agreement signed August 7, 2026 by Pakistan, Saudi Arabia, and Turkey" appears to be factually nonexistent or anachronistic/fictional, as no such formal trilateral mutual defense pact involving these specific nations was signed on that date.
+[2026-09-21 07:02:12 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
+[2026-09-21 07:02:12 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-21 07:03:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'West Bank Attacks on Yom Kippur Eve: Father of Six Killed at Neve Tzuf Spring, IDF Captures Shooter After Manhunt': coverage_theme=['Defence/Security'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-21 07:03:12 UTC] Created — West Bank Attacks on Yom Kippur Eve: Father of Six Killed at Neve Tzuf Spring, IDF Captures Shooter After Manhunt (West Asia Desk)
+[2026-09-21 07:03:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Houthis Launch First Ballistic Missile Targeting Riyadh Since Yemen Fighting Escalated, Saudi Coalition Says Attack Intercepted': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether Pakistan or Turkey respond if Saudi Arabia formally invokes the Mecca Joint Defence Agreement in response to continued Houthi escalation; whether Houthi strikes successfully hit Riyadh or other critical Saudi infrastructure despite air defenses; whether the US or Saudi Arabia launch retaliatory strikes inside Houthi-controlled Yemen that trigger further regional escalation.', next_review='2026-09-25'
+[2026-09-21 07:03:13 UTC] Created — Houthis Launch First Ballistic Missile Targeting Riyadh Since Yemen Fighting Escalated, Saudi Coalition Says Attack Intercepted (West Asia Desk)
+[2026-09-21 07:03:13 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-21 07:03:13 UTC]   Created — West Bank Attacks on Yom Kippur Eve: Father of Six Killed at Neve Tzuf Spring, IDF Captures Shooter After Manhunt (West Asia Desk)
+[2026-09-21 07:03:13 UTC]   Created — Houthis Launch First Ballistic Missile Targeting Riyadh Since Yemen Fighting Escalated, Saudi Coalition Says Attack Intercepted (West Asia Desk)
+[2026-09-21 07:03:13 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
