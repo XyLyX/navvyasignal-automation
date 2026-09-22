@@ -1,27 +1,24 @@
-[2026-09-22 07:54:43 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-22 07:54:43 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-22 07:54:44 UTC] Fetched 34 existing Notion entries for dedup reference.
-[2026-09-22 07:56:28 UTC] Generated briefing: 2026-09-22, 11:54 GST edition, 4 entries
-[2026-09-22 07:56:28 UTC] Gemini verification round 1...
-[2026-09-22 07:56:29 UTC] Gemini raised 1 concern(s):
+[2026-09-22 15:07:32 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-22 15:07:32 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-22 15:07:32 UTC] Fetched 37 existing Notion entries for dedup reference.
+[2026-09-22 15:08:57 UTC] Generated briefing: 2026-09-22, 15:07 GST edition, 3 entries
+[2026-09-22 15:08:57 UTC] Gemini verification round 1...
+[2026-09-22 15:09:00 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- In the fourth entry, the body text states that Saudi Arabia's transits via Hormuz rose "from 1.2 million barrels per day on September 1 to 1.9 million barrels per day on September 16", but the first entry on the same topic states that "Saudi Arabia moved crude through the Strait of Hormuz at 2.9 million barrels per day over the past six days", creating an internal contradiction between the two briefings.
-[2026-09-22 07:58:10 UTC] Gemini verification round 2...
-[2026-09-22 07:58:10 UTC] Gemini raised 1 concern(s):
+- The draft mentions that "David Sacks serve[d] as AI and cryptocurrency czar until term limits forced his departure earlier this year." Presidential advisory positions (such as czars) are political appointees serving at the pleasure of the president, not elected offices subject to constitutional or statutory term limits, making the claim about "term limits" forcing his departure factually implausible.
+[2026-09-22 15:10:08 UTC] Gemini verification round 2...
+[2026-09-22 15:10:10 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- The third briefing entry cites US Energy Information Administration (EIA) data for diesel inventories through September 11, 2026, and states retail diesel prices topped six dollars per gallon "this month"—claims about future or real-time US energy inventory data and exact retail price milestones for September 2026 cannot be verified against actual historical records for this date and appear to be fabricated or extrapolated.
-[2026-09-22 07:58:10 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-22 07:59:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Oil Prices Extend Decline on September 21 as WTI Falls to $95.59 and Brent to $100.06 Amid Diplomatic Push and Saudi Export Resilience': coverage_theme=[], related_desks=['West Asia Desk', 'Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 07:59:39 UTC] Updated — Oil Prices Extend Decline on September 21 as WTI Falls to $95.59 and Brent to $100.06 Amid Diplomatic Push and Saudi Export Resilience (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:39 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'ClarkSea Index Surges to All-Time High of $64,569 per Day on September 21, Surpassing 2007 Peak by 27 Percent as Tanker Earnings Drive Cross-Sector Shipping Boom': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 07:59:41 UTC] Created — ClarkSea Index Surges to All-Time High of $64,569 per Day on September 21, Surpassing 2007 Peak by 27 Percent as Tanker Earnings Drive Cross-Sector Shipping Boom (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Global Diesel Shortage Expected to Last Into 2027 as US Inventories Hit Lowest Level Since 1982 at 107.9 Million Barrels, Retail Prices Surpass Six Dollars per Gallon for First Time': coverage_theme=[], related_desks=['Markets & Capital Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 07:59:41 UTC] Created — Global Diesel Shortage Expected to Last Into 2027 as US Inventories Hit Lowest Level Since 1982 at 107.9 Million Barrels, Retail Prices Surpass Six Dollars per Gallon for First Time (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Saudi Arabia's Gulf Oil Loadings Surge to 14 Million Barrels Capacity Over September 19-20 Weekend, Highest Tanker Count Since June as Kingdom Shifts Exports to Hormuz After Pipeline Shutdown': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 07:59:41 UTC] Created — Saudi Arabia's Gulf Oil Loadings Surge to 14 Million Barrels Capacity Over September 19-20 Weekend, Highest Tanker Count Since June as Kingdom Shifts Exports to Hormuz After Pipeline Shutdown (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-22 07:59:41 UTC]   Updated — Oil Prices Extend Decline on September 21 as WTI Falls to $95.59 and Brent to $100.06 Amid Diplomatic Push and Saudi Export Resilience (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC]   Created — ClarkSea Index Surges to All-Time High of $64,569 per Day on September 21, Surpassing 2007 Peak by 27 Percent as Tanker Earnings Drive Cross-Sector Shipping Boom (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC]   Created — Global Diesel Shortage Expected to Last Into 2027 as US Inventories Hit Lowest Level Since 1982 at 107.9 Million Barrels, Retail Prices Surpass Six Dollars per Gallon for First Time (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:41 UTC]   Created — Saudi Arabia's Gulf Oil Loadings Surge to 14 Million Barrels Capacity Over September 19-20 Weekend, Highest Tanker Count Since June as Kingdom Shifts Exports to Hormuz After Pipeline Shutdown (Maritime Energy & Supply Chains Desk)
-[2026-09-22 07:59:43 UTC] Ops notification sent.
+- The text states that "OpenAI Codex, GitHub Copilot, and Google Gemini CLI" are affected by Plugin4Shell, but GitHub Copilot is a Microsoft product (built on OpenAI technology) and Google Gemini CLI is not a standard major product widely categorized this way alongside Claude Code and Codex, representing potential inaccuracies in specific tool nomenclature or vendor attribution for developer tools.
+[2026-09-22 15:10:10 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-22 15:11:26 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Announces AI Force and AI Czar Position to Oversee National AI Policy, Rejects Safety Constraints Despite Industry Calls for Regulation': coverage_theme=['AI Policy'], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-22 15:11:27 UTC] Created — Trump Announces AI Force and AI Czar Position to Oversee National AI Policy, Rejects Safety Constraints Despite Industry Calls for Regulation (Technology & AI Desk)
+[2026-09-22 15:11:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Plugin4Shell Zero-Click Vulnerability Exposes Four Major AI Coding Agents to Supply-Chain RCE, GitHub Copilot Remains Unpatched as Anthropic and OpenAI Ship Fixes': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='GitHub Copilot patch release or Microsoft public statement on Plugin4Shell remediation timeline', next_review='2026-10-06'
+[2026-09-22 15:11:27 UTC] Created — Plugin4Shell Zero-Click Vulnerability Exposes Four Major AI Coding Agents to Supply-Chain RCE, GitHub Copilot Remains Unpatched as Anthropic and OpenAI Ship Fixes (Technology & AI Desk)
+[2026-09-22 15:11:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'China's CXMT Declares Mass Production of 11.95nm Fifth-Generation DRAM Using Quadruple Patterning, Bypassing US Export Controls to Compete Directly With Samsung and SK Hynix': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-22 15:11:28 UTC] Created — China's CXMT Declares Mass Production of 11.95nm Fifth-Generation DRAM Using Quadruple Patterning, Bypassing US Export Controls to Compete Directly With Samsung and SK Hynix (Technology & AI Desk)
+[2026-09-22 15:11:28 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-22 15:11:28 UTC]   Created — Trump Announces AI Force and AI Czar Position to Oversee National AI Policy, Rejects Safety Constraints Despite Industry Calls for Regulation (Technology & AI Desk)
+[2026-09-22 15:11:28 UTC]   Created — Plugin4Shell Zero-Click Vulnerability Exposes Four Major AI Coding Agents to Supply-Chain RCE, GitHub Copilot Remains Unpatched as Anthropic and OpenAI Ship Fixes (Technology & AI Desk)
+[2026-09-22 15:11:28 UTC]   Created — China's CXMT Declares Mass Production of 11.95nm Fifth-Generation DRAM Using Quadruple Patterning, Bypassing US Export Controls to Compete Directly With Samsung and SK Hynix (Technology & AI Desk)
+[2026-09-22 15:11:29 UTC] Ops notification sent.
