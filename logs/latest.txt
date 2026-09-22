@@ -1,22 +1,29 @@
-[2026-09-21 19:17:03 UTC] Starting NavvyaSignal automated run (type=compile_send)
-[2026-09-21 19:17:04 UTC] Fetched 28 entries from today's desk runs to compile.
-[2026-09-21 19:25:25 UTC] Compiled: September 21, 2026, 19:17 UTC edition
-[2026-09-21 19:25:49 UTC] Today's Intelligence: selected 7 of 28 entries.
-[2026-09-21 19:26:11 UTC] Created Cross-Desk entry: 'Why Saudi Arabia's Forced Return to Hormuz Is Tightening Oil Markets More Than the Pipeline Attack Itself' (id=3e211486-b145-813b-b4ba-fa4eba375030)
-[2026-09-21 19:26:22 UTC] Resolved watchlist item 3e211486-b145-8158-8152-e8505c053db8 -> 3e211486-b145-8158-8152-e8505c053db8
-[2026-09-21 19:26:23 UTC] Resolved watchlist item 3e211486-b145-81e9-9d64-f61d532c072c -> 3e211486-b145-81e9-9d64-f61d532c072c
-[2026-09-21 19:26:24 UTC] Resolved watchlist item 3e211486-b145-819b-becb-cf93f4f015d6 -> 3e211486-b145-819b-becb-cf93f4f015d6
-[2026-09-21 19:26:25 UTC] Resolved watchlist item 3e211486-b145-8144-b957-e304cb559eee -> 3e211486-b145-8144-b957-e304cb559eee
-[2026-09-21 19:26:25 UTC] Resolved watchlist item 3e211486-b145-8173-8c98-edfa8b6af80e -> 3e211486-b145-8173-8c98-edfa8b6af80e
-[2026-09-21 19:26:26 UTC] Resolved watchlist item 3e211486-b145-819f-854b-ff50d388e885 -> 3e211486-b145-819f-854b-ff50d388e885
-[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-81c8-bcf0-de208e63faf6 -> 3e211486-b145-81c8-bcf0-de208e63faf6
-[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-8153-8892-ff7943eccc49 -> 3e211486-b145-8153-8892-ff7943eccc49
-[2026-09-21 19:26:27 UTC] Resolved watchlist item 3e211486-b145-81c8-9f60-c1b87575b2c9 -> 3e211486-b145-81c8-9f60-c1b87575b2c9
-[2026-09-21 19:26:27 UTC] Watchlist: resolved 9 of 9 proposed resolutions.
-[2026-09-21 19:26:29 UTC] Kit broadcast created: id=26023391, send_at=2026-09-21T19:28:27Z
-[2026-09-21 19:28:47 UTC] Kit broadcast 26023391 confirmed completed.
-[2026-09-21 19:28:47 UTC] DEBUG: Whapi payload length = 5412 chars. First 150 chars: 'Navvya Signal September 21 2026\n\nWest Bank: Father of six killed at Neve Tzuf spring hours before Yom Kippur. IDF captured shooter after manhunt. Sepa'
-[2026-09-21 19:28:47 UTC] DEBUG: Whapi payload last 150 chars: ' cyberattack early September Mediterranean. Third tanker incident since late August. US monitoring nearly 20 ships globally.\n\nMore at navvyasignal.com'
-[2026-09-21 19:28:48 UTC] DEBUG: Whapi raw response status=401 body={"error":{"code":401,"message":"need channel authorization for send message"}}
-[2026-09-21 19:28:48 UTC] FATAL: Whapi send failed: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
-[2026-09-21 19:28:48 UTC] WARNING: Ops notification failed to send: 401 {"error":{"code":401,"message":"need channel authorization for send message"}}
+[2026-09-22 06:43:41 UTC] Starting NavvyaSignal automated run (type=west_asia)
+[2026-09-22 06:43:41 UTC] Desk run scoped to: West Asia Desk
+[2026-09-22 06:43:42 UTC] Fetched 30 existing Notion entries for dedup reference.
+[2026-09-22 06:45:05 UTC] Generated briefing: 2026-09-22, 10:45 GST edition, 4 entries
+[2026-09-22 06:45:05 UTC] Gemini verification round 1...
+[2026-09-22 06:45:06 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- In the first article, the text claims that "stocks rising, oil prices easing, and global bond yields falling sharply" on September 21 due to renewed hopes for a diplomatic solution, but the second article later notes that Brent crude was at $101.14 on September 22 and that attacks and constrained transit are ongoing, which presents a mild tension, but more importantly, global bond yields falling sharply alongside rising stocks on a geopolitical news headline is counterintuitive and lacks verification.
+- In the fourth article, the math for the WHO casualty figures contains an internal contradiction: it states that the seven-week total from August 6 is 3,672 casualties, "including 674 deaths and 2,998 injuries", but earlier in the same sentence it states that 164 people were killed and 516 injured *just* between September 13 and 18 (totaling 680 casualties for that single week alone), meaning a single week's casualties exceed or nearly match the stated cumulative total of 674 deaths for the entire multi-week period.
+[2026-09-22 06:46:30 UTC] Gemini verification round 2...
+[2026-09-22 06:46:32 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- In the first entry, the arithmetic for the WHO cumulative casualty toll is internally contradictory: it states 3,672 total casualties comprising "2,998 injuries and 674 deaths," which actually sums to 3,672, but earlier in the same sentence it cites 164 killed and 516 injured for just September 13-18 (totaling 680), and then later states the cumulative toll since August 6 is 3,672 while previously noting a different breakdown. Furthermore, in the fourth entry, the WHO text states 164 killed and 516 injured for September 13-18, which sums to 680 total casualties for that week, but the text immediately describes this as "The week's toll of 680 killed or injured" while later mixing up the cumulative totals and ratios.
+- In the fourth entry, the text states "following claims on September 18 (reported by AFP) that Saudi attacks on Houthi-held territory had reached 300 over the prior week" right after mentioning "The Houthis claimed on September 18 that Saudi Arabia carried out 26 attacks... following claims on September 18...", repeating the same date ("on September 18") for two separate sets of claims within the same sentence structure.
+[2026-09-22 06:46:32 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-22 06:47:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Iran Threatens to Expand War Geography With New Weapons as IRGC Warns of 'Decisive Battle' Ahead of Pezeshkian's UN Arrival': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Whether Trump and Pezeshkian meet at UN General Assembly and whether Trump-Gulf states meeting on September 22 produces diplomatic track or escalation decision', next_review='2026-09-23'
+[2026-09-22 06:47:48 UTC] Created — Iran Threatens to Expand War Geography With New Weapons as IRGC Warns of 'Decisive Battle' Ahead of Pezeshkian's UN Arrival (West Asia Desk)
+[2026-09-22 06:47:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Tanker Struck by Unknown Projectile Entering Strait of Hormuz on September 21, Two Crew Injured as Attacks Continue Despite Reduced Traffic': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-22 06:47:49 UTC] Created — Tanker Struck by Unknown Projectile Entering Strait of Hormuz on September 21, Two Crew Injured as Attacks Continue Despite Reduced Traffic (West Asia Desk)
+[2026-09-22 06:47:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Qatar Proposes Gulf-Iran Economic Interdependence as Path to Long-Term Stability, Calls for Iranian-Arab Dialogue Alongside US Talks': coverage_theme=[], related_desks=['Global Politics Desk', 'Markets & Capital Desk'], watchlist=True, watch_trigger='Whether Trump-Gulf meeting on September 22 produces framework for Gulf-Iran economic talks or security arrangement', next_review='2026-09-23'
+[2026-09-22 06:47:49 UTC] Created — Qatar Proposes Gulf-Iran Economic Interdependence as Path to Long-Term Stability, Calls for Iranian-Arab Dialogue Alongside US Talks (West Asia Desk)
+[2026-09-22 06:47:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'WHO Reports 680 Casualties in Yemen Fighting Between September 13-18 as Saudi-Houthi War Intensifies, Cumulative Toll Since August 6 Reaches 3,672': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-22 06:47:50 UTC] Created — WHO Reports 680 Casualties in Yemen Fighting Between September 13-18 as Saudi-Houthi War Intensifies, Cumulative Toll Since August 6 Reaches 3,672 (West Asia Desk)
+[2026-09-22 06:47:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-22 06:47:50 UTC]   Created — Iran Threatens to Expand War Geography With New Weapons as IRGC Warns of 'Decisive Battle' Ahead of Pezeshkian's UN Arrival (West Asia Desk)
+[2026-09-22 06:47:50 UTC]   Created — Tanker Struck by Unknown Projectile Entering Strait of Hormuz on September 21, Two Crew Injured as Attacks Continue Despite Reduced Traffic (West Asia Desk)
+[2026-09-22 06:47:50 UTC]   Created — Qatar Proposes Gulf-Iran Economic Interdependence as Path to Long-Term Stability, Calls for Iranian-Arab Dialogue Alongside US Talks (West Asia Desk)
+[2026-09-22 06:47:50 UTC]   Created — WHO Reports 680 Casualties in Yemen Fighting Between September 13-18 as Saudi-Houthi War Intensifies, Cumulative Toll Since August 6 Reaches 3,672 (West Asia Desk)
+[2026-09-22 06:47:51 UTC] Ops notification sent.
