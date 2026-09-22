@@ -1,19 +1,8 @@
-[2026-09-22 15:28:49 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-22 15:28:49 UTC] Desk run scoped to: UAE Desk
-[2026-09-22 15:28:50 UTC] Fetched 40 existing Notion entries for dedup reference.
-[2026-09-22 15:29:48 UTC] Generated briefing: 2026-09-22, 19:28 GST edition, 2 entries
-[2026-09-22 15:29:48 UTC] Gemini verification round 1...
-[2026-09-22 15:29:50 UTC] Gemini raised 2 concern(s):
-FLAGS: 2
-- The entry states that the Bascom Palmer Eye Institute is located in "Abu Dhabi" and quotes "Dr Zain Kenderian, chief executive of Bascom Palmer Eye Institute Abu Dhabi"; however, Bascom Palmer Eye Institute is a renowned ophthalmology center operated by the University of Miami in Florida, USA, and does not have an Abu Dhabi campus (though Cleveland Clinic Abu Dhabi or other regional entities may be conflated here).
-- The text mentions that "the Maldives separately signed an $8.8 billion financial centre deal with Dubai-based MBS Global Investments in May 2025," which involves an implausibly massive sum for a financial center in the Maldives relative to the nation's GDP (around $6 billion total), suggesting a potential error in scale, currency, or company details.
-[2026-09-22 15:30:36 UTC] Gemini verification round 2...
-[2026-09-22 15:30:37 UTC] Gemini review: no concerns raised.
-[2026-09-22 15:30:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Abu Dhabi's Eagle Hills Signs $12 Billion Maldives Waterfront and Marina Development, Largest Foreign Investment in Island Nation's History as UAE Developers Deploy Capital Abroad': coverage_theme=['Real Estate & Infrastructure'], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 15:30:37 UTC] Created — Abu Dhabi's Eagle Hills Signs $12 Billion Maldives Waterfront and Marina Development, Largest Foreign Investment in Island Nation's History as UAE Developers Deploy Capital Abroad (UAE Desk)
-[2026-09-22 15:30:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Bascom Palmer Eye Institute Abu Dhabi Sends $1 Million Medical Aid Package to Gaza for 5,000 Patients Awaiting Sight-Saving Surgery': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-22 15:30:38 UTC] Created — Bascom Palmer Eye Institute Abu Dhabi Sends $1 Million Medical Aid Package to Gaza for 5,000 Patients Awaiting Sight-Saving Surgery (UAE Desk)
-[2026-09-22 15:30:38 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-22 15:30:38 UTC]   Created — Abu Dhabi's Eagle Hills Signs $12 Billion Maldives Waterfront and Marina Development, Largest Foreign Investment in Island Nation's History as UAE Developers Deploy Capital Abroad (UAE Desk)
-[2026-09-22 15:30:38 UTC]   Created — Bascom Palmer Eye Institute Abu Dhabi Sends $1 Million Medical Aid Package to Gaza for 5,000 Patients Awaiting Sight-Saving Surgery (UAE Desk)
-[2026-09-22 15:30:39 UTC] Ops notification sent.
+[2026-09-22 15:37:50 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-22 15:37:50 UTC] Desk run scoped to: India Desk
+[2026-09-22 15:37:50 UTC] Fetched 42 existing Notion entries for dedup reference.
+[2026-09-22 15:38:17 UTC] Generated briefing: 2026-09-22, 19:37 GST edition, 0 entries
+[2026-09-22 15:38:17 UTC] Gemini verification round 1...
+[2026-09-22 15:38:18 UTC] Gemini review: no concerns raised.
+[2026-09-22 15:38:18 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-22 15:38:20 UTC] Ops notification sent.
