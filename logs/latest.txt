@@ -1,24 +1,5 @@
-[2026-09-25 16:43:06 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-25 16:43:06 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-25 16:43:06 UTC] Fetched 14 existing Notion entries for dedup reference.
-[2026-09-25 16:44:21 UTC] Generated briefing: 2026-09-25, 16:43 GST edition, 4 entries
-[2026-09-25 16:44:21 UTC] Gemini verification round 1...
-[2026-09-25 16:44:22 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The third item states that "New York City Mayor Zohran Mamdani has called him [Netanyahu] a war criminal..." In 2026, the Mayor of New York City is Eric Adams (or a successor following the 2025 mayoral election cycle), and Zohran Mamdani is a New York State Assemblymember, not the Mayor of New York City.
-[2026-09-25 16:45:37 UTC] Gemini verification round 2...
-[2026-09-25 16:45:38 UTC] Gemini review: no concerns raised.
-[2026-09-25 16:45:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Tigrayan Separatists Launch Major Offensive in Ethiopia's Worst Fighting Since 2022 Ceasefire, Seizing Three Regional Airports': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether the Ethiopian government can contain the multi-front offensive or if the conflict escalates into broader regional war; whether international mediation efforts resume; and the humanitarian impact on civilian populations in affected regions', next_review='2026-09-30'
-[2026-09-25 16:45:38 UTC] Created — Tigrayan Separatists Launch Major Offensive in Ethiopia's Worst Fighting Since 2022 Ceasefire, Seizing Three Regional Airports (Global Politics Desk)
-[2026-09-25 16:45:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Senate Rejects Iran War Powers Resolution 49-50 as Democrats Push to Curtail Trump's Military Action Ahead of Midterm Elections': coverage_theme=[], related_desks=['West Asia Desk', 'Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='Whether additional Republicans break with Trump on the Iran conflict as midterm election pressure intensifies; whether fuel prices continue rising ahead of November 3 vote; and whether the House passes further war powers resolutions that could shift political momentum', next_review='2026-10-01'
-[2026-09-25 16:45:39 UTC] Created — US Senate Rejects Iran War Powers Resolution 49-50 as Democrats Push to Curtail Trump's Military Action Ahead of Midterm Elections (Global Politics Desk)
-[2026-09-25 16:45:39 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dozens of UN Delegates Walk Out as Netanyahu Addresses General Assembly, Leaving Chamber Largely Empty in Protest Over Gaza Conflict': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=True, watch_trigger='Whether the October 27, 2026 Israeli elections result in Netanyahu retaining power or being replaced; whether international pressure for his arrest under ICC warrant intensifies; and whether UN member states take further diplomatic action beyond symbolic walkouts', next_review='2026-10-28'
-[2026-09-25 16:45:40 UTC] Created — Dozens of UN Delegates Walk Out as Netanyahu Addresses General Assembly, Leaving Chamber Largely Empty in Protest Over Gaza Conflict (Global Politics Desk)
-[2026-09-25 16:45:40 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Venezuela's Acting President Delcy Rodríguez Promises Elections at Right Moment in First UN General Assembly Address Since US Abduction of Maduro': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether Rodríguez announces a specific election date and whether key opposition figures including María Corina Machado are permitted to participate; whether US policy shifts ahead of its own midterm elections on November 3; and whether the interim government maintains stability without setting a clear electoral path', next_review='2026-10-25'
-[2026-09-25 16:45:40 UTC] Created — Venezuela's Acting President Delcy Rodríguez Promises Elections at Right Moment in First UN General Assembly Address Since US Abduction of Maduro (Global Politics Desk)
-[2026-09-25 16:45:40 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-25 16:45:40 UTC]   Created — Tigrayan Separatists Launch Major Offensive in Ethiopia's Worst Fighting Since 2022 Ceasefire, Seizing Three Regional Airports (Global Politics Desk)
-[2026-09-25 16:45:40 UTC]   Created — US Senate Rejects Iran War Powers Resolution 49-50 as Democrats Push to Curtail Trump's Military Action Ahead of Midterm Elections (Global Politics Desk)
-[2026-09-25 16:45:40 UTC]   Created — Dozens of UN Delegates Walk Out as Netanyahu Addresses General Assembly, Leaving Chamber Largely Empty in Protest Over Gaza Conflict (Global Politics Desk)
-[2026-09-25 16:45:40 UTC]   Created — Venezuela's Acting President Delcy Rodríguez Promises Elections at Right Moment in First UN General Assembly Address Since US Abduction of Maduro (Global Politics Desk)
-[2026-09-25 16:45:41 UTC] Ops notification sent.
+[2026-09-25 17:03:15 UTC] Starting NavvyaSignal automated run (type=weekly_synthesis)
+[2026-09-25 17:03:16 UTC] Fetched 99 entries from the last 7 days for weekly synthesis.
+[2026-09-25 17:04:21 UTC] Created Briefing entry: 'Gulf Briefing — Week 38' (id=3e611486-b145-810f-8247-db88c2d66076)
+[2026-09-25 17:04:21 UTC] Weekly synthesis complete.
+[2026-09-25 17:04:23 UTC] Ops notification sent.
