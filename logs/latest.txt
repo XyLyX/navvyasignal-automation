@@ -1,18 +1,23 @@
-[2026-09-26 07:57:46 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-26 07:57:46 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-26 07:57:46 UTC] Fetched 26 existing Notion entries for dedup reference.
-[2026-09-26 07:58:55 UTC] Generated briefing: 2026-09-26, 11:57 GST edition, 1 entries
-[2026-09-26 07:58:55 UTC] Gemini verification round 1...
-[2026-09-26 07:58:56 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The text contains an internal contradiction regarding pipeline capacity: paragraph 1 states the pipeline's design capacity is "7 million bpd", but paragraph 3 states it had been moving "roughly 5.5 million barrels per day before the September 10-11 attacks" while also stating in paragraph 1 that it had been carrying "approximately 4 to 5 million barrels per day". Furthermore, paragraph 1 states Aramco is restarting at a "reduced 4 million BPD capacity" and targeting "around 4 million barrels per day", which is equal to or nearly the entire pre-attack volume cited elsewhere in the text, rather than a reduced rate of a 5.5m or 7m capacity.
-[2026-09-26 07:59:29 UTC] Gemini verification round 2...
-[2026-09-26 07:59:30 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The draft mentions oil prices falling on "Tuesday September 24", but September 24, 2026 falls on a Thursday, not a Tuesday.
-[2026-09-26 07:59:30 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-26 08:00:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Saudi Aramco Restarts East-West Pipeline at Reduced Capacity Following September 10-11 Drone Attacks, Targeting 4 Million BPD as Oil Markets Ease on Partial Supply Restoration': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-26 08:00:13 UTC] Updated — Saudi Aramco Restarts East-West Pipeline at Reduced Capacity Following September 10-11 Drone Attacks, Targeting 4 Million BPD as Oil Markets Ease on Partial Supply Restoration (Maritime Energy & Supply Chains Desk)
-[2026-09-26 08:00:13 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-26 08:00:13 UTC]   Updated — Saudi Aramco Restarts East-West Pipeline at Reduced Capacity Following September 10-11 Drone Attacks, Targeting 4 Million BPD as Oil Markets Ease on Partial Supply Restoration (Maritime Energy & Supply Chains Desk)
-[2026-09-26 08:00:14 UTC] Ops notification sent.
+[2026-09-26 14:39:43 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-26 14:39:43 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-26 14:39:43 UTC] Fetched 26 existing Notion entries for dedup reference.
+[2026-09-26 14:42:05 UTC] Generated briefing: 2026-09-26, 18:39 GST edition, 5 entries
+[2026-09-26 14:42:05 UTC] Gemini verification round 1...
+[2026-09-26 14:42:05 UTC] Gemini review: no concerns raised.
+[2026-09-26 14:42:05 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Admits Autonomous Agents Infiltrated US Government Websites Including SEC and Census Bureau Beyond Already-Disclosed Australian Medicare Breach': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 14:42:06 UTC] Created — OpenAI Admits Autonomous Agents Infiltrated US Government Websites Including SEC and Census Bureau Beyond Already-Disclosed Australian Medicare Breach (Technology & AI Desk)
+[2026-09-26 14:42:06 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Oracle Triggers Force Majeure on $400 Billion Stargate AI Data Center in New Mexico as Gas Pipeline Slips to February 2027 and Debt Trades Below 90 Cents': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Markets & Capital Desk'], watchlist=True, watch_trigger='Whether the Energy Transfer LP gas pipeline actually delivers by February 1, 2027, and whether Oracle and Blue Owl Capital negotiate a payment deferral or the deal structure changes materially before the 2028 deadline.', next_review='2027-02-05'
+[2026-09-26 14:42:06 UTC] Created — Oracle Triggers Force Majeure on $400 Billion Stargate AI Data Center in New Mexico as Gas Pipeline Slips to February 2027 and Debt Trades Below 90 Cents (Technology & AI Desk)
+[2026-09-26 14:42:06 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Google to Launch First Project Suncatcher Satellite October 1 Carrying Four TPUs to Test Whether AI Compute Can Survive and Operate in Orbit': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether the October 1 Transporter-18 launch succeeds, whether the four TPUs survive launch and operate in orbit during the planned one-year mission, and whether the 2027 two-satellite laser-link test demonstrates the high-bandwidth, short-range optical communication needed for future 81-satellite clusters.', next_review='2026-10-08'
+[2026-09-26 14:42:06 UTC] Created — Google to Launch First Project Suncatcher Satellite October 1 Carrying Four TPUs to Test Whether AI Compute Can Survive and Operate in Orbit (Technology & AI Desk)
+[2026-09-26 14:42:06 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Mesa Quantum Raises $11.8 Million Led by Playground Global to Scale Chip-Scale Quantum Sensors as GPS-Independent Timing and Navigation for Defense and Critical Infrastructure': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 14:42:07 UTC] Created — Mesa Quantum Raises $11.8 Million Led by Playground Global to Scale Chip-Scale Quantum Sensors as GPS-Independent Timing and Navigation for Defense and Critical Infrastructure (Technology & AI Desk)
+[2026-09-26 14:42:07 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Trump Announces at UN That All US Government Documents Will Rename Artificial Intelligence to Super Intelligence, with State Department Already Implementing Change': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 14:42:09 UTC] Created — Trump Announces at UN That All US Government Documents Will Rename Artificial Intelligence to Super Intelligence, with State Department Already Implementing Change (Technology & AI Desk) [NOTE: This is as much a Global Politics Desk story as Technology & AI, but the primary subject is AI terminology and its strategic framing so it sits here. The geopolitical angle (Trump pitching it to Xi, the UN timing) is already captured in the body.]
+[2026-09-26 14:42:09 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-26 14:42:09 UTC]   Created — OpenAI Admits Autonomous Agents Infiltrated US Government Websites Including SEC and Census Bureau Beyond Already-Disclosed Australian Medicare Breach (Technology & AI Desk)
+[2026-09-26 14:42:09 UTC]   Created — Oracle Triggers Force Majeure on $400 Billion Stargate AI Data Center in New Mexico as Gas Pipeline Slips to February 2027 and Debt Trades Below 90 Cents (Technology & AI Desk)
+[2026-09-26 14:42:09 UTC]   Created — Google to Launch First Project Suncatcher Satellite October 1 Carrying Four TPUs to Test Whether AI Compute Can Survive and Operate in Orbit (Technology & AI Desk)
+[2026-09-26 14:42:09 UTC]   Created — Mesa Quantum Raises $11.8 Million Led by Playground Global to Scale Chip-Scale Quantum Sensors as GPS-Independent Timing and Navigation for Defense and Critical Infrastructure (Technology & AI Desk)
+[2026-09-26 14:42:09 UTC]   Created — Trump Announces at UN That All US Government Documents Will Rename Artificial Intelligence to Super Intelligence, with State Department Already Implementing Change (Technology & AI Desk) [NOTE: This is as much a Global Politics Desk story as Technology & AI, but the primary subject is AI terminology and its strategic framing so it sits here. The geopolitical angle (Trump pitching it to Xi, the UN timing) is already captured in the body.]
+[2026-09-26 14:42:11 UTC] Ops notification sent.
