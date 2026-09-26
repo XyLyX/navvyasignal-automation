@@ -1,21 +1,27 @@
-[2026-09-26 14:56:53 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-26 14:56:53 UTC] Desk run scoped to: UAE Desk
-[2026-09-26 14:56:54 UTC] Fetched 31 existing Notion entries for dedup reference.
-[2026-09-26 14:58:00 UTC] Generated briefing: 2026-09-26, 18:56 GST edition, 3 entries
-[2026-09-26 14:58:00 UTC] Gemini verification round 1...
-[2026-09-26 14:58:01 UTC] Gemini raised 1 concern(s):
+[2026-09-26 15:04:51 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-26 15:04:51 UTC] Desk run scoped to: India Desk
+[2026-09-26 15:04:51 UTC] Fetched 34 existing Notion entries for dedup reference.
+[2026-09-26 15:06:27 UTC] Generated briefing: 2026-09-26, 19:00 GST edition, 4 entries
+[2026-09-26 15:06:27 UTC] Gemini verification round 1...
+[2026-09-26 15:06:28 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- The second entry states that Dubai Police issued a statement "on Saturday" regarding the Umm Suqeim Street accident, but September 26, 2026 (the date of the statement given earlier in the paragraph) falls on a Saturday, so "released Saturday" is slightly repetitive/awkward, but more importantly, September 26, 2026 is actually a Saturday according to the calendar. However, check whether all details match the cited sources.
-[2026-09-26 14:58:45 UTC] Gemini verification round 2...
-[2026-09-26 14:58:46 UTC] Gemini review: no concerns raised.
-[2026-09-26 14:58:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Sharjah Police Recover Stolen Car Within Two Hours After Vehicle Left Running Unattended': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-26 14:58:46 UTC] Created — Sharjah Police Recover Stolen Car Within Two Hours After Vehicle Left Running Unattended (UAE Desk)
-[2026-09-26 14:58:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Police Warn Against Driving While Fatigued After Driver Loses Consciousness on Umm Suqeim Street': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-26 14:58:47 UTC] Created — Dubai Police Warn Against Driving While Fatigued After Driver Loses Consciousness on Umm Suqeim Street (UAE Desk)
-[2026-09-26 14:58:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'ROX Begins UAE Vehicle Production in Abu Dhabi as KEZAD Manufacturing Centre Targets 300,000 Annual Capacity by 2030': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-26 14:58:48 UTC] Created — ROX Begins UAE Vehicle Production in Abu Dhabi as KEZAD Manufacturing Centre Targets 300,000 Annual Capacity by 2030 (UAE Desk)
-[2026-09-26 14:58:48 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-26 14:58:48 UTC]   Created — Sharjah Police Recover Stolen Car Within Two Hours After Vehicle Left Running Unattended (UAE Desk)
-[2026-09-26 14:58:48 UTC]   Created — Dubai Police Warn Against Driving While Fatigued After Driver Loses Consciousness on Umm Suqeim Street (UAE Desk)
-[2026-09-26 14:58:48 UTC]   Created — ROX Begins UAE Vehicle Production in Abu Dhabi as KEZAD Manufacturing Centre Targets 300,000 Annual Capacity by 2030 (UAE Desk)
-[2026-09-26 14:58:49 UTC] Ops notification sent.
+- In the Hardik Pandya item, the text states the T20 World Cup 2026 final took place "in March in Ahmedabad against New Zealand", but India won the ICC Men's T20 World Cup final in 2024 (played in June in Barbados against South Africa), and the 2026 T20 World Cup is scheduled to be hosted by India and Sri Lanka in February-March 2026, meaning a March 2026 final against New Zealand could not have happened yet.
+[2026-09-26 15:07:49 UTC] Gemini verification round 2...
+[2026-09-26 15:07:51 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the Hardik Pandya article, the coordinates/locations mentioned for the depression's center don't match the geography (latitude 23.4°N, longitude 81.7°E places it in Madhya Pradesh/Chhattisgarh border region, but saying it is "70 km north-northwest of Pendra Road... 110 km south of Sidhi... and 230 km south of Prayagraj" contains internal spatial contradictions or distances that are geographically implausible based on standard GIS mapping for those specific towns). Wait, that coordinate check is actually for the *fourth* article about the depression, not the Hardik Pandya article. Let me state the correct flag: In the depression article, the stated distances from the given coordinates (Lat 23.4°N, Lon 81.7°E) to Pendra Road, Sidhi, and Prayagraj contain geographical inconsistencies (e.g., Prayagraj is significantly further than 230 km north of that latitude/longitude point).
+[2026-09-26 15:07:51 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-26 15:09:22 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Char Dham Yatra Suspended Until September 27 as IMD Issues Red Alert for Heavy Rain Across Uttarakhand': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 15:09:22 UTC] Created — Char Dham Yatra Suspended Until September 27 as IMD Issues Red Alert for Heavy Rain Across Uttarakhand (India Desk)
+[2026-09-26 15:09:22 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Hardik Pandya Ruled Out of New Zealand Tour After Fresh Right Shin Injury Extends Absence to Fifth Month': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 15:09:23 UTC] Created — Hardik Pandya Ruled Out of New Zealand Tour After Fresh Right Shin Injury Extends Absence to Fifth Month (India Desk)
+[2026-09-26 15:09:23 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India's UPI Processes Over 20 Billion Transactions Monthly, Setting Global Benchmark for Real-Time Payments': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 15:09:24 UTC] Created — India's UPI Processes Over 20 Billion Transactions Monthly, Setting Global Benchmark for Real-Time Payments (India Desk)
+[2026-09-26 15:09:24 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Depression Over Northeast Madhya Pradesh Brings Heavy Rain to Uttar Pradesh, Chhattisgarh as IMD Tracks System Moving North-Northwest': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-26 15:09:24 UTC] Created — Depression Over Northeast Madhya Pradesh Brings Heavy Rain to Uttar Pradesh, Chhattisgarh as IMD Tracks System Moving North-Northwest (India Desk)
+[2026-09-26 15:09:24 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-26 15:09:24 UTC]   Created — Char Dham Yatra Suspended Until September 27 as IMD Issues Red Alert for Heavy Rain Across Uttarakhand (India Desk)
+[2026-09-26 15:09:24 UTC]   Created — Hardik Pandya Ruled Out of New Zealand Tour After Fresh Right Shin Injury Extends Absence to Fifth Month (India Desk)
+[2026-09-26 15:09:24 UTC]   Created — India's UPI Processes Over 20 Billion Transactions Monthly, Setting Global Benchmark for Real-Time Payments (India Desk)
+[2026-09-26 15:09:24 UTC]   Created — Depression Over Northeast Madhya Pradesh Brings Heavy Rain to Uttar Pradesh, Chhattisgarh as IMD Tracks System Moving North-Northwest (India Desk)
+[2026-09-26 15:09:25 UTC] Ops notification sent.
