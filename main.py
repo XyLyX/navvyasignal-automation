@@ -1117,23 +1117,13 @@ Use the exact "id" values from the entries provided — do not invent or alter t
 
 
 def select_todays_intelligence(todays_entries):
-    """Idempotent: first resets Today's Intelligence=False on every one of today's entries
-    currently flagged True (so a rerun of compile_send doesn't leave stale selections from an
-    earlier attempt), then selects fresh from the current state of today's entries."""
+    """Select the V2 edition and write its Dubai date and ordered priorities."""
     if not NEW_METADATA_STAGE_LIVE:
         log("select_todays_intelligence: new metadata stage not live yet — skipping.")
         return []
     if not todays_entries:
         return []
-
-    # Idempotent reset: today's entries are the only ones this function has authority over.
-    for e in todays_entries:
-        if DRY_RUN:
-            log(f"DRY RUN: would reset Today's Intelligence=False on '{e['title']}' before reselecting.")
-            continue
-        url = f"https://api.notion.com/v1/pages/{e['id']}"
-        requests.patch(url, headers=NOTION_HEADERS,
-                        json={"properties": {"Today's Intelligence": {"checkbox": False}}}, timeout=30)
+    publication_date = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=4))).date().isoformat()
 
     user_prompt = f"""Today's entries (id | desk | title | body):
 {json.dumps([{"id": e["id"], "desk": e["desk"], "title": e["title"], "body": e["body"][:500]} for e in todays_entries], indent=2)}
@@ -1160,15 +1150,33 @@ Select today's Today's Intelligence entries per your instructions."""
         return []
 
     valid_ids = {e["id"] for e in todays_entries}
-    selected_ids = [i for i in selected_ids if i in valid_ids][:7]
+    if not isinstance(selected_ids, list):
+        return []
+    selected_ids = list(dict.fromkeys(i for i in selected_ids if isinstance(i, str) and i in valid_ids))[:7]
 
-    for entry_id in selected_ids:
+    # Keep existing edition intact if selection could not be parsed. Once valid,
+    # clear only this Dubai day's candidate flags, then set the chosen order.
+    for e in todays_entries:
         if DRY_RUN:
-            log(f"DRY RUN: would set Today's Intelligence=True on id={entry_id}")
+            log(f"DRY RUN: would reset Today's Intelligence=False on '{e['title']}'")
+            continue
+        resp = requests.patch(f"https://api.notion.com/v1/pages/{e['id']}", headers=NOTION_HEADERS,
+                              json={"properties": {"Today's Intelligence": {"checkbox": False}}}, timeout=30)
+        if resp.status_code != 200:
+            fail_hard(f"V2 homepage reset failed: HTTP {resp.status_code}")
+
+    for priority, entry_id in enumerate(selected_ids, 1):
+        if DRY_RUN:
+            log(f"DRY RUN: would select id={entry_id}, date={publication_date}, priority={priority}")
             continue
         url = f"https://api.notion.com/v1/pages/{entry_id}"
-        requests.patch(url, headers=NOTION_HEADERS,
-                        json={"properties": {"Today's Intelligence": {"checkbox": True}}}, timeout=30)
+        resp = requests.patch(url, headers=NOTION_HEADERS, json={"properties": {
+            "Today's Intelligence": {"checkbox": True},
+            "Homepage Date": {"date": {"start": publication_date}},
+            "Homepage Priority": {"number": priority},
+        }}, timeout=30)
+        if resp.status_code != 200:
+            fail_hard(f"V2 homepage selection failed: HTTP {resp.status_code}")
 
     log(f"Today's Intelligence: selected {len(selected_ids)} of {len(todays_entries)} entries.")
     return selected_ids
