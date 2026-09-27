@@ -1,31 +1,32 @@
-[2026-09-27 15:46:15 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-27 15:46:15 UTC] Desk run scoped to: India Desk
-[2026-09-27 15:46:16 UTC] Fetched 51 existing Notion entries for dedup reference.
-[2026-09-27 15:48:13 UTC] Generated briefing: 2026-09-27, 19:46 GST edition, 5 entries
-[2026-09-27 15:48:13 UTC] Gemini verification round 1...
-[2026-09-27 15:48:13 UTC] Gemini raised 1 concern(s):
+[2026-09-27 16:31:29 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-27 16:31:29 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-27 16:31:30 UTC] Fetched 50 existing Notion entries for dedup reference.
+[2026-09-27 16:33:09 UTC] Generated briefing: 2026-09-27, 16:31 UTC edition, 5 entries
+[2026-09-27 16:33:09 UTC] Gemini verification round 1...
+[2026-09-27 16:33:10 UTC] Gemini raised 2 concern(s):
+FLAGS: 2
+- The article about the Athens building explosion refers to Kimberly Guilfoyle as the US Ambassador to Greece, which is factually incorrect as she does not hold that diplomatic post.
+- The article about RAF Fairford states that Andy Burnham is the British Prime Minister, which is factually incorrect as Keir Starmer is the UK Prime Minister (and Burnham is the Mayor of Greater Manchester).
+[2026-09-27 16:34:33 UTC] Gemini verification round 2...
+[2026-09-27 16:34:34 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- In the fourth entry about the India vs. West Indies ODI match, the text claims that fast bowler Jasprit Bumrah "is in Japan representing India at the Asian Games." This is factually implausible and contradictory, as Jasprit Bumrah is a senior international cricketer, whereas the Asian Games squash event mentioned in the previous entry is taking place in Aichi-Nagoya, Japan, and cricketers do not participate in the Asian Games multi-sport event concurrently with a live bilateral home series against the West Indies.
-[2026-09-27 15:50:03 UTC] Gemini verification round 2...
-[2026-09-27 15:50:04 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In the fourth entry about the India vs. West Indies ODI, it states that fast bowler Jasprit Bumrah is "in Japan representing India in men's cricket at the Asian Games." This is factually impossible and internally contradictory: cricket is not a sport at the 2026 Aichi-Nagoya Asian Games (having only featured previously in 2010, 2014, and 2023), elite players like Jasprit Bumrah do not play in second-tier multi-sport events while active in international bilateral series, and top-tier Indian cricketers are engaged in the home international season against the West Indies as described in the same article.
-[2026-09-27 15:50:04 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
-[2026-09-27 15:50:04 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-27 15:51:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Heavy Rain Kills 56 in Uttar Pradesh Over Three Days as Depression Triggers Floods, Landslides, and Destroys Over 1,000 Homes': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 15:51:48 UTC] Created — Heavy Rain Kills 56 in Uttar Pradesh Over Three Days as Depression Triggers Floods, Landslides, and Destroys Over 1,000 Homes (India Desk)
-[2026-09-27 15:51:48 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Maharashtra Declares Drought in 265 of 358 Talukas, Covering 74 Percent of State, After 18.8 Percent Rainfall Deficit During Kharif 2026 Season': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 15:51:49 UTC] Updated — Maharashtra Declares Drought in 265 of 358 Talukas, Covering 74 Percent of State, After 18.8 Percent Rainfall Deficit During Kharif 2026 Season (India Desk) [NOTE: Updates existing depression/weather entry with the formal drought declaration and full relief package details.]
-[2026-09-27 15:51:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Anahat Singh Wins Historic Silver at Asian Games 2026 After Loss to Malaysia's Sivasangari in Women's Squash Singles Final, Becoming First Indian to Reach Final': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 15:51:49 UTC] Created — Anahat Singh Wins Historic Silver at Asian Games 2026 After Loss to Malaysia's Sivasangari in Women's Squash Singles Final, Becoming First Indian to Reach Final (India Desk)
-[2026-09-27 15:51:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Begin West Indies Series with Dominant Chase in First ODI as Kuldeep Yadav's Four-Wicket Haul Restricts Visitors to 295 Despite Opening Century': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 15:51:49 UTC] Created — India Begin West Indies Series with Dominant Chase in First ODI as Kuldeep Yadav's Four-Wicket Haul Restricts Visitors to 295 Despite Opening Century (India Desk)
-[2026-09-27 15:51:49 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Public-Sector and Regional Rural Banks Open Sunday, September 27, Ahead of Three-Day Nationwide Strike Starting September 28': coverage_theme=[], related_desks=['UAE Desk'], watchlist=True, watch_trigger='September 28-30 strike execution and actual service disruption levels', next_review='2026-10-01'
-[2026-09-27 15:51:50 UTC] Created — Public-Sector and Regional Rural Banks Open Sunday, September 27, Ahead of Three-Day Nationwide Strike Starting September 28 (India Desk) [NOTE: Relates to but is distinct from the UAE Desk entry from Sept 25 about the strike's potential impact on UAE residents; this entry covers the India-side Sunday opening response.]
-[2026-09-27 15:51:50 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-27 15:51:50 UTC]   Created — Heavy Rain Kills 56 in Uttar Pradesh Over Three Days as Depression Triggers Floods, Landslides, and Destroys Over 1,000 Homes (India Desk)
-[2026-09-27 15:51:50 UTC]   Updated — Maharashtra Declares Drought in 265 of 358 Talukas, Covering 74 Percent of State, After 18.8 Percent Rainfall Deficit During Kharif 2026 Season (India Desk) [NOTE: Updates existing depression/weather entry with the formal drought declaration and full relief package details.]
-[2026-09-27 15:51:50 UTC]   Created — Anahat Singh Wins Historic Silver at Asian Games 2026 After Loss to Malaysia's Sivasangari in Women's Squash Singles Final, Becoming First Indian to Reach Final (India Desk)
-[2026-09-27 15:51:50 UTC]   Created — India Begin West Indies Series with Dominant Chase in First ODI as Kuldeep Yadav's Four-Wicket Haul Restricts Visitors to 295 Despite Opening Century (India Desk)
-[2026-09-27 15:51:50 UTC]   Created — Public-Sector and Regional Rural Banks Open Sunday, September 27, Ahead of Three-Day Nationwide Strike Starting September 28 (India Desk) [NOTE: Relates to but is distinct from the UAE Desk entry from Sept 25 about the strike's potential impact on UAE residents; this entry covers the India-side Sunday opening response.]
-[2026-09-27 15:51:51 UTC] Ops notification sent.
+- In the entry about the building explosion in Athens, the text refers to "US Ambassador to Greece Kimberly Guilfoyle". Kimberly Guilfoyle has not served as US Ambassador to Greece; this is factually incorrect and implausible.
+[2026-09-27 16:34:34 UTC] WARNING: at least one concern appears to be a repeat from the prior round — forcing hedge/strip instead of allowing reconfirmation.
+[2026-09-27 16:34:34 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-27 16:36:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'British Police Arrest Five Men on Terrorism and Explosives Charges Near RAF Fairford US Air Base After Evacuating Homes in Whelford': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 16:36:03 UTC] Created — British Police Arrest Five Men on Terrorism and Explosives Charges Near RAF Fairford US Air Base After Evacuating Homes in Whelford (Global Politics Desk)
+[2026-09-27 16:36:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Mass Shootings in South African Townships Kill at Least 27 People in Four Hours, Following Durban Attack That Killed 11 Earlier This Week': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 16:36:03 UTC] Created — Two Mass Shootings in South African Townships Kill at Least 27 People in Four Hours, Following Durban Attack That Killed 11 Earlier This Week (Global Politics Desk)
+[2026-09-27 16:36:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Building Explosion in Athens' Plaka District Kills Six Including Four American Tourists After Suspected Gas Leak Causes Collapse': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 16:36:04 UTC] Created — Building Explosion in Athens' Plaka District Kills Six Including Four American Tourists After Suspected Gas Leak Causes Collapse (Global Politics Desk)
+[2026-09-27 16:36:04 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Congolese Military Plane Crash in Kenge Kills at Least 17 Including Two Generals Returning From Military Mission in Southwest': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 16:36:04 UTC] Created — Congolese Military Plane Crash in Kenge Kills at Least 17 Including Two Generals Returning From Military Mission in Southwest (Global Politics Desk)
+[2026-09-27 16:36:04 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Argentina's Poverty Rate Rises to 32.3 Percent in First Half of 2026, First Increase Since Milei Brought Inflation Under Control, One Year Before Presidential Election': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="Argentina's next presidential election in 2027 will resolve whether voters prioritize Milei's inflation control over rising poverty under his austerity program", next_review='2027-10-01'
+[2026-09-27 16:36:04 UTC] Created — Argentina's Poverty Rate Rises to 32.3 Percent in First Half of 2026, First Increase Since Milei Brought Inflation Under Control, One Year Before Presidential Election (Global Politics Desk)
+[2026-09-27 16:36:04 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-27 16:36:04 UTC]   Created — British Police Arrest Five Men on Terrorism and Explosives Charges Near RAF Fairford US Air Base After Evacuating Homes in Whelford (Global Politics Desk)
+[2026-09-27 16:36:04 UTC]   Created — Two Mass Shootings in South African Townships Kill at Least 27 People in Four Hours, Following Durban Attack That Killed 11 Earlier This Week (Global Politics Desk)
+[2026-09-27 16:36:04 UTC]   Created — Building Explosion in Athens' Plaka District Kills Six Including Four American Tourists After Suspected Gas Leak Causes Collapse (Global Politics Desk)
+[2026-09-27 16:36:04 UTC]   Created — Congolese Military Plane Crash in Kenge Kills at Least 17 Including Two Generals Returning From Military Mission in Southwest (Global Politics Desk)
+[2026-09-27 16:36:04 UTC]   Created — Argentina's Poverty Rate Rises to 32.3 Percent in First Half of 2026, First Increase Since Milei Brought Inflation Under Control, One Year Before Presidential Election (Global Politics Desk)
+[2026-09-27 16:36:06 UTC] Ops notification sent.
