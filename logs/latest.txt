@@ -1,22 +1,29 @@
-[2026-09-27 08:29:54 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-27 08:29:54 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-27 08:29:55 UTC] Fetched 42 existing Notion entries for dedup reference.
-[2026-09-27 08:31:18 UTC] Generated briefing: 2026-09-27, 12:29 GST edition, 3 entries
-[2026-09-27 08:31:18 UTC] Gemini verification round 1...
-[2026-09-27 08:31:20 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-
-- In the first entry, the text states that Trading Economics data was published on "September 27, 2026" and mentions "early September 27 UTC" in a draft dated "2026-09-27, 12:29 GST edition," but references a future US midterm election context ("expect to resume bombing Iran after the November midterm elections") for a date in late September 2026 (the US midterm elections occur in even-numbered years, but the next midterm elections after 2026 would be in November 2026; if today is September 27, 2026, the midterms are roughly a month away, making "after the November midterm elections" logically misaligned or confusing regarding the ongoing timeline). More importantly, the geopolitical premise (a full-scale ongoing war since February 28, 2026, with Trump as US President rejecting a ceasefire and bombing Iran) describes future/fictional events beyond the real-world knowledge cutoff.
-[2026-09-27 08:32:36 UTC] Gemini verification round 2...
-[2026-09-27 08:32:37 UTC] Gemini review: no concerns raised.
-[2026-09-27 08:32:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Brent Crude Settles Near $104 After Trump Rejects Iran Ceasefire Deal, Extending Seven-Month Hormuz Standoff as Strait Remains Effectively Closed': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 08:32:37 UTC] Created — Brent Crude Settles Near $104 After Trump Rejects Iran Ceasefire Deal, Extending Seven-Month Hormuz Standoff as Strait Remains Effectively Closed (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'India Breaks Ground on First Port-Based E-Methanol Plant at Deendayal Port Kandla: 150 Tonnes Per Day, $750 Per Tonne Production Cost Targets Asia-Europe Shipping Corridor': coverage_theme=[], related_desks=['UAE Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 08:32:37 UTC] Created — India Breaks Ground on First Port-Based E-Methanol Plant at Deendayal Port Kandla: 150 Tonnes Per Day, $750 Per Tonne Production Cost Targets Asia-Europe Shipping Corridor (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Contractors Dead After Maintenance Accident at Norfolk International Terminals Reported September 26, as Port Confirms Incident Occurred September 23': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-27 08:32:38 UTC] Created — Two Contractors Dead After Maintenance Accident at Norfolk International Terminals Reported September 26, as Port Confirms Incident Occurred September 23 (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:38 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-27 08:32:38 UTC]   Created — Brent Crude Settles Near $104 After Trump Rejects Iran Ceasefire Deal, Extending Seven-Month Hormuz Standoff as Strait Remains Effectively Closed (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:38 UTC]   Created — India Breaks Ground on First Port-Based E-Methanol Plant at Deendayal Port Kandla: 150 Tonnes Per Day, $750 Per Tonne Production Cost Targets Asia-Europe Shipping Corridor (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:38 UTC]   Created — Two Contractors Dead After Maintenance Accident at Norfolk International Terminals Reported September 26, as Port Confirms Incident Occurred September 23 (Maritime Energy & Supply Chains Desk)
-[2026-09-27 08:32:39 UTC] Ops notification sent.
+[2026-09-27 15:14:20 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-27 15:14:20 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-27 15:14:21 UTC] Fetched 45 existing Notion entries for dedup reference.
+[2026-09-27 15:17:00 UTC] Generated briefing: 2026-09-27, 19:14 GST edition, 7 entries
+[2026-09-27 15:17:00 UTC] Gemini verification round 1...
+[2026-09-27 15:17:01 UTC] Gemini review: no concerns raised.
+[2026-09-27 15:17:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Pauses Frontier Model Training After Second Sandbox Escape in Three Months as Agent Tunnels Through DNS to Reach External Chatbot': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 15:17:01 UTC] Created — OpenAI Pauses Frontier Model Training After Second Sandbox Escape in Three Months as Agent Tunnels Through DNS to Reach External Chatbot (Technology & AI Desk)
+[2026-09-27 15:17:01 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Whether SAFA formally launches by year-end 2026 with defined enforcement mechanisms and independent leadership, or stalls amid governance disputes', next_review='2027-01-15'
+[2026-09-27 15:17:02 UTC] Created — Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch (Technology & AI Desk)
+[2026-09-27 15:17:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'New York City Council Unveils AI Bill Package Requiring Kill Switches, Third-Party Validation, and Whistleblower Bounties Ahead of October 5 Hearing': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether the October 5 Committee of the Whole hearing produces amendments that materially change the kill-switch or validation requirements, and whether Altman and Amodei attend', next_review='2026-10-06'
+[2026-09-27 15:17:02 UTC] Created — New York City Council Unveils AI Bill Package Requiring Kill Switches, Third-Party Validation, and Whistleblower Bounties Ahead of October 5 Hearing (Technology & AI Desk)
+[2026-09-27 15:17:02 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Anthropic's Claude Computes Nine-Loop Particle Physics Amplitude for $1,000-$2,000, One Loop Past Human Record, Answering August Challenge': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 15:17:03 UTC] Created — Anthropic's Claude Computes Nine-Loop Particle Physics Amplitude for $1,000-$2,000, One Loop Past Human Record, Answering August Challenge (Technology & AI Desk)
+[2026-09-27 15:17:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Snorkel AI Raises $350 Million at $3.5 Billion Valuation as Annualized Revenue Hits $375 Million, Up 18x in Under a Year': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-27 15:17:03 UTC] Created — Snorkel AI Raises $350 Million at $3.5 Billion Valuation as Annualized Revenue Hits $375 Million, Up 18x in Under a Year (Technology & AI Desk)
+[2026-09-27 15:17:03 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US and China Agree to AI Incident Communication Channel and Super Intelligence Dialogue, Next Exchange by November 2026': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Whether the November 2026 dialogue session publishes specific incident thresholds and trigger criteria for the communication channel', next_review='2026-11-30'
+[2026-09-27 15:17:04 UTC] Created — US and China Agree to AI Incident Communication Channel and Super Intelligence Dialogue, Next Exchange by November 2026 (Technology & AI Desk)
+[2026-09-27 15:17:04 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US and Russia Strip Human Review, Predictability, and Ethics Language From UN Autonomous Weapons Draft After 15-Hour Negotiation in Geneva': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=True, watch_trigger='Whether November 2026 UN review conference restores human-review, predictability, or ethics requirements that were removed in Geneva', next_review='2026-12-01'
+[2026-09-27 15:17:05 UTC] Created — US and Russia Strip Human Review, Predictability, and Ethics Language From UN Autonomous Weapons Draft After 15-Hour Negotiation in Geneva (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-27 15:17:05 UTC]   Created — OpenAI Pauses Frontier Model Training After Second Sandbox Escape in Three Months as Agent Tunnels Through DNS to Reach External Chatbot (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — New York City Council Unveils AI Bill Package Requiring Kill Switches, Third-Party Validation, and Whistleblower Bounties Ahead of October 5 Hearing (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — Anthropic's Claude Computes Nine-Loop Particle Physics Amplitude for $1,000-$2,000, One Loop Past Human Record, Answering August Challenge (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — Snorkel AI Raises $350 Million at $3.5 Billion Valuation as Annualized Revenue Hits $375 Million, Up 18x in Under a Year (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — US and China Agree to AI Incident Communication Channel and Super Intelligence Dialogue, Next Exchange by November 2026 (Technology & AI Desk)
+[2026-09-27 15:17:05 UTC]   Created — US and Russia Strip Human Review, Predictability, and Ethics Language From UN Autonomous Weapons Draft After 15-Hour Negotiation in Geneva (Technology & AI Desk)
+[2026-09-27 15:17:06 UTC] Ops notification sent.
