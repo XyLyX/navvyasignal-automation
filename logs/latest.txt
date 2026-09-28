@@ -1,42 +1,30 @@
-[2026-09-28 19:20:06 UTC] Starting NavvyaSignal automated run (type=global_politics)
-[2026-09-28 19:20:06 UTC] Desk run scoped to: Global Politics Desk
-[2026-09-28 19:20:07 UTC] Fetched 35 existing Notion entries for dedup reference.
-[2026-09-28 19:22:10 UTC] Generated briefing: 2026-09-28, 23:20 GST edition, 9 entries
-[2026-09-28 19:22:10 UTC] Gemini verification round 1...
-[2026-09-28 19:22:11 UTC] Gemini raised 1 concern(s):
+[2026-09-28 19:46:24 UTC] Starting NavvyaSignal automated run (type=markets_capital)
+[2026-09-28 19:46:24 UTC] Desk run scoped to: Markets & Capital Desk
+[2026-09-28 19:46:25 UTC] Fetched 44 existing Notion entries for dedup reference.
+[2026-09-28 19:48:30 UTC] Generated briefing: 2026-09-28, 23:46 GST edition, 6 entries
+[2026-09-28 19:48:30 UTC] Gemini verification round 1...
+[2026-09-28 19:48:31 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- In the entry regarding the UK arrests near RAF Fairford, the text states that "UK Prime Minister Andy Burnham chaired a COBRA meeting Monday". Andy Burnham is the Mayor of Greater Manchester, not the UK Prime Minister.
-[2026-09-28 19:24:12 UTC] Gemini verification round 2...
-[2026-09-28 19:24:14 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- The entry regarding New Jersey Lieutenant Governor Dale Caldwell states that he resigned on September 25, 2026, nine months into his term alongside Governor Mikie Sherrill. However, Mikie Sherrill is a U.S. Representative (and former Navy pilot) from New Jersey; she is not the Governor of New Jersey, and the current Governor of New Jersey as of recent years is Phil Murphy (with term limits extending into 2026), making this premise and timeline factually incorrect.
-[2026-09-28 19:24:14 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-28 19:26:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="October 25 snap parliamentary election outcome — whether Vučić's populist coalition retains control and whether the opposition capitalizes on two years of protests", next_review='2026-10-26'
-[2026-09-28 19:26:11 UTC] Created — Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early (Global Politics Desk)
-[2026-09-28 19:26:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=True, watch_trigger='Whether UK authorities determine state sponsorship and identify any wider network behind the alleged plot — charges or release decision', next_review='2026-10-12'
-[2026-09-28 19:26:12 UTC] Created — Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing (Global Politics Desk)
-[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 19:26:12 UTC] Created — New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term (Global Politics Desk)
-[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="November 2026 midterm election results in Missouri's contested districts and whether voters approve the gerrymandered map through referendum", next_review='2026-11-04'
-[2026-09-28 19:26:12 UTC] Created — US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms (Global Politics Desk)
-[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether health worker strikes and payment delays can be resolved before the outbreak spirals further out of control — and whether international response scales up', next_review='2026-10-12'
-[2026-09-28 19:26:13 UTC] Created — Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent (Global Politics Desk)
-[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 19:26:13 UTC] Created — Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children (Global Politics Desk)
-[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether revived database use produces documented cases of noncitizen voting or wrongly disenfranchises eligible citizens ahead of November midterms, and whether lower court ultimately rules on legality', next_review='2026-11-04'
-[2026-09-28 19:26:13 UTC] Created — US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling (Global Politics Desk)
-[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 19:26:14 UTC] Created — Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges (Global Politics Desk)
-[2026-09-28 19:26:14 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 19:26:14 UTC] Created — Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells (Global Politics Desk)
-[2026-09-28 19:26:14 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-28 19:26:14 UTC]   Created — Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges (Global Politics Desk)
-[2026-09-28 19:26:14 UTC]   Created — Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells (Global Politics Desk)
-[2026-09-28 19:26:15 UTC] Ops notification sent.
+- The draft refers to "FAA Administrator Bryan Bedford" in the Boeing article, but the current FAA Administrator (as of recent history and ongoing terms) is not Bryan Bedford; this appears to be a factual error regarding the name of the FAA head.
+[2026-09-28 19:50:35 UTC] Gemini verification round 2...
+[2026-09-28 19:50:36 UTC] Gemini review: no concerns raised.
+[2026-09-28 19:50:36 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Equities Decline 0.6-0.8% as Iran Standoff Pushes Oil Past $106, Treasury Yields Hit Near-Two-Decade High at 5.24%': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=True, watch_trigger='PCE inflation data Wednesday and September jobs report Friday will test whether Fed pricing for additional 2026 hikes (70% October probability) holds or reverses; if inflation runs hot or payrolls stay strong, yields could extend multi-year highs and equities face further pressure', next_review='2026-10-02'
+[2026-09-28 19:50:36 UTC] Created — US Equities Decline 0.6-0.8% as Iran Standoff Pushes Oil Past $106, Treasury Yields Hit Near-Two-Decade High at 5.24% (Markets & Capital Desk)
+[2026-09-28 19:50:36 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'MongoDB CEO Chirantan Desai Resigns to Lead Meta's New Enterprise AI Platform, Stock Plunges 15-25%': coverage_theme=[], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:50:37 UTC] Created — MongoDB CEO Chirantan Desai Resigns to Lead Meta's New Enterprise AI Platform, Stock Plunges 15-25% (Markets & Capital Desk)
+[2026-09-28 19:50:37 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Snowflake Shares Fall 4-5% After Announcing $3.5 Billion Convertible Debt Offering to Refinance 2027 Notes': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:50:38 UTC] Created — Snowflake Shares Fall 4-5% After Announcing $3.5 Billion Convertible Debt Offering to Refinance 2027 Notes (Markets & Capital Desk)
+[2026-09-28 19:50:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'FAA Delays Boeing 737 Max 10 Certification Over New Software Issue, Shares Fall 6%': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:50:38 UTC] Created — FAA Delays Boeing 737 Max 10 Certification Over New Software Issue, Shares Fall 6% (Markets & Capital Desk)
+[2026-09-28 19:50:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Gold Slides 3% to Seven-Week Low of $4,149-$4,153 as Fed Rate-Hike Bets Hit 70% on Oil Spike': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:50:38 UTC] Created — Gold Slides 3% to Seven-Week Low of $4,149-$4,153 as Fed Rate-Hike Bets Hit 70% on Oil Spike (Markets & Capital Desk)
+[2026-09-28 19:50:38 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Treasury 10-Year Yield Surges to 5.24%, Highest Since 2007, as Oil Shock Lifts Fed Hike Bets': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:50:39 UTC] Created — US Treasury 10-Year Yield Surges to 5.24%, Highest Since 2007, as Oil Shock Lifts Fed Hike Bets (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-28 19:50:39 UTC]   Created — US Equities Decline 0.6-0.8% as Iran Standoff Pushes Oil Past $106, Treasury Yields Hit Near-Two-Decade High at 5.24% (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC]   Created — MongoDB CEO Chirantan Desai Resigns to Lead Meta's New Enterprise AI Platform, Stock Plunges 15-25% (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC]   Created — Snowflake Shares Fall 4-5% After Announcing $3.5 Billion Convertible Debt Offering to Refinance 2027 Notes (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC]   Created — FAA Delays Boeing 737 Max 10 Certification Over New Software Issue, Shares Fall 6% (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC]   Created — Gold Slides 3% to Seven-Week Low of $4,149-$4,153 as Fed Rate-Hike Bets Hit 70% on Oil Spike (Markets & Capital Desk)
+[2026-09-28 19:50:39 UTC]   Created — US Treasury 10-Year Yield Surges to 5.24%, Highest Since 2007, as Oil Shock Lifts Fed Hike Bets (Markets & Capital Desk)
+[2026-09-28 19:50:40 UTC] Ops notification sent.
