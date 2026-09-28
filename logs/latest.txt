@@ -1,25 +1,20 @@
-[2026-09-28 18:33:59 UTC] Starting NavvyaSignal automated run (type=uae)
-[2026-09-28 18:33:59 UTC] Desk run scoped to: UAE Desk
-[2026-09-28 18:33:59 UTC] Fetched 30 existing Notion entries for dedup reference.
-[2026-09-28 18:35:21 UTC] Generated briefing: 2026-09-28, 18:33 GST edition, 3 entries
-[2026-09-28 18:35:21 UTC] Gemini verification round 1...
-[2026-09-28 18:35:23 UTC] Gemini raised 2 concern(s):
-FLAGS: 2
-- In entry 1, the text states that Mossad Director is "Roman Gofman", which is factually incorrect/implausible (David Barnea or his successor is head of Mossad; Roman Gofman is a military official/former military secretary to the Prime Minister). Additionally, the National Security Adviser in Israel is Tzachi Hanegbi (or successor), not Shmuel Ben Ezra.
-- In entry 3, the financial figures cited for the Emirates Group ("group revenue reaching 41.0 billion dollars, up 3 percent, and profit before tax reaching 6.6 billion dollars") correspond to the financial year ended March 31, **2024** (or roughly AED 137 billion), not 2026, making the financial data anachronistic for a 2026 briefing.
-[2026-09-28 18:36:23 UTC] Gemini verification round 2...
-[2026-09-28 18:36:25 UTC] Gemini raised 1 concern(s):
-FLAGS: 1
-- In entry 1, the text states that ForsaTEK 2026 concluded on September 28, but also mentions the event was held on September 21 and 22, which is an internal chronological contradiction or error regarding the dates of the event.
-[2026-09-28 18:36:25 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
-[2026-09-28 18:37:17 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Israeli Prime Minister Netanyahu Makes Secret Sunday Visit to UAE, Meets President MBZ on Iran Coordination One Month Before Israeli Election': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:37:18 UTC] Created — Israeli Prime Minister Netanyahu Makes Secret Sunday Visit to UAE, Meets President MBZ on Iran Coordination One Month Before Israeli Election (UAE Desk)
-[2026-09-28 18:37:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Dubai Inbound Flights Face Continued Delays Monday Morning After Weekend Disruption, Concentrated on Central Asia and Russia Routes': coverage_theme=[], related_desks=['Maritime Energy & Supply Chains Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:37:18 UTC] Created — Dubai Inbound Flights Face Continued Delays Monday Morning After Weekend Disruption, Concentrated on Central Asia and Russia Routes (UAE Desk)
-[2026-09-28 18:37:18 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Emirates Group Concludes ForsaTEK 2026 Innovation Showcase, Unveils Airport Robot Prototype and 60 Technology Projects Focused on Agentic AI and Human-AI Collaboration': coverage_theme=['Technology & AI'], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:37:18 UTC] Created — Emirates Group Concludes ForsaTEK 2026 Innovation Showcase, Unveils Airport Robot Prototype and 60 Technology Projects Focused on Agentic AI and Human-AI Collaboration (UAE Desk)
-[2026-09-28 18:37:18 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-28 18:37:18 UTC]   Created — Israeli Prime Minister Netanyahu Makes Secret Sunday Visit to UAE, Meets President MBZ on Iran Coordination One Month Before Israeli Election (UAE Desk)
-[2026-09-28 18:37:18 UTC]   Created — Dubai Inbound Flights Face Continued Delays Monday Morning After Weekend Disruption, Concentrated on Central Asia and Russia Routes (UAE Desk)
-[2026-09-28 18:37:18 UTC]   Created — Emirates Group Concludes ForsaTEK 2026 Innovation Showcase, Unveils Airport Robot Prototype and 60 Technology Projects Focused on Agentic AI and Human-AI Collaboration (UAE Desk)
-[2026-09-28 18:37:20 UTC] Ops notification sent.
+[2026-09-28 18:42:15 UTC] Starting NavvyaSignal automated run (type=india)
+[2026-09-28 18:42:15 UTC] Desk run scoped to: India Desk
+[2026-09-28 18:42:16 UTC] Fetched 33 existing Notion entries for dedup reference.
+[2026-09-28 18:43:27 UTC] Generated briefing: 2026-09-28, 22:42 GST edition, 4 entries
+[2026-09-28 18:43:27 UTC] Gemini verification round 1...
+[2026-09-28 18:43:27 UTC] Gemini review: no concerns raised.
+[2026-09-28 18:43:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:43:28 UTC] Updated — Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28 (India Desk)
+[2026-09-28 18:43:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:43:28 UTC] Updated — Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured (India Desk)
+[2026-09-28 18:43:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:43:29 UTC] Created — Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat (India Desk)
+[2026-09-28 18:43:29 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:43:29 UTC] Created — Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges (India Desk)
+[2026-09-28 18:43:29 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-28 18:43:29 UTC]   Updated — Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28 (India Desk)
+[2026-09-28 18:43:29 UTC]   Updated — Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured (India Desk)
+[2026-09-28 18:43:29 UTC]   Created — Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat (India Desk)
+[2026-09-28 18:43:29 UTC]   Created — Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges (India Desk)
+[2026-09-28 18:43:31 UTC] Ops notification sent.
