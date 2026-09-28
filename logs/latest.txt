@@ -1,20 +1,42 @@
-[2026-09-28 18:42:15 UTC] Starting NavvyaSignal automated run (type=india)
-[2026-09-28 18:42:15 UTC] Desk run scoped to: India Desk
-[2026-09-28 18:42:16 UTC] Fetched 33 existing Notion entries for dedup reference.
-[2026-09-28 18:43:27 UTC] Generated briefing: 2026-09-28, 22:42 GST edition, 4 entries
-[2026-09-28 18:43:27 UTC] Gemini verification round 1...
-[2026-09-28 18:43:27 UTC] Gemini review: no concerns raised.
-[2026-09-28 18:43:27 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:43:28 UTC] Updated — Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28 (India Desk)
-[2026-09-28 18:43:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:43:28 UTC] Updated — Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured (India Desk)
-[2026-09-28 18:43:28 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat': coverage_theme=['Real Estate & Infrastructure'], related_desks=['Technology & AI Desk'], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:43:29 UTC] Created — Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat (India Desk)
-[2026-09-28 18:43:29 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
-[2026-09-28 18:43:29 UTC] Created — Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges (India Desk)
-[2026-09-28 18:43:29 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-28 18:43:29 UTC]   Updated — Three-Day Nationwide Bank Strike Averted After Late-Night Union-Management Conciliation, All Banks Operational September 28 (India Desk)
-[2026-09-28 18:43:29 UTC]   Updated — Uttar Pradesh Flooding Death Toll Rises to 62 as Three-Day Heavy Rain Subsides, Over 1,000 Homes Damaged and 46 Injured (India Desk)
-[2026-09-28 18:43:29 UTC]   Created — Union Home Minister Amit Shah Launches India's First LNG-Powered Train from Sabarmati, Inaugurates Rs 1,472 Crore Railway Projects in Gujarat (India Desk)
-[2026-09-28 18:43:29 UTC]   Created — Two Men Die from Suspected Chemical Leak in Goregaon East Public Toilet, One Person in Custody as Police File Culpable Homicide Charges (India Desk)
-[2026-09-28 18:43:31 UTC] Ops notification sent.
+[2026-09-28 19:20:06 UTC] Starting NavvyaSignal automated run (type=global_politics)
+[2026-09-28 19:20:06 UTC] Desk run scoped to: Global Politics Desk
+[2026-09-28 19:20:07 UTC] Fetched 35 existing Notion entries for dedup reference.
+[2026-09-28 19:22:10 UTC] Generated briefing: 2026-09-28, 23:20 GST edition, 9 entries
+[2026-09-28 19:22:10 UTC] Gemini verification round 1...
+[2026-09-28 19:22:11 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- In the entry regarding the UK arrests near RAF Fairford, the text states that "UK Prime Minister Andy Burnham chaired a COBRA meeting Monday". Andy Burnham is the Mayor of Greater Manchester, not the UK Prime Minister.
+[2026-09-28 19:24:12 UTC] Gemini verification round 2...
+[2026-09-28 19:24:14 UTC] Gemini raised 1 concern(s):
+FLAGS: 1
+- The entry regarding New Jersey Lieutenant Governor Dale Caldwell states that he resigned on September 25, 2026, nine months into his term alongside Governor Mikie Sherrill. However, Mikie Sherrill is a U.S. Representative (and former Navy pilot) from New Jersey; she is not the Governor of New Jersey, and the current Governor of New Jersey as of recent years is Phil Murphy (with term limits extending into 2026), making this premise and timeline factually incorrect.
+[2026-09-28 19:24:14 UTC] Final verification round still has open concerns — forcing hedge/strip rather than shipping the disputed claim(s) as flatly stated.
+[2026-09-28 19:26:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="October 25 snap parliamentary election outcome — whether Vučić's populist coalition retains control and whether the opposition capitalizes on two years of protests", next_review='2026-10-26'
+[2026-09-28 19:26:11 UTC] Created — Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early (Global Politics Desk)
+[2026-09-28 19:26:11 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=True, watch_trigger='Whether UK authorities determine state sponsorship and identify any wider network behind the alleged plot — charges or release decision', next_review='2026-10-12'
+[2026-09-28 19:26:12 UTC] Created — Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing (Global Politics Desk)
+[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:26:12 UTC] Created — New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term (Global Politics Desk)
+[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger="November 2026 midterm election results in Missouri's contested districts and whether voters approve the gerrymandered map through referendum", next_review='2026-11-04'
+[2026-09-28 19:26:12 UTC] Created — US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms (Global Politics Desk)
+[2026-09-28 19:26:12 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether health worker strikes and payment delays can be resolved before the outbreak spirals further out of control — and whether international response scales up', next_review='2026-10-12'
+[2026-09-28 19:26:13 UTC] Created — Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent (Global Politics Desk)
+[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:26:13 UTC] Created — Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children (Global Politics Desk)
+[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='Whether revived database use produces documented cases of noncitizen voting or wrongly disenfranchises eligible citizens ahead of November midterms, and whether lower court ultimately rules on legality', next_review='2026-11-04'
+[2026-09-28 19:26:13 UTC] Created — US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling (Global Politics Desk)
+[2026-09-28 19:26:13 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:26:14 UTC] Created — Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges (Global Politics Desk)
+[2026-09-28 19:26:14 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 19:26:14 UTC] Created — Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells (Global Politics Desk)
+[2026-09-28 19:26:14 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-28 19:26:14 UTC]   Created — Serbia's President Aleksandar Vučić Resigns to Run for Prime Minister in Snap Parliamentary Elections, Second Presidential Term Cut Short Eight Months Early (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — Five British Nationals Released on Bail After Arrest Near RAF Fairford Base Used by US Bombers for Iran Strikes, Police Probe Possible Foreign-State Backing (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — New Jersey Lieutenant Governor Dale Caldwell Resigns After Sexual Harassment Investigation, Less Than Nine Months Into Term (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — US Supreme Court Blocks Missouri Gerrymandered Congressional Map for Third Time, Unanimously Orders 2022 Districts Used for November Midterms (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — Congo Ebola Outbreak Surpasses 8,000 Confirmed Cases with Nearly 4,000 Deaths as Health Worker Shortages Worsen, Fatality Rate Exceeds 48 Percent (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — Russian Guided Bomb Strikes Kharkiv Apartment Building Early Monday, Injuring 22 to 38 People Including Up to Ten Children (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — US Supreme Court Revives DHS Voter Citizenship Database Ahead of Midterms in 6-3 Decision, Pausing Lower Court Privacy Ruling (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — Federal Prosecutor Resigns Under Protest Over Failed Broadview Six ICE Case, Accuses Trump-Appointed US Attorney of Pushing Unwarranted Felony Charges (Global Politics Desk)
+[2026-09-28 19:26:14 UTC]   Created — Federal Judge Issues Permanent Injunction Against Dreadful Conditions at Manhattan ICE Jail, Orders End to Indefinite Detention in Overcrowded Holding Cells (Global Politics Desk)
+[2026-09-28 19:26:15 UTC] Ops notification sent.
