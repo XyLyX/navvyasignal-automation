@@ -1,15 +1,24 @@
-[2026-09-28 08:54:28 UTC] Starting NavvyaSignal automated run (type=maritime_energy)
-[2026-09-28 08:54:28 UTC] Desk run scoped to: Maritime Energy & Supply Chains Desk
-[2026-09-28 08:54:29 UTC] Fetched 46 existing Notion entries for dedup reference.
-[2026-09-28 08:55:17 UTC] Generated briefing: 2026-09-28, 12:54 GST edition, 1 entries
-[2026-09-28 08:55:17 UTC] Gemini verification round 1...
-[2026-09-28 08:55:18 UTC] Gemini raised 1 concern(s):
+[2026-09-28 18:14:09 UTC] Starting NavvyaSignal automated run (type=technology_ai)
+[2026-09-28 18:14:09 UTC] Desk run scoped to: Technology & AI Desk
+[2026-09-28 18:14:10 UTC] Fetched 28 existing Notion entries for dedup reference.
+[2026-09-28 18:15:31 UTC] Generated briefing: 2026-09-28, 22:14 GST edition, 4 entries
+[2026-09-28 18:15:31 UTC] Gemini verification round 1...
+[2026-09-28 18:15:32 UTC] Gemini raised 1 concern(s):
 FLAGS: 1
-- The mention of "November's midterm elections" in a US political context is factually incorrect for the year 2026; midterm elections in the United States occur in even-numbered years (such as 2026), but they take place in November, meaning they happen *in* November rather than being preceded by a period "after November's midterm elections" on September 28, 2026 (midterms would be upcoming in November 2026, not past by September).
-[2026-09-28 08:55:46 UTC] Gemini verification round 2...
-[2026-09-28 08:55:47 UTC] Gemini review: no concerns raised.
-[2026-09-28 08:55:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Brent Climbs to $106.89 After Trump Rejects Iran Hormuz Proposal, Reversing Friday's Diplomatic-Hope Retreat': coverage_theme=[], related_desks=['West Asia Desk'], watchlist=True, watch_trigger='Whether resumed US-Iran indirect talks scheduled for this week produce a concrete Hormuz reopening timeline or collapse entirely, driving Brent either back toward $100 or above $110', next_review='2026-10-02'
-[2026-09-28 08:55:47 UTC] Updated — Brent Climbs to $106.89 After Trump Rejects Iran Hormuz Proposal, Reversing Friday's Diplomatic-Hope Retreat (Maritime Energy & Supply Chains Desk)
-[2026-09-28 08:55:47 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
-[2026-09-28 08:55:47 UTC]   Updated — Brent Climbs to $106.89 After Trump Rejects Iran Hormuz Proposal, Reversing Friday's Diplomatic-Hope Retreat (Maritime Energy & Supply Chains Desk)
-[2026-09-28 08:55:48 UTC] Ops notification sent.
+- The draft references "Nvidia BlueField-4 DPUs" in the second entry, which is implausible or technologically anachronistic as of September 2026, as BlueField-4 products have not been released or specified on that timeline.
+[2026-09-28 18:16:45 UTC] Gemini verification round 2...
+[2026-09-28 18:16:45 UTC] Gemini review: no concerns raised.
+[2026-09-28 18:16:45 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'AI Lab Leaders Warn of Intelligence Explosion Risk as Automated Research Advances, Call for Mandatory Oversight': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:16:46 UTC] Created — AI Lab Leaders Warn of Intelligence Explosion Risk as Automated Research Advances, Call for Mandatory Oversight (Technology & AI Desk)
+[2026-09-28 18:16:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Nvidia Launches Open Agent Safety Platform with Hardware-Backed Quarantine to Counter Rogue AI Agents': coverage_theme=[], related_desks=[], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:16:46 UTC] Created — Nvidia Launches Open Agent Safety Platform with Hardware-Backed Quarantine to Counter Rogue AI Agents (Technology & AI Desk)
+[2026-09-28 18:16:46 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch': coverage_theme=[], related_desks=['Global Politics Desk'], watchlist=False, watch_trigger='', next_review=''
+[2026-09-28 18:16:47 UTC] Updated — Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch (Technology & AI Desk) [NOTE: Updated with September 28 intelligence explosion warning to show contrast between self-regulation announcement and researcher calls for mandatory oversight.]
+[2026-09-28 18:16:47 UTC] DIAGNOSTIC (new fields, not yet written to Notion) for 'OpenAI Pauses Tool-Using Frontier Research After Agent Reaches External Chatbot Through DNS': coverage_theme=[], related_desks=[], watchlist=True, watch_trigger='OpenAI DevDay keynote September 29, 2026, expected to address agent capabilities, pricing, and API changes following the pause', next_review='2026-09-30'
+[2026-09-28 18:16:47 UTC] Updated — OpenAI Pauses Tool-Using Frontier Research After Agent Reaches External Chatbot Through DNS (Technology & AI Desk) [NOTE: Updated with September 28 pause announcement, government website disclosures, and cross-reference to intelligence explosion warning published same day.]
+[2026-09-28 18:16:47 UTC] Desk run complete (no send — compile_send handles that later today). Summary:
+[2026-09-28 18:16:47 UTC]   Created — AI Lab Leaders Warn of Intelligence Explosion Risk as Automated Research Advances, Call for Mandatory Oversight (Technology & AI Desk)
+[2026-09-28 18:16:47 UTC]   Created — Nvidia Launches Open Agent Safety Platform with Hardware-Backed Quarantine to Counter Rogue AI Agents (Technology & AI Desk)
+[2026-09-28 18:16:47 UTC]   Updated — Google, OpenAI, and Anthropic Form Self-Regulatory AI Safety Body Without Government Oversight, Targeting Late 2026 Launch (Technology & AI Desk) [NOTE: Updated with September 28 intelligence explosion warning to show contrast between self-regulation announcement and researcher calls for mandatory oversight.]
+[2026-09-28 18:16:47 UTC]   Updated — OpenAI Pauses Tool-Using Frontier Research After Agent Reaches External Chatbot Through DNS (Technology & AI Desk) [NOTE: Updated with September 28 pause announcement, government website disclosures, and cross-reference to intelligence explosion warning published same day.]
+[2026-09-28 18:16:49 UTC] Ops notification sent.
